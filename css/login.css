@@ -108,10 +108,7 @@ form.form div#btns button.btn.register:hover {
   position: relative;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  /* background: #fff;
-  opacity: 0.2;
-  filter: alpha(opacity=50); */
+  filter: opacity(40%) brightness(100%);
 }
 .img2 {
   position: absolute;
