@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>Settings-Payment</title>
 </head>
 <style>
@@ -28,11 +29,36 @@
 </style>
 
 <body>
-
+    <div class="header">
+       <ul class="nav-items">
+         <li class="nav-item">
+            <a href="#">Accounts</a></li>
+         <li class="nav-item">
+            <a href="#">Users</a></li>
+         <li class="nav-item active">
+           <a href="#">Payment History</a></li>
+       </ul>
+    </div>
     <div class="container">
-            
-
-            <table class="table table-bordered">
+        <div class="payment-header">
+            <h4 class="d-inline text-dark">Payment History</h4>
+            <p class="d-inline desc">Every payment details are made available here</p>
+          </div>
+          <hr>
+          <div class="form-group has-search float-sm-right">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control d-inline-block" placeholder="Find by email address">
+              <button type="button" class="btn btn-light d-inline-block">Search</button>
+          </div>
+          <br>
+          <div class="search">
+            <p class="d-inline searchText">Search for people by</p>
+            <div class="btn-group d-inline" role="group" aria-label="#">
+              <button type="button" class="btn btn-primary">Email Address</button>
+              <button type="button" class="btn btn-default">Adding Filters</button>
+            </div>
+          </div>
+            <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">Date</th>
