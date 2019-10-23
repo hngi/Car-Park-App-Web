@@ -104,6 +104,93 @@
         td>div>p {
             margin-bottom: 0;
         }
+
+        /* MAP */
+        .map-row {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .map-header {
+
+            text-align: justify;
+            align-items: center;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 23px;
+            color: #777777;
+            background-color: #fff;
+            margin-top: 0.8rem;
+            margin-left: 1.5rem;
+            width: 96.5%;
+            p adding: 0.3rem;
+            border-bottom: 1px solid #f6f6f6;
+        }
+
+        #Row2 {
+            height: 350px;
+            margin-top: 15px;
+        }
+
+        .map {
+
+            gap: 1.2rem;
+            height: 58vh;
+            width: 96.5%;
+            margin-left: 1.5rem;
+            background-color: #fff;
+        }
+
+        .map1 {
+            margin-left: 0.5rem;
+        }
+
+        .list2 {
+            height: 100%;
+            margin-top: 1rem;
+            width: 90%;
+            border: 2px solid #f6f6f6;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .list2 h4 {
+            background-color: #fdfdfd;
+            padding: 0.4rem;
+            margin-top: -1rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #f6f6f6;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .list-header {
+            border-top: 1px solid rgba(119, 119, 119, 0.2);
+            padding-top: 0.5rem;
+        }
+
+        .list2 li {
+            list-style-type: none;
+            padding: 0.4rem;
+            width: 110%;
+            margin-left: -1.1rem;
+            margin-bottom: 1rem;
+            margin-right: -1rem;
+            border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+        }
+
+        .list2::after {
+            content: "";
+            width: 1px;
+            height: 17rem;
+            background-color: #1A73E8;
+            border: 2px solid #1A73E8;
+            border-radius: 101px;
+            top: 3rem;
+            left: 18rem;
+        }
     </style>
 </head>
 
@@ -395,39 +482,37 @@
 
                     </div>
                 </div>
-                <div class="row">
+                <div class="map-row">
                     <!--@Ore_cathy's part-->
+
+                    <!--Map header goes in here-->
                     <div class="body-map">
-                            <h3 class="map-header">Car Park Locations</h3>
-                        </div>
-                        <!-- MAP SECTION -->
-                        <section class="map">
-                            <div class="map1">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.
-                            173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C
-                            +FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus" width="100%" height="100%" frameborder="0"
-                                    style="border:0" id="Row2" allowfullscreen></iframe>
-                            </div>
-                            <!--list view goes in here-->
-                            <div class="list2">
-                                <ul>
-                                    <h4>List View</h4>
-                                    <li>Maryland, Lagos</li>
-                                    <li>Lekki, Lagos</li>
-                                    <li>Gwarimpa, Abuja</li>
-                                    <li>Wuse, Abuja</li>
-                                    <li>Maitama, Abuja</li>
-                                    <li>Wuse, Abuja</li>
-                                </ul>
-                            </div>
-                        </section>
-                    <!--<div class=" col col-md-8">
-
+                        <h3 class="map-header">Car Park Locations</h3>
                     </div>
-                    <div class="col col-md-4">
+                    <!-- MAP SECTION -->
+                    <section class="map">
+                        <div class="map1">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.
+                        173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C
+                        +FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus" width="100%" height="100%" frameborder="0"
+                                style="border:0" id="Row2" allowfullscreen></iframe>
+                        </div>
+                        <!--list view goes in here-->
+                        <div class="list2">
+                            <ul>
+                                <h4 class="list-header">List View</h4>
+                                <li>Maryland, Lagos</li>
+                                <li>Lekki, Lagos</li>
+                                <li>Gwarimpa, Abuja</li>
+                                <li>Wuse, Abuja</li>
+                                <li>Maitama, Abuja</li>
+                                <li>Wuse, Abuja</li>
+                            </ul>
+                        </div>
+                    </section>
 
-                    </div>-->
                 </div>
+                <!--End of map section-->
             </div>
         </div>
 
