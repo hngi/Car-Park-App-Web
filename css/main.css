@@ -21,7 +21,7 @@ html{
     display: flex;
     padding: 0 5rem;
     align-items: flex-start;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 .nav-item{
     padding: 0.5rem 0rem;
