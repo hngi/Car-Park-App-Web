@@ -4,11 +4,26 @@
     background-color: blue;
     
 }
-.cont{
-    width:60%;
-    margin-left:auto;
-    margin-right:auto;
-    border:1px solid grey;
-    padding:5rem;
-    
+.cont {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid 
+    grey;
+    padding: 0.5rem;
+}
+@media only screen and (min-width: 760px) {
+    .cont {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid 
+        grey;
+        padding: 5rem;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .collapse-icon{
+        display:none;
+    }
 }
