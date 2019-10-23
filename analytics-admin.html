@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 15%  auto;
+    grid-template-areas: "sect1 sect2";
+    height: 90vh;
+}
+
+footer {
+    color: #ccc;
+    background-color: #fff;
+    text-align: center;
+}
+
+aside {
+    margin-top: 3rem;
+}
+
+.left-section {
+    grid-area: sect1;
+    background-color: #0049b5;
+}
+
+.left-nav img {
+    width: 20px;
+    margin-right: 1rem;
+}
+
+.left-nav a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 30px;
+    color: #fff;
+}
+
+.left-nav li {
+    padding: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: #fff;
+    height: 8vh;
+}
+
+.user,
+.country {
+    width: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    width: 600px;
+    height: 8vh;
+    display: flex;
+    position: relative;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+}
+
+.nav img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15%;
+    right: 1%
+}
+
+.search {
+    width: 100%;
+    height: 80%;
+    border: none;
+    border: 1px solid rgba(119, 119, 119, 0.2);
+    padding: 1rem;
+}
+
+.nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12%;
+    margin-right: 10rem;
+    position: relative;
+}
+
+
+.nav2 {
+    display: flex;
+    padding: 1rem;
+    border-left: 1px solid rgba(119, 119, 119, 0.5);
+    width: 8%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+.topic {
+    background-color: #1A73E8;
+    color: #fff;
+    height: 17vh;
+}
+
+.topic h1{
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.topic h3 {
+    font-size: 1.2rem;
+    line-height: 23px;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 1.2rem;           
+}
+
+
+.links {
+    width: 30%;
+    margin-left: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+.links a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 23px;
+    color: #777777;
+    text-decoration: none;
+    padding: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+.links a:visited {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+.links a:active {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+
+.top-headings {
+    margin-top: 0.5rem;
+    float: right;
+    height: 5vh;
+}
+
+.top-headings a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 23px;
+    color: #777777;
+    margin-right: 5rem;
+    transition: all 0.3s ease;
+}
+
+
+.top-headings a:hover {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+.top-headings a:visited {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+.top-headings a:active {
+    border-bottom: 2px solid #1A73E8;
+    padding: 0.3rem;
+}
+
+.sect {
+    margin-top: 3rem;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "pie line";
+    gap: 1.2rem;
+    height: 40vh;
+    width: 95%;
+    margin-left: 1.5rem;
+}
+
+.pie {
+    grid-area: pie;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.line {
+    grid-area: line;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* MAP */
+
+.map-header {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 23px;
+    color: #777777;
+    background-color: #fff;
+    margin-top: 0.8rem;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    margin-left: 1.5rem;
+    width: 96.5%;
+    padding: 0.3rem;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+#Row2 {
+    height:350px;
+    margin-top:15px;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "pie line";
+    gap: 1.2rem;
+    height: 58vh;
+    width: 96.5%;
+    margin-left: 1.5rem;
+    background-color: #fff;
+}
+
+.map1{
+    margin-left: 0.5rem;
+}
+
+
+.list2 {
+    height: 100%;
+    margin-top: 1rem;
+    width: 90%;
+    border: 2px solid #f6f6f6;
+    padding: 1rem;
+    position: relative;
+}
+
+.list2 h4 {
+    background-color: #fdfdfd;
+    padding: 0.4rem;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #f6f6f6;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.first-list {
+    border-top: 1px solid rgba(119, 119, 119, 0.2);
+    padding-top: 0.5rem;
+}
+
+.list2 li {
+    list-style-type: none;
+    padding: 0.4rem;
+    width: 110%;
+    margin-left: -1.1rem;
+    margin-bottom: 1rem;
+    margin-right: -1rem;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+}
+
+.list2::after {
+    content: "";
+    position: absolute;
+    width:1px;
+    height: 17rem;
+    background-color: #1A73E8;
+    border: 2px solid #1A73E8;
+    border-radius: 101px;
+    top: 3rem;
+    left: 18rem;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="left-section">
+                <aside>
+                        <div class="left-nav">
+                            <nav>
+                                <ul>
+                                    <li><a href="#"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810940/dashboard_il6s9d.png" alt="dashboard"> Dashboard</a></li>
+                                    <li><a href="#"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810941/apps_v8mvwx.png" alt="apps"> Apps</a></li>
+                                    <li><a href="#"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810940/mail_piazsv.png" alt="mail"> Mail</a></li>
+                                    <li><a href="#"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810941/users_cbyiay.png" alt="people"> Users</a></li>
+                                    <li><a href="#"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810941/settings1_jawpbb.png" alt="settings"> Settings</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+        </section>
+        <section class="right-section">
+            <header>
+                <nav>
+                    <div class="nav">
+                        <input type="search" placeholder="Search" class="search">
+                        <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810941/Vector_jslf0r.png" alt="Search">
+                    </div>
+                    <div class="nav1">
+                        <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810941/person_dncjgs.png" alt="User" class="user">
+                        <p>John Travolta</p>
+                    </div>
+                    <div class="nav2">
+                        <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1571810940/country_lueuyn.png" alt="country" class="country">
+                        <p>EN</p>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="topic">
+                <h1>Welcome back Admin</h1>
+                <h3>CAR PARK APPLICATION</h3>
+            </div>
+
+            <div class="links">
+                <a href="#">Overview</a>
+                <a href="#">Analytics</a>
+                <a href="#">Demographics</a>
+            </div>
+
+            <div class="top-headings">
+                    <a href="#">New Users</a>
+                    <a href="#">Existing Users</a>
+                    <a href="#">Issues</a>
+                    <a href="#">CarPark</a>
+            </div>
+            <!--PIE CHART SECTION -->
+            <section class="sect">
+                <div class="charts">
+                    <div class="pie">
+                        <canvas id ="pieChart"></canvas>
+                    </div>
+                    <div class="line">
+                        <canvas id="myChart"></canvas>                    
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="body-map">
+                <h3 class="map-header">Car Park Locations</h3>
+            </div>
+            <!-- MAP SECTION -->
+            <section class="map">
+                <div class="map1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C+FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus"
+                         width="100%" height="100%" frameborder="0" style="border:0" id="Row2" allowfullscreen></iframe>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <h4>List View</h4>
+                        <li class="first-list">Maryland, Lagos</li>
+                        <li>Lekki, Lagos</li>
+                        <li>Gwarimpa, Abuja</li>
+                        <li>Wuse, Abuja</li>
+                        <li>Maitama, Abuja</li>
+                        <li>Wuse, Abuja</li>
+                    </ul>
+                </div>
+            </section>
+           
+        </section>
+       
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <script>
+        // PIE CHART
+        let pieChart = document.getElementById('pieChart').getContext('2d');
+
+        // GLOBAL OPTIONS
+        Chart.defaults.global.defaultFontFamily='Lato';
+        Chart.defaults.global.defaultFontSize=18;
+        Chart.defaults.global.defaultFontColor='#777';
+
+        let massivePopChart = new Chart(pieChart, {
+            type: 'pie',
+            data: {
+                labels:['250 Existing Users', '16 New Users', '14 Dummy Users'],
+                datasets:[{
+                    label: 'Population',
+                    data:[
+                        617594,
+                        181045,
+                        153060,
+                    ],
+                    // backgroundColor: 'transparent',
+                    backgroundColor: [
+                        '#556080',
+                        '#f0c419',
+                        '#71C285;'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#1A73E8',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000',
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'October, 2019',
+                    FontSize: 15,
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding:{
+                        left: 50,
+                        right:0,
+                        bottom: 0,
+                        top:0
+                    }
+                },
+                tooltips: {
+                    enabled:true
+                }
+            }
+        })
+
+
+
+
+        // LINE CHART
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        // GLOBAL OPTIONS
+        Chart.defaults.global.defaultFontFamily='Lato';
+        Chart.defaults.global.defaultFontSize=18;
+        Chart.defaults.global.defaultFontColor='#777';
+
+        let massPopChart = new Chart(myChart, {
+            type: 'line',
+            data: {
+                labels:['01', '02', '03', '04', '05', '06'],
+                datasets:[{
+                    label: 'Population',
+                    data:[
+                        617594,
+                        181045,
+                        153060,
+                        106519,
+                        105162,
+                        95072
+                    ],
+                    backgroundColor: 'transparent',
+                    borderWidth: 1,
+                    borderColor: '#1A73E8',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000',
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'October, 2019',
+                    FontSize: 15,
+                },
+                legend: {
+                    display: false,
+                    position: 'top',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding:{
+                        left: 50,
+                        right:0,
+                        bottom: 0,
+                        top:0
+                    }
+                },
+                tooltips: {
+                    enabled:true
+                }
+            }
+        })
+    </script>
+</body>
+</html>
