@@ -1,1 +1,55 @@
+/* NAV TAB */
+body{
+    background: #E5E5E5;
+}
+.nav-border {
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px #ccc;
+    background: #fff;
+}
 
+.nav-text{
+    color: #777777;
+    background-color: none;
+    font-size: 20px;
+    display: block;
+    padding: .5rem 2rem;
+}
+
+.nav-pills .nav-text.active, .nav-pills .show>.nav-text {
+    color: #777777;
+    background-color: #fff;
+    border-bottom: 3px solid blue;
+}
+
+.nav-pills .nav-text {
+    border-radius: 0px;
+}
+.container {
+    background: #fff;
+    /* margin: 15px 15px 15px 15px; */
+    max-width: 95%;
+    overflow-y: auto;
+}
+
+thead, time, .fa-calendar {
+    color: #777777;
+}
+
+.badge-primary {
+    border-radius: 50px;
+}
+td img, .fa-calendar{
+    width: 15px;
+    height: 15px;
+}
+
+.colspan{
+    text-align: center;
+    margin: 0 auto;
+}
+
+td input {
+    border: 0px #fff;
+    color: #777777;
+}
