@@ -72,11 +72,24 @@
         text-align: right;
         padding-left: 10px;
         }
+        .map-container-7{
+        overflow:hidden;
+        padding-bottom:30%;
+        position:relative;
+        height:0;
+        }
+        .map-container-7 iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:70%;
+        position:absolute;
+        }
     </style>
 </head>
 <body>
-    <div class="container-fluid p-0">
-        <div class="row" id="body-row">
+    <div class="container-fluid p-0" style="background-color: #F6F6F6;">
+        <div class="row " id="body-row">
             <div id="sidebar-container" class="sidebar">
                 <ul class="list-group">
                     <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -127,7 +140,7 @@
                 </ul>
             </div>
             <!--For main content area -->
-            <div class="col w-100 p-0">
+            <div class="col w-75 p-0">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="col-7 p-2 mb-0">   
                         <form class="form-inline active-cyan-4">
@@ -157,8 +170,85 @@
                         <h6 class="pt-2">CAR PARK APPLICATION </h6>
                     </div>
                 </div>
-            </div>
+                <div class="col shadow">
+                        <nav class="nav">
+                            <a class="nav-link active text-muted border-bottom border-primary" href="#">Overview</a>
+                            <a class="nav-link text-muted" href="#">Analysis</a>
+                            <a class="nav-link text-muted" href="#">Demographics</a>
+                        </nav>
+                </div>
+                <div class="col main p-0 mt-4 d-flex">
+                        <div class="col d-flex flex-wrap p-3 ml-4">
+                            <div class="card  mr-5" style="width: 15rem; background-color: #EAEAEA;">
+                                <div class="card-body p-0" style="color: black; background-color: #fff; text-align: center;">
+                                    <h5 class="card-title text-muted pt-2">New Users</h5>
+                                    <p class="card-text pb-2 border-top pt-2" style="font-size: 40px; font-weight: 500;">20</p>
+                                    <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
+                                </div>
+                            </div>
+                            <div class="card mr-5" style="width: 15rem;">
+                                <div class="card-body p-0" style="text-align:center;">
+                                    <h5 class="card-title text-muted pt-2">Exisiting Users</h5>
+                                    <p class="card-text pb-2 border-top pt-2" style="color: orange; font-size:40px; font-weight: 500;">8</p>
+                                    <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                                </div>
+                            </div>
+                            <div class="card mr-5" style="width: 15rem;">
+                                <div class="card-body p-0" style="text-align: center;">
+                                    <h5 class="card-title pt-2 text-muted">Issues</h5>
+                                    <p class="card-text pb-2 border-top pt-2" style="color: red; font-size:40px; font-weight: 500;">8</p>
+                                    <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 15rem; text-align: center;">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title text-muted pt-2">Car Park</h5>
+                                    <p class="card-text pb-2 border-top pt-2" style="color: purple; font-size:40px; font-weight: 500;">20</p>
+                                    <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col card">
+                        <h2 class="section-heading pt-4 text-muted">Car Park Locations</h2>
+                        <div class="d-flex flex-wrap justify-content-evenly">
+                            <div class="col-10 map">
+                                    <iframe class="w-100" src="https://maps.google.com/maps?q=Lekki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                    style="border:0; height: 400px;" allowfullscreen></iframe>
+                            </div>
+                            <div class="ul border">
+                                <ul class="nav flex-column">
+                                    <li class="nav-header border">
+                                        <p class="pt-3" style="text-align: center;">List View</p>
+                                    </li>
+                                    <li class="nav-item border">
+                                        <a class="nav-link active" style="color: #000;" href="#">MaryLand, Lagos</a>
+                                    </li>
+                                    <li class="nav-item border">
+                                        <a class="nav-link" href="#" style="color: #000;">Lekki, Lagos</a>
+                                    </li>
+                                    <li class="nav-item border">
+                                        <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
+                                    </li>
+                                    <li class="nav-item border">
+                                        <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     
+            </div>                      
         </div>
     </div>
 
