@@ -41,7 +41,30 @@ input {
   padding: 2px 2px 2px 10px;
   color: #fff;
 }
+.placeicon {
+  font-family: fontawesome;
+}
+input[type="email"]::placeholder {
+  /* Firefox, Chrome, Opera */
+  text-align: right;
+  color: #fff;
+}
+input[type="email"]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  text-align: right;
+  color: #fff;
+}
 
+input[type="password"]::placeholder {
+  /* Firefox, Chrome, Opera */
+  text-align: right;
+  color: #fff;
+}
+input[type="password"]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  text-align: right;
+  color: #fff;
+}
 button {
   color: darkgreen;
   font-weight: bolder;
@@ -89,11 +112,6 @@ form.form div#btns button.btn.login {
 
 /* form.form div#btns button.btn.login:hover {
 } */
-
-form.form div#btns button.btn.register:hover {
-  background: rgb(4, 66, 4);
-  color: white;
-}
 
 .side2 {
   background: gray;
