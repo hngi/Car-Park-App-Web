@@ -10,47 +10,99 @@
     <link rel="stylesheet" href="style.css">
     <title>Car Park - New Users</title>
     <style>
-        body{
+        body {
             font-family: 'Roboto';
             font-style: normal;
-            
+
         }
-        .welcome-row{
+
+        .welcome-row {
             background-color: #1A73E8;
         }
-        hgroup{
+
+        hgroup {
             color: #fff;
         }
-        hgroup>h1{
+
+        hgroup>h1 {
             font-size: 2em;
             font-weight: 100;
         }
-        hgroup>h2{
+
+        hgroup>h2 {
             font-size: 1em;
             font-weight: 100;
             letter-spacing: 0.05em;
         }
-        .head-container-parent{
+
+        .head-container-parent {
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
         }
-        .head-container{
+
+        .head-container {
             width: 60%;
         }
-        .head-container a{
+
+        .head-container a {
             font-size: 1em;
             font-weight: 100;
             margin-bottom: 0;
             color: #777777;
-            transition: color 1.5s;
+            transition: color 1.5s, border-bottom 0.1s;
+
         }
-        .head-container a:hover{
+
+        .head-container a:hover {
             text-decoration: none;
             color: #000;
             border-bottom: 2px solid #1A73E8;
-            
+
         }
-        .active-tab{
+
+        .active-tab {
             border-bottom: 2px solid #1A73E8;
+        }
+
+        table {
+            overflow-x: scroll;
+        }
+
+        .table-light {
+            background-color: #ffffff;
+        }
+
+        table th a {
+            font-weight: 100;
+            color: rgba(119, 119, 119, 0.5);
+            transition: color 1.5s;
+        }
+
+        table th {
+            font-weight: 100;
+            color: rgba(119, 119, 119, 0.5);
+
+        }
+
+        table th a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        table th>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        td>div {
+            white-space: nowrap;
+        }
+
+        td>div>p {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -75,22 +127,271 @@
                 <div class="row py-3 welcome-row">
                     <!--Welcome back-->
                     <div class="col-12">
-                        <hgroup class = "text-left">
+                        <hgroup class="text-left">
                             <h1>Welcome back Admin</h1>
-                            <h2 class = "mt-4">CAR PARK APPLICATION</h2>
+                            <h2 class="mt-4">CAR PARK APPLICATION</h2>
                         </hgroup>
                     </div>
                 </div>
-                <div class="row">
-                    <!--OVERIEW + TABLE-->
+                <div class="row" style="background:#F6F6F6 ">
+                    <!--OVERIEW -->
                     <div class="col-12 px-0 head-container-parent">
                         <div class="head-container ml-5  d-flex justify-content-between">
-                            <a href = "#" class = "py-2 px-2 active-tab">Overview</a>
-                            <a href = "#" class = "py-2 px-2">Analytics</a>
-                            <a href = "#" class = "py-2 px-2">Demographics</a>
+                            <a href="#" class="py-2 px-2 active-tab">Overview</a>
+                            <a href="#" class="py-2 px-2">Analytics</a>
+                            <a href="#" class="py-2 px-2">Demographics</a>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
+                        <div class="h-100 table-responsive">
+                            <table class="table table-light ">
+                                <thead class="">
+                                    <tr>
+                                        <th>
+                                            <div>
+                                                <p style="white-space: nowrap;" class="mb-0">New Users</p>
+                                                <span class="rounded-circle text-white ml-2 py-2 px-2"
+                                                    style="background-color: #1A73E8; font-size: 0.9em;">250</span>
+                                            </div>
+
+                                        </th>
+                                        <th class="">
+                                            <div>
+                                                <img class="mr-1"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571828300/print_i86sar.svg"
+                                                    alt="">
+                                                <a href="#" class="pointer">Print</a>
+                                            </div>
+
+                                        </th>
+                                        <th>
+                                            <div>
+                                                <img class="mr-1"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571828300/download_dkacm1.svg"
+                                                    alt="">
+                                                <a href="#" class="pointer">Download</a>
+                                            </div>
+
+                                        </th>
+                                        <th>
+                                            <div>
+                                                <a href="#"><span class="mr-1">&lt;</span>Go back</a>
+                                            </div>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="nowrap">1. Wale Johnson</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830181/calendar_gexubx.svg"
+                                                    alt="">
+                                                <p>23rd October,2019</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830168/clock_giygqf.svg"
+                                                    alt="">
+                                                <p>12:00:00</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="white-space: nowrap;">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830250/phone_yhkobx.svg"
+                                                    alt="">
+                                                <p>Samsung S7</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830160/globe_n6ei9l.svg"
+                                                    alt="">
+                                                Ikeja, Lagos
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="nowrap">2. Wale Johnson</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830181/calendar_gexubx.svg"
+                                                    alt="">
+                                                <p>23rd October,2019</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830168/clock_giygqf.svg"
+                                                    alt="">
+                                                <p>12:00:00</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="white-space: nowrap;">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830250/phone_yhkobx.svg"
+                                                    alt="">
+                                                <p>Samsung S7</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830160/globe_n6ei9l.svg"
+                                                    alt="">
+                                                Ikeja, Lagos
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="nowrap">3. Wale Johnson</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830181/calendar_gexubx.svg"
+                                                    alt="">
+                                                <p>23rd October,2019</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830168/clock_giygqf.svg"
+                                                    alt="">
+                                                <p>12:00:00</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="white-space: nowrap;">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830250/phone_yhkobx.svg"
+                                                    alt="">
+                                                <p>Samsung S7</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830160/globe_n6ei9l.svg"
+                                                    alt="">
+                                                Ikeja, Lagos
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="nowrap">4. Wale Johnson</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830181/calendar_gexubx.svg"
+                                                    alt="">
+                                                <p>23rd October,2019</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830168/clock_giygqf.svg"
+                                                    alt="">
+                                                <p>12:00:00</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="white-space: nowrap;">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830250/phone_yhkobx.svg"
+                                                    alt="">
+                                                <p>Samsung S7</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830160/globe_n6ei9l.svg"
+                                                    alt="">
+                                                Ikeja, Lagos
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="nowrap">5. Wale Johnson</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830181/calendar_gexubx.svg"
+                                                    alt="">
+                                                <p>23rd October,2019</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830168/clock_giygqf.svg"
+                                                    alt="">
+                                                <p>12:00:00</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex" style="white-space: nowrap;">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830250/phone_yhkobx.svg"
+                                                    alt="">
+                                                <p>Samsung S7</p>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="mr-2"
+                                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1571830160/globe_n6ei9l.svg"
+                                                    alt="">
+                                                Ikeja, Lagos
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
 
                     </div>
                 </div>
