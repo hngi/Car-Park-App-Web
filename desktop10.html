@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Pack Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="lead mb-4">Car Pack Locations</p>
+        <div class="row">
+            <div class="col-lg-8 mb-3" id="map"></div>
+            <div class="col-lg-4 mb-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><p class="lead">List View</p></li>
+                    <li class="list-group-item">Maryland, Lagos</li>
+                    <li class="list-group-item">Lekki,Lagos</li>
+                    <li class="list-group-item">Gwarimpa,Abuja</li>
+                    <li class="list-group-item">Wuse, Abuja</li>
+                    <li class="list-group-item">Maitamma, Abuja</li>
+                    <li class="list-group-item">Ikeja, Lagos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function initMap() {
+            var uluru = { lat: 6.5764, lng: 3.3653 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 14, center: uluru });
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAIpSmR58DYsl0M3vHzP2e0AOhoZPqacg&callback=initMap">
+    </script>
+</body>
+
+</html>
