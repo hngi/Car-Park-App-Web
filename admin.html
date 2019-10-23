@@ -140,7 +140,7 @@
                 </ul>
             </div>
             <!--For main content area -->
-            <div class="col w-75 p-0">
+            <div class="col p-0" style="width: 58.60%">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="col-7 p-2 mb-0">   
                         <form class="form-inline active-cyan-4">
@@ -179,34 +179,34 @@
                 </div>
                 <div class="col main p-0 mt-4 d-flex">
                         <div class="col d-flex flex-wrap p-3 ml-4">
-                            <div class="card  mr-5" style="width: 15rem; background-color: #EAEAEA;">
+                            <a href="#" class="card  mr-5" style="width: 15rem; background-color: #EAEAEA; text-decoration: none;">
                                 <div class="card-body p-0" style="color: black; background-color: #fff; text-align: center;">
                                     <h5 class="card-title text-muted pt-2">New Users</h5>
                                     <p class="card-text pb-2 border-top pt-2" style="font-size: 40px; font-weight: 500;">20</p>
                                     <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
                                 </div>
-                            </div>
-                            <div class="card mr-5" style="width: 15rem;">
-                                <div class="card-body p-0" style="text-align:center;">
+                            </a>
+                            <a href="#" class="card mr-5" style="width: 15rem; text-decoration: none;">
+                                <div class="card-body p-0" style="text-align:center; ">
                                     <h5 class="card-title text-muted pt-2">Exisiting Users</h5>
                                     <p class="card-text pb-2 border-top pt-2" style="color: orange; font-size:40px; font-weight: 500;">8</p>
                                     <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                 </div>
-                            </div>
-                            <div class="card mr-5" style="width: 15rem;">
+                            </a>
+                            <a href="#" class="card mr-5 " style="width: 15rem; text-decoration: none;">
                                 <div class="card-body p-0" style="text-align: center;">
                                     <h5 class="card-title pt-2 text-muted">Issues</h5>
                                     <p class="card-text pb-2 border-top pt-2" style="color: red; font-size:40px; font-weight: 500;">8</p>
                                     <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
                                 </div>
-                            </div>
-                            <div class="card" style="width: 15rem; text-align: center;">
+                            </a>
+                            <a href="#" class="card" style="width: 15rem; text-align: center; text-decoration: none;">
                                 <div class="card-body p-0">
                                     <h5 class="card-title text-muted pt-2">Car Park</h5>
                                     <p class="card-text pb-2 border-top pt-2" style="color: purple; font-size:40px; font-weight: 500;">20</p>
                                     <div class="card-footer pb-5" style="background-color: #EAEAEA;"></div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         
                     </div>
@@ -234,13 +234,13 @@
                                     <li class="nav-item border">
                                         <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item border">
                                         <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item border">
                                         <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item border">
                                         <a class="nav-link" href="#" style="color: #000;">Gwarimpa, Abuja</a>
                                     </li>
                                 </ul>
@@ -268,7 +268,9 @@ $('#collapse-icon').addClass('fa-angle-double-left');
 $('[data-toggle=sidebar-colapse]').click(function() {
     SidebarCollapse();
 });
-
+$(window).ready(function(){
+    $('.sidebar-collapsed').addClass('d-block');
+})
 function SidebarCollapse () {
     $('.menu-collapsed').toggleClass('d-none');
     $('.sidebar-submenu').toggleClass('d-none');
