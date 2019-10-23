@@ -106,7 +106,7 @@
         }
 
         /* MAP */
-        .map-row {
+        /*.map-row {
             display: flex;
             flex-direction: row;
 
@@ -190,6 +190,14 @@
             border-radius: 101px;
             top: 3rem;
             left: 18rem;
+        }*/
+        .city-list-container {
+            border: 1px solid rgba(119, 119, 119, 0.2);
+        }
+
+        .city-list li {
+            list-style-type: none;
+
         }
     </style>
 </head>
@@ -206,7 +214,7 @@
                 </aside>
             </div>
 
-            <div class="col-12 col-lg-10">
+            <div class="col-12 col-lg-10" style="background:#F6F6F6 ">
                 <div class="row">
                     <!--Search bar row-->
                     search
@@ -482,36 +490,64 @@
 
                     </div>
                 </div>
-                <div class="map-row">
-                    <!--@Ore_cathy's part-->
 
-                    <!--Map header goes in here-->
-                    <div class="body-map">
-                        <h3 class="map-header">Car Park Locations</h3>
-                    </div>
-                    <!-- MAP SECTION -->
-                    <section class="map">
-                        <div class="map1">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.
-                        173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C
-                        +FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus" width="100%" height="100%" frameborder="0"
-                                style="border:0" id="Row2" allowfullscreen></iframe>
+                <!--@Ore_cathy's part-->
+                <div class="row mx-1" style="background:#FFF ">
+                    <div class="col-12">
+                        <div class="">
+                            <h3 class="">Car Park Locations</h3>
                         </div>
-                        <!--list view goes in here-->
-                        <div class="list2">
-                            <ul>
-                                <h4 class="list-header">List View</h4>
-                                <li>Maryland, Lagos</li>
-                                <li>Lekki, Lagos</li>
-                                <li>Gwarimpa, Abuja</li>
-                                <li>Wuse, Abuja</li>
-                                <li>Maitama, Abuja</li>
-                                <li>Wuse, Abuja</li>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="h-100">
+                            <iframe class = "h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.
+                                    173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C
+                                    +FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus" width="100%"
+                                frameborder="0" style="border:0" id="Row2" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-3 mt-md-0">
+                        <div class="city-list-container">
+                            <table class = "table">
+                                <thead>
+                                    <tr>
+                                        <th class = "text-dark" style = "font-size: 1.5em">List View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Maryland, Lagos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lekki, Lagos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gwarimpa, Abuja</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wuse, Abuja</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maitama, Abuja</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wuse, Abuja</li>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3></h3>
+                            <ul class="city-list pl-0">
+
                             </ul>
                         </div>
-                    </section>
-
+                    </div>
                 </div>
+
+
+
+
+
+
                 <!--End of map section-->
             </div>
         </div>
@@ -523,3 +559,42 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!--Map header goes in here-->
+<!--<div class="body-map">
+               </             <h3 class="map-header">Car Park Locations</h3>
+                        </div>
+                        <!-- MAP SECTION --
+                        <section class="map">
+                            <div class="map1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222956.1460761856!2d-82.29689329564486!3d29.
+                                173812511425073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e62b541cba3ce5%3A0xf5f53be4b1380536!2sOcala%2C
+                                +FL!5e0!3m2!1sen!2sus!4v1563387105323!5m2!1sen!2sus" width="100%" height="100%"
+                                    frameborder="0" style="border:0" id="Row2" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="list2">
+                                <ul>
+                                    <h4 class="list-header">List View</h4>
+                                    <li>Maryland, Lagos</li>
+                                    <li>Lekki, Lagos</li>
+                                    <li>Gwarimpa, Abuja</li>
+                                    <li>Wuse, Abuja</li>
+                                    <li>Maitama, Abuja</li>
+                                    <li>Wuse, Abuja</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
