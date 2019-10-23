@@ -9,31 +9,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Car Park - New Users</title>
+    <style>
+        body{
+            font-family: 'Roboto';
+            font-style: normal;
+            
+        }
+        .welcome-row{
+            background-color: #1A73E8;
+        }
+        hgroup{
+            color: #fff;
+        }
+        hgroup>h1{
+            font-size: 2em;
+            font-weight: 100;
+        }
+        hgroup>h2{
+            font-size: 1em;
+            font-weight: 100;
+            letter-spacing: 0.05em;
+        }
+        .head-container-parent{
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        .head-container{
+            width: 60%;
+        }
+        .head-container a{
+            font-size: 1em;
+            font-weight: 100;
+            margin-bottom: 0;
+            color: #777777;
+            transition: color 1.5s;
+        }
+        .head-container a:hover{
+            text-decoration: none;
+            color: #000;
+            border-bottom: 2px solid #1A73E8;
+            
+        }
+        .active-tab{
+            border-bottom: 2px solid #1A73E8;
+        }
+    </style>
 </head>
+
+
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-8 col-lg-4 p-absolute p-lg-static">
+            <div class="d-none d-lg-block col-8 col-lg-2 p-absolute p-lg-static">
                 <aside>
                     side bar
                     <!--side bar container-->
                 </aside>
             </div>
 
-            <div class="col-12 col-md-10 col-lg-8">
+            <div class="col-12 col-lg-10">
                 <div class="row">
                     <!--Search bar row-->
+                    search
                 </div>
-                <div class="row">
-                    	<!--Welcome back-->
+                <div class="row py-3 welcome-row">
+                    <!--Welcome back-->
+                    <div class="col-12">
+                        <hgroup class = "text-left">
+                            <h1>Welcome back Admin</h1>
+                            <h2 class = "mt-4">CAR PARK APPLICATION</h2>
+                        </hgroup>
+                    </div>
                 </div>
                 <div class="row">
                     <!--OVERIEW + TABLE-->
-                    <div class="col">
-
+                    <div class="col-12 px-0 head-container-parent">
+                        <div class="head-container ml-5  d-flex justify-content-between">
+                            <a href = "#" class = "py-2 px-2 active-tab">Overview</a>
+                            <a href = "#" class = "py-2 px-2">Analytics</a>
+                            <a href = "#" class = "py-2 px-2">Demographics</a>
+                        </div>
                     </div>
-                    <div class="col">
+                    <div class="col-12">
 
                     </div>
                 </div>
