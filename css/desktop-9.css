@@ -46,13 +46,7 @@ section #overview td img, .fa-calendar{
     height: 15px;
 }
 
-section #overview .colspan{
-    text-align: center;
-    margin: 0 auto; 
-}
-
-section #overview td input {
-    border: 0px #fff;
+section #overview td{
     color: #777777;
 }
 
@@ -67,6 +61,7 @@ header{
 }
 #carParks{
     background: #fff;
+    max-width: 95%;
 }
 #carParks h1{
     text-transform: capitalize;
@@ -120,3 +115,11 @@ header{
 #demo{
     height: 0.5em;
 }
+/* @media screen and (max-width: 49em){
+    .aside{
+        margin-left: -20%;
+    }
+    .main{
+        margin-left: 0;
+    }
+} */
