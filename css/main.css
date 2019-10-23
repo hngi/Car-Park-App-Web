@@ -11,6 +11,7 @@ html{
 }
 .header{
     width: 100%;
+    height: 100%;
     background: #FFFFFF;
     height: 45px;
     border-bottom: 2px solid #ccc;
@@ -70,6 +71,12 @@ html{
 }
 
 @media (max-width: 380px){
+    body{
+        position: absolute;
+    }
+    .nav-items{
+        width: 100%;
+    }
     .container{
         margin-top: 3rem ;
         border: 0px !important;
@@ -83,8 +90,6 @@ html{
         text-align: center !important;
     }
     .btn-group{
-        text-align: center !important;
-        display: block !important;
         padding-bottom: 2rem !important;
     }
     form-group{
