@@ -96,6 +96,32 @@ html{
         margin-bottom: 0rem;
     }
 }
+@media (max-width: 414px){
+    body{
+        position: absolute;
+    }
+    .nav-items{
+        width: 100%;
+    }
+    .container{
+        margin-top: 3rem ;
+        border: 0px !important;
+        border-radius: 0px !important;
+    }
+    .search{
+        margin-top: 0;
+        width: 100% !important;
+    }
+    .searchText{
+        text-align: center !important;
+    }
+    .btn-group{
+        padding-bottom: 2rem !important;
+    }
+    form-group{
+        margin-bottom: 0rem;
+    }
+}
 @media(max-width:768px){
     .search{
         width: 100vw !important;
