@@ -113,6 +113,13 @@ section #overviewTabs td img, .fa-calendar{
 section #overviewTabs td{
     color: #777777;
 }
+.makeFlex{
+    display: flex;
+    flex-flow: row wrap;
+}
+.city{
+    margin: -1.4em 0 -1em 1em;
+}
 /* 
 .aside{
     width: 20%;
@@ -179,11 +186,8 @@ section #overviewTabs td{
 #demo{
     height: 0.5em;
 }
-/* @media screen and (max-width: 49em){
-    .aside{
-        margin-left: -20%;
+@media screen and (max-width: 49em){
+    .city{
+        margin: 0;
     }
-    .main{
-        margin-left: 0;
-    }
-} */
+}
