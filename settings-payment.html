@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    
     <style>
         #body-row {
             margin-left:0;
@@ -68,6 +68,150 @@
         text-align: right;
         padding-left: 10px;
         }
+
+        /* css styling for the table  */
+
+        *{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+.container{
+    margin-top: 3rem;
+    border: 2px solid #ccc !important;
+    border-radius: 5px;
+}
+.header{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    height: 45px;
+    border-bottom: 2px solid #ccc;
+}
+.nav-items{
+    width: 50%;
+    list-style: none;
+    display: flex;
+    padding: 0 5rem;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.nav-item{
+    padding: 0.5rem 0rem;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #777777;
+}
+.nav-item a:hover{
+    color: #1A73E8; 
+}
+.active{
+    border-bottom: 2px solid #1A73E8;
+}
+.payment-header{
+    margin: 1rem 0 !important;
+}
+.desc{
+    font-size: 0.8rem !important;
+    color: #66788A !important;
+    padding-left: 1.5rem;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.form-control{
+    width: 70% !important;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.searchbtn{
+    height: 40px !important;
+}
+.search{
+    margin: 0.8rem 0 1rem 30rem!important;
+    float: right !important; 
+}
+
+@media (max-width: 380px){
+    body{
+        position: absolute;
+    }
+    .w-100{
+        width: 20% !important;
+    }
+    .nav-items{
+        width: 70%;
+    }
+    .container{
+        margin-top: 3rem ;
+        border: 0px !important;
+        border-radius: 0px !important;
+    }
+    .search{
+        margin-top: 0;
+        width: 100% !important;
+    }
+    .searchText{
+        text-align: center !important;
+    }
+    .btn-group{
+        padding-bottom: 2rem !important;
+    }
+    form-group{
+        margin-bottom: 0rem;
+    }
+}
+@media (max-width: 414px){
+    body{
+        position: absolute;
+    }
+    .nav-items{
+        width: 100%;
+    }
+    .container{
+        margin-top: 3rem ;
+        border: 0px !important;
+        border-radius: 0px !important;
+    }
+    .search{
+        margin-top: 0;
+        width: 100% !important;
+    }
+    .searchText{
+        text-align: center !important;
+    }
+    .btn-group{
+        padding-bottom: 2rem !important;
+    }
+    form-group{
+        margin-bottom: 0rem;
+    }
+}
+@media(max-width:768px){
+    .search{
+        width: 50%;
+        text-align: center;
+        margin-top: 1.2rem !important;
+        padding: 0px !important;
+        margin-left:200px ;
+    }
+    .btn-group{
+        padding: 1rem 0;
+    }
+}
+
+
         #pencil{
          margin-left:30px;
         color:gray;
