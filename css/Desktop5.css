@@ -94,13 +94,26 @@ body {
     padding-bottom: 14px;
 }
 
+a:hover {
+    text-decoration: none;
+}
 
 .options {
     font-size: 20px;
     line-height: 23px;
     color: #777777;
     margin-left: 75px;
-    margin-bottom: 0;
+    margin-bottom: -14px;
+    padding-bottom: 14px;
+}
+
+.options:hover {
+    border-bottom: 4px solid #1A73E8;
+}
+
+.options1 {
+    border-bottom: 4px solid #1A73E8;
+    padding-bottom: 10px;
 }
 
 .desktop5-charts {
@@ -121,7 +134,10 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 100%;
     width: 100%;
-    margin-left: 8px;
+}
+
+.top-padding {
+    padding-left: 8px;
 }
 
 .container-fluid {
@@ -180,8 +196,8 @@ body {
 }
 
 .first-icons {
-    padding-left: 82px;
-    padding-right: 82px;
+    padding-left: 62px;
+    padding-right: 62px;
     display: flex;
     justify-content: space-between;
     margin-top: 41px;
@@ -196,7 +212,7 @@ body {
 }
 
 .fa-instagram {
-    color: rgb(146, 54, 105)
+    color: #C21975;
 }
 
 .fa-facebook-square {
@@ -207,14 +223,19 @@ body {
     color: red;
 }
 
+.fa-reddit {
+    color: orangered;
+}
+
 .coll {
-    background-color: #F6F6F6;
+    /* background-color: #F6F6F6; */
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .card {
     background: #FEFEFE;
   }
-
 
   .card .card-header {
     border-bottom: solid 1px #ccc;
@@ -252,6 +273,11 @@ body {
         padding-top: 20px;
         padding-right: 30px;
         margin-right: 20px;
+    }
+
+    .options {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .first-icons {
