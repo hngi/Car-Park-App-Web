@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:600&display=swap');
+
+:root {
+	font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+    background-color: #fafafa;
+    font-family: 'Nunito', sans-serif;
+}
+.space-btn {
+    padding: 8px 25px;
+    color:  #FFC408;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid  #FFC408;
+    font-size: 13px;
+}
+.download-btn {
+    padding: 8px 25px; 
+    border-radius: 50px;
+    border: 1px solid  #1A73E8;
+    background-color: #1A73E8;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+.wrapper {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 1.5;
+	padding: 3.5rem 0;
+	color: #1A73E8;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	flex: 1 0 24rem;
+	margin: -2rem 1rem;
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+    border-radius: 10px;
+	object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.15);
+    border-radius: 20px;    
+}
+
+.available {
+    display: inline-block;
+    position: relative;
+    top: -29rem;
+    left: 20px;
+    color: #219653;
+    text-decoration: none;
+    padding: 4px 25px;
+    background: #EEFBF3;
+    border: 1px solid #219653;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.not-available {
+    display: inline-block;
+    position: relative;
+    top: -29rem;
+    left: 20px;
+    color: #EB5757;
+    text-decoration: none;
+    padding: 4px 25px;
+    background: #EEFBF3;
+    border: 1px solid #EB5757;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.available:hover {
+    text-decoration: none;
+    color: #219653;
+}
+.not-available:hover {
+    text-decoration: none;
+    color: #EB5757;
+}
+.title {
+    display: flex;
+    position: relative;
+    top: -11rem;
+    left: 20px;
+    width: 200px;
+    color: #fff;
+}
+@media only screen and (max-width: 768px) {
+
+  .available, .not-available {
+    margin-top: 1em;
+  }
+  .title {
+      margin-bottom: .1em;
+  }
+  .space-btn {
+    padding: 2px 20px;
+    font-size: 13px;
+    margin-top: 1.5rem;
+    }
+    .download-btn {
+        padding: 3px 20px; 
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 375px) {
+
+  .available, .not-available {
+    display: inline-block;
+    position: relative;
+    top: -26rem;
+    left: 20px;
+  }
+  .title {
+      display: flex;
+    position: relative;
+    top: -10rem;
+    left: 20px;
+  }
+}
