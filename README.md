@@ -10,7 +10,7 @@ Each sub team lead should fork this repo and add his team mates as contributors.
 ```
 - Make the repository (the forked repo) the remote upstream 
 ```use git command line
-    git remote add upstream https://github.com/hngi/Car-Park-App-Web.git
+    git add remote upstream https://github.com/hngi/Car-Park-App-Web.git
 ```
 - Each team member can create a branch, the branch name should at least be meaningfull e.g if you're working on the footer, your branch name would be;
 ```use git command line
