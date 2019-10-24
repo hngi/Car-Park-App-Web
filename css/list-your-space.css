@@ -55,7 +55,7 @@ body {
 
 .gallery-item {
 	flex: 1 0 24rem;
-	margin: -2rem 1rem;
+	margin: -3rem 1rem;
 	overflow: hidden;
 }
 
@@ -94,7 +94,7 @@ body {
     color: #EB5757;
     text-decoration: none;
     padding: 4px 25px;
-    background: #EEFBF3;
+    background: #FDEFEF;
     border: 1px solid #EB5757;
     box-sizing: border-box;
     border-radius: 50px;
@@ -125,13 +125,16 @@ body {
       margin-bottom: .1em;
   }
   .space-btn {
-    padding: 2px 20px;
+    padding: 4px 20px;
     font-size: 13px;
     margin-top: 1.5rem;
     }
     .download-btn {
-        padding: 3px 20px; 
+        padding: 4px 20px; 
         font-size: 13px;
+    }
+    .heading {
+	font-size: 2rem;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -139,7 +142,7 @@ body {
   .available, .not-available {
     display: inline-block;
     position: relative;
-    top: -26rem;
+    top: -27rem;
     left: 20px;
   }
   .title {
