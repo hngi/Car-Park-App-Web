@@ -147,19 +147,6 @@ html{
     margin: 1rem;
     clear: right; 
 }
-.table{
-    padding: 0.8rem 1.2rem;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     width: 100%;
-     border-bottom: 2px solid #E4E7EB;
-     overflow-x: auto;
-}
-.table li, .table-header li{
-    list-style: none;
-}
 #pencil{
          margin-left:30px;
         color:gray;
@@ -169,12 +156,25 @@ html{
     margin: 1rem;
     float: none !important;
    }
+   .desc{
+       display: block !important;
+       padding: 1rem 0;
+   }
+   .form-group{
+       margin-left: 2rem !important;
+   }
+   .searchText{
+       padding: 2rem;
+   }
+   .btn-group{
+       display: block !important;
+   }
    .column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-}
+    }
 }
     </style>
 </head>
@@ -308,93 +308,49 @@ html{
                                   <button type="button" class="btn btn-default border" style="background:#FFFFFF;">Adding Filters</button>
                                 </div>
                         </div>
-                        <div class="table-container"> 
-                            <ul class="table">
-                                <li><strong>Date</strong></li>
-                                <li><strong>Reference Number</strong></li>
-                                <li><strong>Description</strong></li>
-                                <li><strong>Amount</strong></li>
-                                <li><strong>Payment Method</strong></li>
-                            </ul>
-                            <ul class="table">
-                                <li>2/2/2/2020</li>
-                                <li>ID2712JJJG</li>
-                                <li>Park Fee</li>
-                                <li>N20.00</li>
-                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li> 
-                            </ul>
-                            <ul class="table">
-                                <li>2/2/2/2020</li>
-                                <li>ID2712JJJG</li>
-                                <li>Park Fee</li>
-                                <li>N20.00</li>
-                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li>  
-                            </ul>
-                            <ul class="table">
-                                <li>2/2/2/2020</li>
-                                <li>ID2712JJJG</li>
-                                <li>Park Fee</li>
-                                <li>N20.00</li>
-                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li>  
-                            </ul>
-                            <ul class="table">
-                                <li>2/2/2/2020</li>
-                                <li>ID2712JJJG</li>
-                                <li>Park Fee</li>
-                                <li>N20.00</li>
-                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li> 
-                            </ul>
-                        </div>
-                        
-
-            <!-- <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Refference Number</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Payment Method</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">2/2/2020</th>
-                        <td>ID2712JJJG</td>
-                        <td>Park Fee</td>
-                        <td>N20.00</td>
-                        <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
-                      </tr>
-                      <tr>
-                            <th scope="row">2/2/2020</th>
-                            <td>ID2712JJJG</td>
-                            <td>Park Fee</td>
-                            <td>N20.00</td>
-                            <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2/2/2020</th>
-                        <td>ID2712JJJG</td>
-                        <td>Park Fee</td>
-                        <td>N20.00</td>
-                        <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2/2/2020</th>
-                        <td>ID2712JJJG</td>
-                        <td>Park Fee</td>
-                        <td>N20.00</td>
-                        <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2/2/2020</th>
-                        <td>ID2712JJJG</td>
-                        <td>Park Fee</td>
-                        <td>N20.00</td>
-                        <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
-                      </tr>
-                    </tbody>
-                  </table> -->
+                        <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Date</th>
+                                  <th scope="col">Reference Number</th>
+                                  <th scope="col">Description</th>
+                                  <th scope="col">Amount</th>
+                                  <th scope="col">Payment Method</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>2/2/2020</td>
+                                  <td>ID2712JJJG</td>
+                                  <td>Park Fee</td>
+                                  <td>N20.00</td>
+                                  <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2/2/2020</td>
+                                    <td>ID2712JJJG</td>
+                                    <td>Park Fee</td>
+                                    <td>N20.00</td>
+                                    <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2/2/2020</td>
+                                    <td>ID2712JJJG</td>
+                                    <td>Park Fee</td>
+                                    <td>N20.00</td>
+                                    <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2/2/2020</td>
+                                    <td>ID2712JJJG</td>
+                                    <td>Park Fee</td>
+                                    <td>N20.00</td>
+                                    <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                 </div>
             </div>                      
         </div>
