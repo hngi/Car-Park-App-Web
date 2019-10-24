@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <title>Car Park Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -70,15 +71,16 @@
         }
 
         /* css styling for the table  */
-
-        *{
-    box-sizing: border-box;
+body{
+    overflow-x: hidden !important;
 }
 html{
     height: 100%;
 }
 .container{
-    margin-top: 3rem;
+    margin-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
     border: 2px solid #ccc !important;
     border-radius: 5px;
 }
@@ -91,11 +93,13 @@ html{
 }
 .nav-items{
     width: 50%;
+    min-width: auto;
+    min-width: 345px;
     list-style: none;
     display: flex;
-    padding: 0 5rem;
+    padding: 0 3rem;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nav-item{
     padding: 0.5rem 0rem;
@@ -112,6 +116,7 @@ html{
 }
 .payment-header{
     margin: 1rem 0 !important;
+    padding: 0rem 2rem;
 }
 .desc{
     font-size: 0.8rem !important;
@@ -139,82 +144,37 @@ html{
     height: 40px !important;
 }
 .search{
-    margin: 0.8rem 0 1rem 30rem!important;
-    float: right !important; 
+    margin: 1rem;
+    clear: right; 
 }
-
-@media (max-width: 380px){
-    body{
-        position: absolute;
-    }
-    .w-100{
-        width: 20% !important;
-    }
-    .nav-items{
-        width: 70%;
-    }
-    .container{
-        margin-top: 3rem ;
-        border: 0px !important;
-        border-radius: 0px !important;
-    }
-    .search{
-        margin-top: 0;
-        width: 100% !important;
-    }
-    .searchText{
-        text-align: center !important;
-    }
-    .btn-group{
-        padding-bottom: 2rem !important;
-    }
-    form-group{
-        margin-bottom: 0rem;
-    }
+.table{
+    padding: 0.8rem 1.2rem;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     width: 100%;
+     border-bottom: 2px solid #E4E7EB;
+     overflow-x: auto;
 }
-@media (max-width: 414px){
-    body{
-        position: absolute;
-    }
-    .nav-items{
-        width: 100%;
-    }
-    .container{
-        margin-top: 3rem ;
-        border: 0px !important;
-        border-radius: 0px !important;
-    }
-    .search{
-        margin-top: 0;
-        width: 100% !important;
-    }
-    .searchText{
-        text-align: center !important;
-    }
-    .btn-group{
-        padding-bottom: 2rem !important;
-    }
-    form-group{
-        margin-bottom: 0rem;
-    }
+.table li, .table-header li{
+    list-style: none;
 }
-@media(max-width:768px){
-    .search{
-        width: 50%;
-        text-align: center;
-        margin-top: 1.2rem !important;
-        padding: 0px !important;
-        margin-left:200px ;
-    }
-    .btn-group{
-        padding: 1rem 0;
-    }
-}
-
-
-        #pencil{
+#pencil{
          margin-left:30px;
         color:gray;
+}
+@media only screen and (max-width: 375px) {
+    .search{
+    margin: 1rem;
+    float: none !important;
+   }
+   .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
 }
     </style>
 </head>
@@ -306,7 +266,7 @@ html{
                 </nav>
                 <div class="col main p-3 text-white" style="background:#1A73E8;">
                     <div class="col">
-                        <h1 style="font-size: 35px">Welcome back Admin</h1>
+                        <h1 style="font-size: 2.2rem">Welcome back Admin</h1>
                         <h6 class="pt-2">CAR PARK APPLICATION </h6>
                     </div>
                 </div>
@@ -329,7 +289,7 @@ html{
                   </ul>
                 </div> 
                 
-                  <div class="container">
+                <div class="container">
                       <div class="payment-header">
                           <h4 class="d-inline text-dark">Payment History</h4>
                           <p class="d-inline desc">Every payment details are made available here</p>
@@ -341,15 +301,53 @@ html{
                             <button type="button" class="btn btn-light d-inline-block">Search</button>
                         </div>
                         <br>
-                        <div class="search">
-                          <p class="d-inline searchText">Search for people by</p>
-                          <div class="btn-group d-inline" role="group" aria-label="#">
-                            <button type="button" class="btn btn-primary">Email Address</button>
-                            <button type="button" class="btn btn-default border">Adding Filters</button>
-                          </div>
+                        <div class="search float-sm-right">
+                                <p class="d-inline searchText">Search for people by</p>
+                                <div class="btn-group d-inline" role="group" aria-label="#">
+                                  <button type="button" class="btn btn-primary">Email Address</button>
+                                  <button type="button" class="btn btn-default border" style="background:#FFFFFF;">Adding Filters</button>
+                                </div>
                         </div>
+                        <div class="table-container"> 
+                            <ul class="table">
+                                <li><strong>Date</strong></li>
+                                <li><strong>Reference Number</strong></li>
+                                <li><strong>Description</strong></li>
+                                <li><strong>Amount</strong></li>
+                                <li><strong>Payment Method</strong></li>
+                            </ul>
+                            <ul class="table">
+                                <li>2/2/2/2020</li>
+                                <li>ID2712JJJG</li>
+                                <li>Park Fee</li>
+                                <li>N20.00</li>
+                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li> 
+                            </ul>
+                            <ul class="table">
+                                <li>2/2/2/2020</li>
+                                <li>ID2712JJJG</li>
+                                <li>Park Fee</li>
+                                <li>N20.00</li>
+                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li>  
+                            </ul>
+                            <ul class="table">
+                                <li>2/2/2/2020</li>
+                                <li>ID2712JJJG</li>
+                                <li>Park Fee</li>
+                                <li>N20.00</li>
+                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li>  
+                            </ul>
+                            <ul class="table">
+                                <li>2/2/2/2020</li>
+                                <li>ID2712JJJG</li>
+                                <li>Park Fee</li>
+                                <li>N20.00</li>
+                                <li>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span></li> 
+                            </ul>
+                        </div>
+                        
 
-            <table class="table">
+            <!-- <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">Date</th>
@@ -396,10 +394,11 @@ html{
                         <td>Visa <span id="pencil"> : <i id="pencil" class="fas fa-pencil-alt"></i></span> </td>
                       </tr>
                     </tbody>
-                  </table>
+                  </table> -->
                 </div>
             </div>                      
         </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
