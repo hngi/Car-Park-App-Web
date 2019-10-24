@@ -72,19 +72,6 @@
         text-align: right;
         padding-left: 10px;
         }
-        .map-container-7{
-        overflow:hidden;
-        padding-bottom:30%;
-        position:relative;
-        height:0;
-        }
-        .map-container-7 iframe{
-        left:0;
-        top:0;
-        height:100%;
-        width:70%;
-        position:absolute;
-        }
     </style>
 </head>
 <body>
@@ -100,7 +87,6 @@
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                    
                         <a href="#" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
@@ -137,11 +123,21 @@
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
+                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                                <span class="mr-auto">
+                                        <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571904849/Group_47_gq0grj.svg" alt="Settings" width="25" height="25">
+                                        <span class="menu-collapsed">Cancelation Policy</span>
+                                        <span class="submenu-icon ml-auto"></span>
+                                </span>  
+                            </a>
                 </ul>
             </div>
             <!--For main content area -->
-            <div class="col p-0" style="width: 58.60%">
+            <div class="col p-0 w-25">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="d-flex">
+                        <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted" style="font-size: 22px; cursor: pointer;"></span>
+                    </div>
                     <div class="col-7 p-2 mb-0">   
                         <form class="form-inline active-cyan-4">
                             <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
@@ -262,15 +258,13 @@
 $('#body-row .collapse').collapse('hide'); 
 
 // Collapse/Expand icon
-$('#collapse-icon').addClass('fa-angle-double-left'); 
+$('#collapse-icon').addClass('fa-angle-double-left');
+$('#collapse-menu').addClass('fa-angle-double-right'); 
 
 // Collapse click
 $('[data-toggle=sidebar-colapse]').click(function() {
     SidebarCollapse();
 });
-$(window).ready(function(){
-    $('.sidebar-collapsed').addClass('d-block');
-})
 function SidebarCollapse () {
     $('.menu-collapsed').toggleClass('d-none');
     $('.sidebar-submenu').toggleClass('d-none');
@@ -278,9 +272,33 @@ function SidebarCollapse () {
     $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
     
     // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+    $('#collapse-icon').toggleClass('fa-angle-double-right fa-angle-double-left');
 }
 });
+// Collapse click
+$('[data-toggle=sidebar-container]').click(function() {
+    SidemenuCollapse();
+});
+//Collapse Side Menu
+function SidemenuCollapse () {
+    $('#sidebar-container').toggleClass('d-none');
+    // Collapse/Expand icon
+    $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
+}
+
+//Hide Menu on Load
+$(document).ready(function(){
+    $('#sidebar-container').toggleClass('d-none');
+})
+$(document).ready(function(){
+    $('.menu-collapsed').toggleClass('d-none');
+    $('.sidebar-submenu').toggleClass('d-none');
+    $('.submenu-icon').toggleClass('d-none');
+    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+    
+    // Collapse/Expand icon
+    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+})
     </script>
 </body>
 </html>
