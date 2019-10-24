@@ -1,10 +1,9 @@
 #body-row {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left:0;
+    margin-right:0;
 }
-
 #sidebar-container {
-    min-height: 100vh;
+    min-height: 100vh;   
     background-color: #0049B5;
     padding: 0;
 }
@@ -13,7 +12,6 @@
 .sidebar-expanded {
     width: 230px;
 }
-
 .sidebar-collapsed {
     width: 60px;
 }
@@ -29,7 +27,6 @@
     height: 45px;
     padding-left: 30px;
 }
-
 .sidebar-submenu {
     font-size: 0.9rem;
 }
@@ -39,33 +36,30 @@
     background-color: #0049B5;
     height: 35px;
 }
-
 .sidebar-separator {
     background-color: #0049B5;
     height: 25px;
 }
-
 .logo-separator {
-    background-color: #0049B5;
+    background-color: #0049B5;    
     height: 60px;
 }
 
 /* Closed submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
-    content: " \f0d7";
-    font-family: FontAwesome;
-    display: inline;
-    text-align: right;
-    padding-left: 10px;
+content: " \f0d7";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 10px;
 }
-
 /* Opened submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
-    content: " \f0da";
-    font-family: FontAwesome;
-    display: inline;
-    text-align: right;
-    padding-left: 10px;
+content: " \f0da";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 10px;
 }
 
 * {
@@ -94,13 +88,26 @@ body {
     padding-bottom: 14px;
 }
 
+a:hover {
+    text-decoration: none;
+}
 
 .options {
     font-size: 20px;
     line-height: 23px;
     color: #777777;
     margin-left: 75px;
-    margin-bottom: 0;
+    margin-bottom: -14px;
+    padding-bottom: 14px;
+}
+
+.options:hover {
+    border-bottom: 4px solid #1A73E8;
+}
+
+.options1 {
+    border-bottom: 4px solid #1A73E8;
+    padding-bottom: 10px;
 }
 
 .desktop5-charts {
@@ -121,7 +128,10 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 100%;
     width: 100%;
-    margin-left: 8px;
+}
+
+.top-padding {
+    padding-left: 8px;
 }
 
 .container-fluid {
@@ -180,8 +190,8 @@ body {
 }
 
 .first-icons {
-    padding-left: 82px;
-    padding-right: 82px;
+    padding-left: 62px;
+    padding-right: 62px;
     display: flex;
     justify-content: space-between;
     margin-top: 41px;
@@ -196,7 +206,7 @@ body {
 }
 
 .fa-instagram {
-    color: rgb(146, 54, 105)
+    color: #C21975;
 }
 
 .fa-facebook-square {
@@ -207,14 +217,19 @@ body {
     color: red;
 }
 
+.fa-reddit {
+    color: orangered;
+}
+
 .coll {
-    background-color: #F6F6F6;
+    /* background-color: #F6F6F6; */
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .card {
     background: #FEFEFE;
   }
-
 
   .card .card-header {
     border-bottom: solid 1px #ccc;
@@ -235,6 +250,10 @@ body {
         margin-left: 0;
     }
 
+    .top-padding {
+        padding-left: 0;
+    }
+
 
     .first-icons {
         margin-left: 69px;
@@ -252,6 +271,13 @@ body {
         padding-top: 20px;
         padding-right: 30px;
         margin-right: 20px;
+    }
+
+    
+
+    .options {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .first-icons {
@@ -293,7 +319,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 848px) {
+@media only screen and (max-width: 664px) {
     .chart-section {
         justify-content: space-around;
     }
