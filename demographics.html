@@ -158,34 +158,34 @@
                                 <p class="options">CarPark</p>
                             </a>
                         </div>
-    
+
                         <div class="container-fluid">
                             <div class="row justify-content-center">
-                                <div class="desktop5-charts col-xl-8 col-lg-8 col-md-9 col-sm-10 col-10" id="charts">
+                                <div class="desktop5-charts col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12" id="charts">
                                     <div class="desktop5-padding">
                                         <div class="desktop5-date">
                                             <p id="date-section">October, 2019</p>
                                             <i class="fa fa-angle-down"></i>
                                         </div>
-    
+
                                         <div class="chart-section">
                                             <div class="chart">
-                                                <div id="piechart1"></div>
+                                                <canvas id="myChart" height="350"></canvas>
                                             </div>
                                             <div class="chart marg">
-                                                <div id="piechart2"></div>
+                                                <canvas id="myChart2" height="400"></canvas>
                                             </div>
                                             <div class="chart marg">
-                                                <div id="piechart3"></div>
+                                                <canvas id="myChart3" height="350"></canvas>
                                             </div>
                                             <div class="chart">
-                                                <div id="piechart4"></div>
+                                                <canvas id="myChart4" height="350"></canvas>
                                             </div>
                                         </div>
                                     </div>
-    
+
                                 </div>
-                                <div class="desktop5-charts col-xl-4 col-lg-4 col-md-9 col-sm-10 col-10 top-padding"
+                                <div class="desktop5-charts col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 top-padding"
                                     id="social-icons">
                                     <div class="ad-section">
                                         <div class="desktop5-date">
@@ -205,12 +205,12 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="container coll">
+
+                        <div class="container-fluid coll">
                             <div class="card mt-5">
                                 <div class="card-header">
                                     <h5> Car Park Locations</h5>
@@ -225,11 +225,14 @@
                                                 style="background:#F6F6F6; ">
                                                 List
                                             </a>
-                                            <a href="#" class="list-group-item list-group-item-action">Maryland, Lagos</a>
+                                            <a href="#" class="list-group-item list-group-item-action">Maryland,
+                                                Lagos</a>
                                             <a href="#" class="list-group-item list-group-item-action">Lekki, Lagos</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Gwarimpa, Abuja</a>
+                                            <a href="#" class="list-group-item list-group-item-action">Gwarimpa,
+                                                Abuja</a>
                                             <a href="#" class="list-group-item list-group-item-action">Wuse, Abuja</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Maitama, Abuja</a>
+                                            <a href="#" class="list-group-item list-group-item-action">Maitama,
+                                                Abuja</a>
                                             <a href="#" class="list-group-item list-group-item-action">wuse 2, Abuja</a>
                                             <a href="#" class="list-group-item list-group-item-action">Oshodi, Lagos</a>
                                             <a href="#" class="list-group-item list-group-item-action">Apapa, Lagos</a>
@@ -237,13 +240,13 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                             </div>
-        
-        
-        
+
+
+
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -310,10 +313,10 @@
                 var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
             }
         </script>
-    
+
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7NOJ5VbOZ2uzheASfYPZVPMniO0QAcys&callback=myMap"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
         <script src="js/desktop5.js"></script>
 </body>
 
