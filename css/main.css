@@ -74,8 +74,11 @@ html{
     body{
         position: absolute;
     }
+    .w-100{
+        width: 20% !important;
+    }
     .nav-items{
-        width: 100%;
+        width: 70%;
     }
     .container{
         margin-top: 3rem ;
@@ -124,10 +127,9 @@ html{
 }
 @media(max-width:768px){
     .search{
-        width: 100vw !important;
+        width: 50%;
         text-align: center;
         margin-top: 1.2rem !important;
-        width: 80% !important;
         padding: 0px !important;
         margin-left:200px ;
     }
