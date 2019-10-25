@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+.mt-5 {
+  margin-top: 8em !important;
+}
+.mt-4 {
+  margin-top: 5em !important;
+}
+/* NAVBAR */
+.navbar {
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+.nav-btn {
+  width: 163px;
+  height: 44px;
+  border-radius: 50px;
+}
+.nav-btn1 {
+  border-color: #f8d373;
+  color: #f8d373;
+}
+.nav-btn2 {
+  background: #4a85e4;
+  border: none;
+  color: #e6effb;
+}
+.navbar-brand img {
+  width: 5em;
+}
+
+/* HERO SECTION */
+.container .navbar {
+  margin-top: 1em;
+}
+.h-five {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 160%;
+  color: #ffc408;
+}
+.h-one {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  color: #11092c;
+  margin: 20px 0;
+}
+.paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #514c65;
+}
+.hero-btn {
+  background: #3684eb;
+  border-radius: 48px;
+  border: none;
+}
+.eclipse {
+  width: 400px;
+  height: 400px;
+  margin-left: 73px;
+  margin-top: 54px;
+  background: #f7f4ef;
+  border-radius: 50%;
+}
+.hero-img {
+  height: auto;
+  margin-top: -10%;
+  margin-left: 15%;
+  box-shadow: 0px 4px 25px rgba(81, 76, 101, 0.1);
+}
+.section2,
+.section5 {
+  background: rgba(245, 244, 250, 0.25);
+}
+.sect2 {
+  padding: 0 5em 0 3em;
+}
+/* SECTION 4 */
+.card {
+  border: none;
+}
+.card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: #3684eb;
+}
+.cdtxt {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: #514c65;
+}
+.icons {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.list {
+  margin-left: 30px;
+}
+span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3684eb;
+  line-height: 50px;
+}
+/* SECTION 5 */
+.testimonials h3 {
+  margin-bottom: 20px;
+}
+.testimonials .card {
+  transition: 0.5s;
+  margin-top: 60px;
+  background: #fff;
+}
+.testimonials .card i {
+  color: #4c33a630;
+  width: 300px;
+  height: 45px;
+  line-height: 75px;
+  margin: -40px auto 0 auto;
+}
+.cdtxt1 {
+  font-family: Apercu;
+  font-size: 16px;
+  line-height: 160%;
+  color: #514c65;
+}
+.blockquote-footer {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #11092c;
+}
+.blockquote-footer::before {
+  content: " ";
+}
+/* FOOTER */
+.footer {
+  background: #3684eb;
+  height: fit-content;
+  margin-left: 0px;
+  margin-top: 560px;
+}
+.eclipse2 {
+  background: #1a73e8;
+  width: 400px;
+  height: 400px;
+  margin-left: 73px;
+  margin-top: 54px;
+  border-radius: 50%;
+}
+.foot1 {
+  padding-left: 10rem;
+  padding-top: 5rem;
+}
+.foot-btn {
+  background: white;
+  color: #1a73e8;
+}
+.foot-one {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 130%;
+  color: #ffffff;
+}
+.foot-paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: #dbd6ed;
+}
+hr {
+  width: 1000px;
+  margin-left: 164px;
+  margin-top: 200px;
+  border: 1px solid #1a73e8;
+}
+.footer-links {
+  padding: 0 0 2em 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-links a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160%;
+  color: #a599d2;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(233, 230, 230);
+}
+/* BUTTONS */
+.btn-success:hover {
+  background: #1350a0;
+  border: none;
+  color: #fff;
+}
+.btn-outline-success:hover {
+  background: #ffc408;
+  border: none;
+  color: #fff;
+}
+
+/* RESPONSIVENESS */
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 640px) {
+  .eclipse,
+  .eclipse2 {
+    margin: auto;
+    width: 300px;
+    padding-right: 15px;
+    padding-left: 45px;
+  }
+  .hero-img {
+    height: -webkit-fill-available;
+    margin: auto;
+  }
+  .container,
+  .container-fluid {
+    margin-top: 2em;
+  }
+  .foot1 {
+    padding-left: 1em;
+    padding-top: 5em;
+    margin-bottom: 2em;
+  }
+}
