@@ -69,6 +69,7 @@
         text-align: right;
         padding-left: 10px;
         }
+
         /* css styling for the table  */
 body{
     overflow-x: hidden !important;
@@ -103,15 +104,15 @@ html{
 .nav-item{
     padding: 0.5rem 0rem;
 }
+.nav-item:active{
+    border-bottom: 2px solid #1A73E8;
+}
 .nav-item a{
     text-decoration: none;
     color: #777777;
 }
 .nav-item a:hover{
     color: #1A73E8; 
-}
-.active{
-    border-bottom: 2px solid #1A73E8;
 }
 .payment-header{
     margin: 1rem 0 !important;
@@ -190,49 +191,34 @@ html{
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="overview.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
                                     <span class="menu-collapsed">Dashboard</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
-                            <span class="mr-auto">
-                                    <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813952/Group_46_tnscz9.svg" alt="Apps" width="30" height="30">
-                                    <span class="menu-collapsed">Apps</span>
-                                    <span class="submenu-icon ml-auto"></span>
-                            </span>  
-                        </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="mailSupport.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
                                     <span class="menu-collapsed">Mail</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="car-pack-users" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img src="https://res.cloudinary.com/benjee/image/upload/v1571813959/Vector_1_sos0vb.svg" alt="Users" width="30" height="30">
                                     <span class="menu-collapsed">Users</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="settings_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg" alt="Settings" width="25" height="25">
                                     <span class="menu-collapsed">Settings</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
-                                <span class="mr-auto">
-                                        <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571904849/Group_47_gq0grj.svg" alt="Settings" width="25" height="25">
-                                        <span class="menu-collapsed">Cancelation Policy</span>
-                                        <span class="submenu-icon ml-auto"></span>
-                                </span>  
-                            </a>
                 </ul>
             </div>
             <!--For main content area -->
@@ -271,23 +257,19 @@ html{
                 </div>
                 <div class="col shadow">
                         <nav class="nav">
-                            <a class="nav-link active text-muted border-bottom border-primary" href="#">Overview</a>
-                            <a class="nav-link text-muted" href="#">Analysis</a>
-                            <a class="nav-link text-muted" href="#">Demographics</a>
+                            <a class="nav-link active text-muted border-bottom border-primary" href="overview.html">Overview</a>
+                            <a class="nav-link text-muted" href="admin-analytics.html">Analytics</a>
+                            <a class="nav-link text-muted" href="demographics.html">Demographics</a>
                         </nav>
                 </div>
                 <div class="col mt-2 p-3">
-                           <div class="header">
-                  <ul class="nav-items">
-                    <li class="nav-item">
-                        <a href="#">Accounts</a></li>
-                    <li class="nav-item">
-                        <a href="#">Users</a></li>
-                    <li class="nav-item active">
-                      <a href="#">Payment History</a></li>
-                  </ul>
-                </div> 
-                
+                    <div class="col shadow">
+                        <nav class="nav">
+                            <a class="nav-link text-muted" href="Setting_account.html">Account</a>
+                            <a class="nav-link text-muted" href="car-park-users.html">Users</a>
+                            <a class="nav-link active text-muted border-bottom border-primary" href="settings-payment.html">Payment History</a>
+                        </nav>
+                    </div>
                 <div class="container">
                       <div class="payment-header">
                           <h4 class="d-inline text-dark">Payment History</h4>
@@ -356,7 +338,8 @@ html{
     </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
