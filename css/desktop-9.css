@@ -190,6 +190,11 @@ section #overviewTabs .nav-pills .nav-text {
 #listTable::-webkit-scrollbar-thumb:hover {
     background: rgb(23, 23, 253);
 }
+
+td a .fa-angle-left {
+    color: #c7c6c6;
+
+}
 /* #demo{
     height: 0.5em;
 } */
