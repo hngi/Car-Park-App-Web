@@ -1,18 +1,13 @@
-const options = document.querySelectorAll('.options')
+// const options = document.querySelectorAll('.options')
 
-function put() {
-  options.forEach(cur => cur.classList.remove('options1'))
-  this.classList.add('options1')
-}
+// function put() {
+//   options.forEach(cur => cur.classList.remove('options1'))
+//   this.classList.add('options1')
+// }
 
-options.forEach(cur => cur.addEventListener('click', put))
+// options.forEach(cur => cur.addEventListener('click', put))
 
-
-
-
-
-
-
+/**** Charts */
 var ctx = document.getElementById('myChart').getContext('2d');
 var ctx2 = document.getElementById('myChart2').getContext('2d');
 var ctx3 = document.getElementById('myChart3').getContext('2d');
