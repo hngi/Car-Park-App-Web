@@ -1,3 +1,11 @@
+<?php 
+
+include "config/autoconfig.php";
+
+if (!$_SESSION['email']) {
+    header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -321,6 +329,7 @@
                             class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
                             style="background-color: #0049B5">
                             <span class="mr-auto">
+                            <h3 style="color:green; text-align:center; font-weight:bold" id=""> Welcome Home <?=$_SESSION['full_name'];?></h3>
                                 <img class="mr-auto"
                                     src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg"
                                     alt="Mail" width="30" height="30">
@@ -338,6 +347,7 @@
                                 <span class="submenu-icon ml-auto"></span>
                             </span>
                         </a>
+
                         <a href="#"
                             class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
                             style="background-color: #0049B5">

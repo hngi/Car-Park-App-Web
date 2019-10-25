@@ -1,3 +1,5 @@
+<?php require_once "config/autoconfig.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,33 +16,26 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Signin Page</title>
+    <title>LogIn Page</title>
   </head>
 
   <body>
     <div class="container">
-      <form class="form" action="#">
+        
+      <form class="form" action="#" method="post">
         <h1>Admin Login</h1>
         <br />
+        <?php
+          if (isset($error)) {
+            echo '<div style="color:red; text-align:center; font-weight:bold">'.$error.'</div>';
+          }
+        ?>
         <label for="email">Email Address</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="placeicon"
-          placeholder="&#xf007;  "
-          onblur="validateMail()"
-        />
+        <input type="email" name="email" id="email" class="placeicon" placeholder="&#xf007;  " onblur="validateMail()" required/>
         <b id="emError" style="color:lightcoral; font-size:14px"></b>
         <br />
         <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          class="placeicon"
-          placeholder="&#xf2bb;  "
-          onblur="validatePasword()"
-        />
+        <input type="password" id="password" name="password" class="placeicon" placeholder="&#xf2bb;  " onblur="validatePasword()" required/>
         <div id="checkitems">
           <div class="div-2">
             <b id="passError" style="color:lightcoral; font-size:14px "></b>
@@ -49,20 +44,12 @@
         </div>
         <br />
         <div id="btns" class="btns">
-          <button
-            class="btn login"
-            type="button"
-            value="Login"
-            onclick="login()"
-          >
-            Login
-          </button>
+          <button class="btn login" name="login-btn" type="submit" value="Login" onclick="login()">Login</button>
         </div>
       </form>
       <div class="side2">
-        <img class="img1" src="./images/login-map.JPG" alt="map-background" />
-        <div class="overlay"></div>
-        <img class="img2" src="./images/login-logo.png" alt="car-park-logo" />
+        <img class="img1" src="map.JPG" alt="map-background" />
+        <img class="img2" src="logo.png" alt="car-park-logo" />
       </div>
     </div>
     <script type="text/javascript">
@@ -99,7 +86,7 @@
 
       function login() {
         if (evalidated && pvalidated) {
-          window.location = "index.html";
+          window.location = "index.php";
         } else {
         }
       }
