@@ -1,148 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <title>Mail-Campaign </title>
-  <style>
-    .mail-container {
-      padding: 0;
-      margin:0;
-    }
-    .mail-side-bar {
-      background-color:#1A73E8;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      padding-left: 0px;
-      padding-top: 42px;
-      padding-bottom: 59px;
-    }
-    .mail-side-bar ul {
-      padding-top: 59px;
-    }
-    .mail-side-bar ul li {
-      list-style-type: none;
-      padding-bottom: 30px;
-    }
-    .mail-side-bar ul li img {
-      padding-right: 10px;
-    }
-    .compose {
-      color: white;
-      width: 180px;
-      height: 50px;
-      background-color: #5cb5ff;
-      border-radius: 0px 25px 25px 0px;
-      font-weight: bolder;
-    }
-    .compose span {
-      padding-left: 46px;
-    }
-    .mail-main-bar {
-      margin: 0;
-      padding: 0;
-    }
-    .read-mail {
-      background-color: #f6f6f6;
-      padding: 70px 25px 25px 25px;
-    }
-    .mail {
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-      background-color: #fff;
-      margin-top: 2px;
-      font-size: 13px;
-    }
-    .read-mail div img {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .mail span small {
-      color: #0049B5;
-      font-size: 11px;
-    }
-    .p-first {
-      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
-    }
-    #sent {
-      float: right;
-    }
-    #span-first {
-      float: right;
-    }
-    .tym {
-      padding-right: 9px;
-    }
-    .marketting {
-      background-color: #fff;
-      margin-top: 200px;
-      padding: 10px;
-    }
-    .marketting .marketting-head {
-      text-align: center;
-    }
-    .marketting .marketting-head h5 {
-      color: #5cb5ff;
-    }
-    .marketting .marketting-head {
-      color: #b1bbb1;
-    }
-    .marketting ul li {
-      list-style-type: none;
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-      padding: 5px;
-    }
-    .marketting ul li span {
-    float: right;
-    color: royalblue;
-    size: 11px;
-    }
-    .last-bar {
-      padding-top: 70px;
-      background-color: #fff;
-    }
-    .last-bar button{
-      float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    }
-    .session-first {
-      font-size: 12px;
-      padding: 10px;
-      width: 90%;
-      margin: auto;
-      background-color: #b1b1b1;
-    }
-    .session-second {
-      padding: 10px;
-      font-size: 12px;
-      width: 90%;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 11px;
-      background-color: #171717;
-      color: whitesmoke;
-    }
-    #newletter-head {
-      text-align: center;
-      font-weight: bold;
-      padding: 10px;
-      font-size: 13px;
-      border-bottom: 1px solid rgb(197, 192, 192);
-    }
-    .span-nav .active {
-        padding-right: 20px;
-        border-bottom: 1px solid #0049B5;
-      }
-      #body-row {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Park Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        #body-row {
             margin-left:0;
             margin-right:0;
         }
@@ -151,7 +18,6 @@
             background-color: #0049B5;
             padding: 0;
         }
-
         /* Sidebar sizes when expanded and expanded */
         .sidebar-expanded {
             width: 230px;
@@ -159,13 +25,11 @@
         .sidebar-collapsed {
             width: 60px;
         }
-
         /* Menu item*/
         #sidebar-container .list-group a {
             height: 50px;
             color: white;
         }
-
         /* Submenu item*/
         #sidebar-container .list-group .sidebar-submenu a {
             height: 45px;
@@ -174,7 +38,6 @@
         .sidebar-submenu {
             font-size: 0.9rem;
         }
-
         /* Separators */
         .sidebar-separator-title {
             background-color: #0049B5;
@@ -188,7 +51,6 @@
             background-color: #0049B5;    
             height: 60px;
         }
-
         /* Closed submenu icon */
         #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
         content: " \f0d7";
@@ -205,19 +67,13 @@
         text-align: right;
         padding-left: 10px;
         }
-        .max-width {
-          max-width: 98.5%;
+        .policy{
+            color: #423F3F;
         }
-        .ml-reset {
-          margin-left: 0px;
-        }
-        .campaign {
-          margin-bottom: 3px;
-        }
-      </style>
+    </style>
 </head>
 <body>
-  <div class="container-fluid p-0" style="background-color: #FFF;">
+    <div class="container-fluid p-0" style="background-color: #F6F6F6;">
         <div class="row " id="body-row">
             <div id="sidebar-container" class="sidebar">
                 <ul class="list-group">
@@ -265,7 +121,7 @@
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="cancellation.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                                 <span class="mr-auto">
                                         <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571904849/Group_47_gq0grj.svg" alt="Settings" width="25" height="25">
                                         <span class="menu-collapsed">Cancelation Policy</span>
@@ -309,131 +165,61 @@
                     </div>
                 </div>
                 <div class="col shadow">
-                        <nav class="nav campaign">
-                            <a class="nav-link text-muted" href="#">Support</a>
-                            <a class="nav-link  active text-muted border-bottom border-primary" href="#">Campaign</a>
+                        <nav class="nav">
+                            <a class="nav-link active text-muted border-bottom border-primary" href="#">Overview</a>
+                            <a class="nav-link text-muted" href="#">Analysis</a>
+                            <a class="nav-link text-muted" href="#">Demographics</a>
                         </nav>
                 </div>
-                <div>
-                  <!-- My Work Starts here -->
-    <div class="mail-container container max-width">
-    <div class="row ml-reset">
-    <div class="col-sm-2 mail-side-bar">
-      <button class="compose">Compose <span>+</span></button>
-      <ul>
-        <li>
-          <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/All_lpndxk.svg" alt="All">
-          All
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/kayode/image/upload/v1571831583/cars/Arrow_vmii5g.svg" alt="->">
-          Ongoing
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/draft_k9nyhc.svg" alt="Draft">
-          Draft
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/completed_csrvtb.svg" alt="Completed">
-          Completed
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/Automation_g0qdiq.svg" alt="Automation">
-          Automation
-        </li>
-      </ul>
-    </div>
-    <div class="col-sm-10 mail-main-bar row">
-        <div class="col-sm-6 read-mail">
-          <div class="mail row">
-            <div class="col-sm-2">
-              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831585/cars/message_e86r1p.svg" alt="message_icon">
-            </div>
-            <div class="col-sm-10">
-              <p class="p-first">
-                <b>Promo Code for App Download </b> 
-                <span id="span-first"><small class="tym">October, 21 2019 </small><small>21:00</small></span>
-              </p>
-              <p>
-                <span ><small>1215 Recipient</small></span>
-                <span id="sent" ><small>Message Sent</small></span>
-              </p>
-            </div>
-          </div>
-          <div class="mail row">
-            <div class="col-sm-2">
-              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831585/cars/message_e86r1p.svg" alt="message_icon">
-            </div>
-            <div class="col-sm-10">
-              <p class="p-first">
-                <b>Promo Code for App Download </b> 
-                <span id="span-first"><small class="tym">October, 21 2019 </small><small>21:00</small></span>
-              </p>
-              <p>
-                <span ><small>1215 Recipient</small></span>
-                <span id="sent" ><small>Message Sent</small></span>
-              </p>
-            </div>
-          </div>
-          <div class="marketting">
-              <div class="marketting-head">
-                <h5>Integrate with best Email Marketting Softwares</h5>
-                <small>Add respondent names and emails to Subscribers list</small>
-              </div>
-              <ul>
-                <li>
-                  <img src="https://res.cloudinary.com/kayode/image/upload/v1571831585/cars/head_dwwk4x.svg" alt="">
-                  <span><small>integrated</small></span>
-                </li>
-                <li>
-                  <img src="https://res.cloudinary.com/kayode/image/upload/v1571831585/cars/hubsport_xhkljw.svg" alt="">
-                  <span><small>integrated</small></span>
-                </li>
-                <li>
-                  <img src="https://res.cloudinary.com/kayode/image/upload/v1571831586/cars/sendblue_elymyd.svg" alt="">
-                  <span><small>integrated</small></span>
-                </li>
-                <li>
-                  <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/constant_hqp3rw.svg" alt="">
-                  <span><small>integrated</small></span>
-                </li>
-              </ul>
-          </div>
-        </div>
-        <div class="last-bar col-sm-6">
-        <p id="newletter-head">CarPark NewsLetter Subscription</p>
-      <section class="session-first">
-        <p>Hi User,</p>
-        <p>
-          My account was debited but payment for park space was not processed
-          accordingly.
-        </p>
-        <p>
-        I have proof of invoice sent to me after payment was made, but when I
-        checked the car space I wanted to book, it's saying that the payment has
-        not been processed, therefore park space cannot be booked.
-        </p>
-        <p>I don't know what to do.</p>
-        <p>Kindly look into the situation and get back to me ASAP.</p>
-        <p>Eagerly awaiting your response.</p>
-        <p>Thank you.</p>
-    </section>
-    <section class="session-second">
-        <p>Our mailing address is:</p>
-        <p>CAR PARK APP</p>
-        <p>Sanjuma Kai Close Festac Town</p>
-        <p>Lagos 100211</p>
-        <p>Nigeria</p>
-        <p>Add us to your address book</p>
-        <p>Want to change how you receive these emails?</p>
-        <p>You can update your preferences or unsubscribe from this list</p>
-    </section>
-    <button class="btn btn-primary">Send</button>
-    </div>
-        </div>
-    </div>
-  </div>
-    <!-- My Work Finishes -->
+                <div class="col mt-2 p-3 policy">
+                        <h3>CANCELLATION AND MODIFICATION POLICY</h3>
+                            <ul>
+                            <li>CARPARK provides the Client with two options (set out below) to cancel or modify a
+                                 reservation and how to get a refund.</li>
+
+                            <li>Cancellations and refunds vary according to the car park and type of reservation, 
+                                as the User will have seen in the terms and conditions for that car park and type 
+                                of reservation when making the reservation for that parking space.</li>
+
+                            <li>The cancellation and modification policy applicable to each reservation is detailed 
+                                in the legal conditions, in the confirmation email that the Client receives following
+                                 the completion of the purchasing process, and on the reservation receipt, which the 
+                                 Client should validate on arrival at the car park.</li>
+                            </ul>
+                        <h3>Products with a policy of cancellation and modification before 23:59h (local time at the car park)
+                             on the day before the date of arrival confirmed on the reservation or receipt: </h3>
+                            <ul>
+                            <li> Clients may cancel or modify their stay before 23:59h on the day before their arrival. 
+                                Should the Client fail to show up at the car park, wish to cancel or modify the reservation
+                                 after 23:59h on the day before their arrival, or after the arrival time confirmed on the reservation, 
+                                 they would not, in any such cases, be able to modify, cancel or claim a partial or total refund for 
+                                 the purchase made.</li>
+                            </ul>
+                            
+                        <h3>Products with a flexible cancellation and modification policy, up to 1 hour before the arrival time 
+                            confirmed on the reservation or receipt: </h3>
+                            <ul>
+                            <Li>The Client may cancel or modify their reservation up to 1 hour before the time given at the
+                                 time of purchase and shown on the reservation receipt. Should the Client fail to show up at the car park,
+                                  wish to cancel or modify their reservation after the period permitted by the flexible cancellation policy,
+                                   which is only applicable to certain products, or after the arrival time shown on the receipt, 
+                                   they would not be able to modify, cancel or claim a full or partial refund for the purchase made.</li>
+                            </ul>
+
+                        <h3>Products classified as monthly, quarterly, biannual and annual tickets:</h3>
+                            <ul>
+                            <li>The Client may modify their monthly, quarterly, biannual or annual ticket reservation for free up until
+                                 23:59h the day before their arrival at the car park.</li>
+
+                            <li>The Client may cancel their monthly, quarterly, biannual or annual ticket reservation up until 23:59h
+                                 the day following their arrival at the car park.</li>
+
+                            <li>By purchasing a monthly ticket with CARPARK with the car park determined by the length of stay –
+                                 the Client enjoys a discount on the usual price. Should the Client decide to cancel their monthly, 
+                                 quarterly, biannual or annual ticket within the indicated time period, the Client understands and
+                                  accepts that they must pay the difference between the discounted price and the usual price for each 
+                                  month of using the car park.</li>
+                            </ul>
             </div>                      
         </div>
     </div>
@@ -446,11 +232,9 @@
     $(document).ready(function(){
 // Hide submenus
 $('#body-row .collapse').collapse('hide'); 
-
 // Collapse/Expand icon
 $('#collapse-icon').addClass('fa-angle-double-left');
 $('#collapse-menu').addClass('fa-angle-double-right'); 
-
 // Collapse click
 $('[data-toggle=sidebar-colapse]').click(function() {
     SidebarCollapse();
@@ -475,7 +259,6 @@ function SidemenuCollapse () {
     // Collapse/Expand icon
     $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
 }
-
 //Hide Menu on Load
 $(document).ready(function(){
     $('#sidebar-container').toggleClass('d-none');
@@ -490,6 +273,5 @@ $(document).ready(function(){
     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
 })
     </script>
-
 </body>
 </html>
