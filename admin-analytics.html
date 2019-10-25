@@ -76,7 +76,7 @@
         padding-left: 10px;
         }
         .p-link {
-    height: 5vh;
+    height: 6vh;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -85,6 +85,29 @@
 	background-color: blue !important;
 	color: blue !important;
 }
+
+.scrollbar {
+margin-left: -15px;
+float: left;
+height: 300px;
+background: #fff;
+overflow-y: scroll;
+margin-bottom: 25px;
+}
+.pb-5{
+    padding-bottom: 1rem !important;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 5px;
+background-color: #F5F5F5; }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #4285F4; }
+
+
 
 .links {
     width: 30%;
@@ -118,6 +141,10 @@
 .links a:active {
     border-bottom: 2px solid #1A73E8;
     padding: 0.3rem;
+}
+
+.analytics {
+    border-bottom: 2px solid #1A73E8;
 }
 
 .sect {
@@ -473,49 +500,34 @@
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./overview.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
                                     <span class="menu-collapsed">Dashboard</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
-                            <span class="mr-auto">
-                                    <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813952/Group_46_tnscz9.svg" alt="Apps" width="30" height="30">
-                                    <span class="menu-collapsed">Apps</span>
-                                    <span class="submenu-icon ml-auto"></span>
-                            </span>  
-                        </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./mailSupport.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
                                     <span class="menu-collapsed">Mail</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./car-park-users.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img src="https://res.cloudinary.com/benjee/image/upload/v1571813959/Vector_1_sos0vb.svg" alt="Users" width="30" height="30">
                                     <span class="menu-collapsed">Users</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./Setting_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg" alt="Settings" width="25" height="25">
                                     <span class="menu-collapsed">Settings</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
-                                <span class="mr-auto">
-                                        <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571904849/Group_47_gq0grj.svg" alt="Settings" width="25" height="25">
-                                        <span class="menu-collapsed">Cancelation Policy</span>
-                                        <span class="submenu-icon ml-auto"></span>
-                                </span>  
-                            </a>
                 </ul>
             </div>
             <!--For main content area -->
@@ -561,14 +573,14 @@
             <div class="p-link">
                     <div class="links">
                         <a href="#">Overview</a>
-                        <a href="#">Analytics</a>
-                        <a href="#">Demographics</a>
+                        <a href="#" class="analytics">Analytics</a>
+                        <a href="./demographics.html">Demographics</a>
                     </div>
                 </div>
                 <!-- CHART SECTION -->
                 <div class="main-section">
                     <div class="top-headings">
-                        <a href="#">New Users</a>
+                        <a href="#" class="analytics">New Users</a>
                         <a href="#">Existing Users</a>
                         <a href="#">Issues</a>
                         <a href="#">CarPark</a>
@@ -604,6 +616,8 @@
                                 <li class="second-list last-list">Wuse, Abuja</li>
                             </ul>
                         </div>
+
+                        
                     </section>
         </div>
     </div>
