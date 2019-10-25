@@ -8,6 +8,14 @@
     padding: 0;
 }
 
+.menu-hover:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dashboard-background {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
 /* Sidebar sizes when expanded and expanded */
 .sidebar-expanded {
     width: 230px;
@@ -270,7 +278,7 @@ a:hover {
         border-bottom: 1px solid rgba(119, 119, 119, 0.2);
         padding-top: 20px;
         padding-right: 30px;
-        margin-right: 20px;
+        margin-right: -20px; 
     }
 
     
