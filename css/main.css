@@ -240,13 +240,32 @@ a:hover {
     height: -webkit-fill-available;
     margin: auto;
   }
+  .section2,
+  .sect2 {
+    margin-top: 2em !important;
+  }
+  .sect2 {
+    padding: 15px !important;
+  }
   .container,
   .container-fluid {
-    margin-top: 2em;
+    margin-top: 2em !important;
+  }
+  .testimonials,
+  .mt-5 {
+    margin-top: 1em !important;
+  }
+  .testimonials .card {
+    margin-top: 5px !important;
   }
   .foot1 {
     padding-left: 1em;
     padding-top: 5em;
     margin-bottom: 2em;
+  }
+  hr {
+    width: 350px;
+    margin-left: 0;
+    margin-top: 100px;
   }
 }
