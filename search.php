@@ -1,5 +1,5 @@
 <?php
-mysql_connect("remotemysql.com:3306", "Ok8zqA11hb", "s0z5X6XgIB") or die("Error connecting to database: " . mysql_error());
+mysql_connect("remotemysql.com:3306", "Ok8zqA11hb", "6O3RJ5JDn8") or die("Error connecting to database: " . mysql_error());
 mysql_select_db("Ok8zqA11hb") or die(mysql_error());
 ?>
 
@@ -22,7 +22,7 @@ mysql_select_db("Ok8zqA11hb") or die(mysql_error());
         $query = mysql_real_escape_string($query);
         $raw_results = mysql_query("SELECT * FROM carparks
             WHERE (`title` LIKE '%" . $query . "%') OR (`text` LIKE '%" . $query . "%')") or die(mysql_error());
-            
+
         if (mysql_num_rows($raw_results) > 0) {
             while ($results = mysql_fetch_array($raw_results)) {
                 echo "<p><h3>" . $results['title'] . "</h3>" . $results['text'] . "</p>";

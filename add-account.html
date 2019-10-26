@@ -197,30 +197,30 @@
                         <div class="card" style="width: 100%;">
                             <div class="card-body">
 
-                                <form>
+                                <form action="add-user.php" method="POST">
                                     <fieldset>
                                         <div style="padding-left: 1.25rem; padding-right: 1.25rem">Personal inforation
                                             <span class="card-text" style="color: darkgray; padding-left: 50px">The
                                                 information can be edited from your profile page.</span>
-                                            <a href="#" class="btn btn-primary"
-                                                style="float: right; width: 120px;">Save</a></div>
+                                            <input type="submit" class="btn btn-primary"
+                                                style="float: right; width: 120px;" value="Save"></div>
                                         <br>
                                         <hr><br>
                                         <div style="padding-left: 1.25rem; padding-right: 1.25rem">
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
                                                     First Name
-                                                    <input type="email" class="form-control" placeholder="First name">
+                                                    <input type="email" class="form-control" placeholder="First name" name="firstName">
                                                 </div>
                                                 <div class="col-sm-6">
                                                     Last Name
-                                                    <input type="email" class="form-control" placeholder="Last name">
+                                                    <input type="email" class="form-control" placeholder="Last name" name="lastName">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
                                                     Email
-                                                    <input type="email" class="form-control" placeholder="Email">
+                                                    <input type="email" class="form-control" placeholder="Email" name="email">
                                                 </div>
                                                 <div class="col-sm-6"></div>
                                             </div>
