@@ -37,7 +37,7 @@
           class="placeicon"
           placeholder="&#xf007;  "
           onblur="validateMail()"
-        />
+          required/>
         <b id="emError" style="color:lightcoral; font-size:14px"></b>
         <br />
         <label for="password">Password</label>
@@ -48,7 +48,7 @@
           class="placeicon"
           placeholder="&#xf2bb;  "
           onblur="validatePasword()"
-        />
+        required/>
         <div id="checkitems">
           <div class="div-2">
             <b id="passError" style="color:lightcoral; font-size:14px "></b>
