@@ -1,3 +1,10 @@
+<?php require_once "config/autoconfig.php"; 
+    if (!$_SESSION['email']) {
+        header("location: login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +97,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="col-8 pt-3 d-flex">
                                 <i class="fa fa-user pr-1" aria-hidden="true"></i>
-                                <p class="text-muted">John Travolta</p>
+                                <p class="text-primary text-uppercase "><?=$_SESSION['full_name'];?></p>
                         </div>
                         <div class="col-4  d-flex border-left justify-content-end">
                                 <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
@@ -98,6 +105,7 @@
                         </div>
                     </div>
                 </nav>
+                
                 <div class="col main p-3 text-white" style="background:#1A73E8;">
                     <div class="col">
                         <h1 style="font-size: 35px">Welcome back Admin</h1>

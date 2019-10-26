@@ -1,3 +1,5 @@
+<?php require_once "config/autoconfig.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,9 +21,14 @@
 
   <body>
     <div class="container">
-      <form class="form" action="#">
+      <form class="form" action="#" method="post">
         <h1>Admin Login</h1>
         <br />
+        <?php
+          if (isset($error)) {
+            echo '<div style="color:red; text-align:center; font-weight:bold">'.$error.'</div>';
+          }
+        ?>
         <label for="email">Email Address</label>
         <input
           type="email"
@@ -37,6 +44,7 @@
         <input
           type="password"
           id="password"
+          name="password"
           class="placeicon"
           placeholder="&#xf2bb;  "
           onblur="validatePasword()"
@@ -51,8 +59,9 @@
         <div id="btns" class="btns">
           <button
             class="btn login"
-            type="button"
+            type="submit"
             value="Login"
+            name="login-btn"
             onclick="login()"
           >
             Login
@@ -65,7 +74,7 @@
         <img class="img2" src="./images/login-logo.png" alt="car-park-logo" />
       </div>
     </div>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var evalidated = false;
       var pvalidated = false;
       function validateMail() {
@@ -99,10 +108,10 @@
 
       function login() {
         if (evalidated && pvalidated) {
-          window.location = "index.html";
+          window.location = "index.";
         } else {
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
