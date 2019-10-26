@@ -75,7 +75,7 @@
                 </ul>
             </div>
             <!--For main content area -->
-            <div class="col p-0 w-25">
+            <div class="col p-0 w-25 choose">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="d-flex">
                         <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted"
@@ -263,6 +263,9 @@
             //Collapse Side Menu
             function SidemenuCollapse() {
                 $('#sidebar-container').toggleClass('d-none');
+                $('#sidebar-container').toggleClass('relate');
+                $('#collapse-menu').toggleClass('move');
+                $('.choose').toggleClass('relative');
                 // Collapse/Expand icon
                 $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
             }
