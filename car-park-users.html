@@ -226,26 +226,24 @@
                                     <th>Last Login</th>
                                 </tr>
 
-                                <tr>
-                                    <td>Anthony Joshua</td>
-                                    <td>anthonyjo@gmail.com</td>
-                                    <td>User</td>
-                                    <td>2/2/2020</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Anthony Joshua</td>
-                                    <td>anthonyjo@gmail.com</td>
-                                    <td>User</td>
-                                    <td>2/2/2020</td>
-                                </tr>
-
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <?php
+									$conn = mysqli_connect("localhost", "root", "", "carpack");
+									// Check connection
+									if ($conn->connect_error) {
+										die("Connection failed: " . $conn->connect_error);
+									}
+									$sql = "SELECT name, email, role, login FROM carpack";
+									$result = $conn->query($sql);
+									if ($result->num_rows > 0) {
+									// output data of each row
+										while($row = $result->fetch_assoc()) {
+											echo "<tr><td>" . $row["Name"]. "</td><td>" . $row["email"] . "</td><td>"
+											. $row["role"]. "</td><td>" . $row["login"]. "</td></tr>";
+											}
+										echo "</table>";
+									else { echo "0 results"; }
+										$conn->close();
+								?>
 
                             </tbody>
                         </table>
