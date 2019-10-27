@@ -1,0 +1,102 @@
+
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	width: 100;
+}
+
+
+
+.notification-box img {
+	margin: 10px;
+	margin-left: 20px;
+	margin-right: -10px;
+	padding: 14px;
+}
+.notification-box {
+	border: 1px solid #C4C4C4;
+	margin-bottom: 15px;
+	margin-right: 20px;
+	border-radius: 10px;
+	background-color: lightblue;
+}
+.notification-box b {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	
+}
+.notification-box span {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2
+}
+p {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+h1, b, .notification-box, nav {
+	margin-left: 80px;
+}
+}
+@media screen and (min-width: 850px) and (max-width: 1090px) {
+h1, b, .notification-box, nav {
+	margin-left: 70px;
+}
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  border: none;
+  width: 25px;
+cursor: pointer;
+  float: right;
+  font-size: 25px;
+  margin-right: 60px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  /*position: relative;*/
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ display: none;
+  /*position: absolute;*/
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*z-index: 1;*/
+  overflow: auto;
+}
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
