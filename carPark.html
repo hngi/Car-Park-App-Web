@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<title>Car Park</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel ="stylesheet" href="carPark.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class = "w3-container">
+<!-- Sidebar -->
+<div id = "side" class="w3-sidebar w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Car Park</h3>
+  <a href="#" class="w3-bar-item w3-button">Dashboard</a>
+  <a href="#" class="w3-bar-item w3-button">Mails</a>
+  <a href="#" class="w3-bar-item w3-button">Users</a>
+  <a href="#" class="w3-bar-item w3-button">Settings</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+  <div class= "top-navbar">
+    <input class= "w3-input w3-border w3-round" type="text" name="Search" placeholder="Search" style="width:360px">
+    <div class="w3-dropdown-Click">
+  <button onclick="myFunction()" class="w3-button">John Travolta <i class="fa fa-caret-down">
+
+  </i></button>
+  <div id= "click" class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  </div>
+</div>
+  </div>
+
+<div class="w3-container w3-blue">
+  <h1>Welcome Back Admin</h1>
+  <p>CAR PARK APPLICATION</p>
+</div>
+<div class = "container">
+  <div class="w3-bar w3-border">
+     <a href="#" class="w3-bar-item w3-button">Account</a>
+    <a href="#" class="w3-bar-item w3-button">Users</a>
+    <a href="#" class="w3-bar-item w3-button">Payment History</a>
+  </div>
+</div>
+
+<div class ="container2">
+<div class = "w3-bar w3-border">
+
+<table class="w3-table w3-bordered w3-border w3-centered w3-small">
+  <div class ="w3-bar w3-border" style ="padding: 2px;">
+  <p><strong>Payment History:</strong>  Every Payment Details are made available here</p>
+</div>
+
+<form class="example" action="action_page.php">
+  <input style = "margin-left: 450px; width: 300px; padding: 3px;"type="text" placeholder="Find by Email Address" name="search"></input>
+  <button style ="padding:3px;"type="submit"><i class="fa fa-search"></i> Search</button>
+</form>
+
+<p style="float: right; margin-right: 30px;">Search for users by <button>Email Address</button> <button>Adding Filters</button></p>
+
+<tr>
+  <th>Date</th>
+  <th>Reference Number</th>
+  <th>Description</th>
+  <th>Amount</th>
+  <th>Payment Method</th>
+</tr>
+<tr>
+  <td>2/2/2020</td>
+  <td>ID2712JJJG</td>
+  <td>Park Fee</td>
+  <td>N20.00</td>
+  <td>Visa</td>
+</tr>
+<tr>
+  <td>2/2/2020</td>
+  <td>ID2712JJJG</td>
+  <td>Park Fee</td>
+  <td>N20.00</td>
+  <td>Visa</td>
+</tr>
+<tr>
+  <td>2/2/2020</td>
+  <td>ID2712JJJG</td>
+  <td>Park Fee</td>
+  <td>N20.00</td>
+  <td>Visa</td>
+</tr>
+<tr>
+  <td>2/2/2020</td>
+  <td>ID2712JJJG</td>
+  <td>Park Fee</td>
+  <td>N20.00</td>
+  <td>Visa</td>
+</tr>
+<tr>
+  <td>2/2/2020</td>
+  <td>ID2712JJJG</td>
+  <td>Park Fee</td>
+  <td>N20.00</td>
+  <td>Visa</td>
+</tr>
+
+</table>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("click");
+  if (x.className.indexOf("w3-show") == -1) { 
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+      
+</body>
+</html>

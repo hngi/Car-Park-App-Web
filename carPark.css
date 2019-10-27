@@ -1,0 +1,32 @@
+#side {
+  background-color: #0049B5;
+  color: white;
+}
+
+.top-navbar {
+  padding: 3px;
+  margin-left: 300px;
+  display: inline-flex;
+}
+
+i.fa-caret-down {
+  content: '\e809';
+  width: 10px;
+}
+
+.container {
+ padding: 1px;
+}
+.container2 {
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+}
+
+.details {
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+}
