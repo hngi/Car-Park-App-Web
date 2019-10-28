@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <style>
+        h1,
+        h2 {
+            font-size: 20px;
+        }
+
+        .control-label {
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        address {
+            margin: 0;
+        }
+
+        .head {
+            padding-bottom: 1rem;
+        }
+
+        .footer {
+  background: #3684eb;
+  height: 50%;
+  overflow-x: hidden;
+  
+}
+
+.foot1 {
+  padding-left: 10rem;
+}
+
+.foot1 h1{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.foot-paragraph {
+  font-size: 16px;
+  color: #fff;
+  padding: .5rem 0 1rem;
+}
+
+.btn-light{
+    border-radius: 30px;
+    color: #3684eb;
+}
+
+.eclipse2 {
+  background: #1a73e8;
+  width: 50%;
+  height: 20rem;
+  margin-left: 5rem;
+  margin: 8em 0;
+  border-radius: 50%;
+}
+
+.hero-img {
+  height: auto;
+  margin-top: -20%;
+  margin-left: 6%;
+  /* box-shadow: 0px 4px 25px rgba(81, 76, 101, 0.1); */
+}
+.hero-img {
+  -webkit-animation: float 2s infinite alternate;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+    transform: translatey(0px);
+  }
+  50% {
+    /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+    transform: translatey(-30px);
+  }
+  100% {
+    /* box-shadow: 0 5px 15px 0px rgba(207, 207, 207, 0.6); */
+    transform: translatey(0px);
+  }
+}
+
+hr {
+  width: 90%;
+  margin-left: ;
+  margin-top:2rem;
+  border: 1px solid #fff;
+}
+.footer-links {
+  padding: 0 0 2em 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-links a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160%;
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(233, 230, 230);
+}
+
+@media(max-width: 380px){
+    .wrapper{
+        padding-left: 0rem !important;
+    }
+    .contact{
+        padding-top: 0rem !important;
+    }
+
+    h2{
+        padding-bottom: 1rem;
+    }
+
+    .btn-primary{
+        width: 3rem;
+    }
+
+    .frm-btn{
+        margin-left: 70% !important;
+    }
+}
+  </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 p-5">
+                <div class="wrapper" style="padding-left: 5rem;">
+                    <div class="head">
+                        <i class="fas fa-address-card"></i>
+                        <div class="details">
+                            <h1>Contact Address</h1>
+                            <address>817 Preston Rd Oxnard, <br> Missouri 75738, <br> United States</address>
+                        </div>
+                    </div>
+                    <div class="head">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="details">
+                            <h1>Contact Number</h1>
+                            <p>(201) 555-0124</p>
+                            <p>(414) 555-0132</p>
+                            <p>(219) 555-0144</p>
+                        </div>
+                    </div>
+                    <div class="head">
+                        <i class="fas fa-envelope"></i>
+                        <div class="details">
+                            <h1>Contact Email</h1>
+                            <p>luke.smith@gmail.com</p>
+                            <p>bill.berry@gmail.com</p>
+                            <p>brandy.soto@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7 p-0">
+                <div class="contact p-5">
+                    <h2>Get In Touch</h2>
+                    <form action="" method="post" class="contact-form">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="name">Name</label>
+                            <div class="col-sm-10 p-0">
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email</label>
+                            <div class="col-sm-10 p-0">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                    name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="message">Message</label>
+                            <div class="col-sm-10 p-0">
+                                <textarea class="form-control" rows="5" id="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group frm-btn" style=" margin-left:67.5%;">
+                            <div class=" col-sm-10 p-0">
+                                <button type="submit" class="btn btn-primary " style="width: auto; ">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 align-self-center hero1 foot1">
+                <h1 class="foot-one">
+                  Finding a parking space should be easy, convenient and not
+                  stressful.
+                </h1>
+                <p class="foot-paragraph">
+                  Download the carpark app today and find secure spaces to park your
+                  vehicles .
+                </p>
+                <button class="btn btn-light" type="submit">
+                  <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571932706/Icon_zfkudh.svg" alt="Google Playstore">
+                  Download App
+                </button>
+              </div>
+              <div class="col-sm-12 col-md-6" style="display: flex; justify-content: center;">
+                
+                  <div class="eclipse2">
+                    <img class="hero-img" src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571933234/Car%20Park/three_hd8ge5.svg" alt="Android Phone">
+                  </div>
+                
+              </div>
+            </div>
+            <hr>
+            <div class="footer-links">
+                    <a class="" href="#" style="font-size: 20px; letter-spacing: 2px;"> CarP<span><i class="fas fa-map-marker-alt" style="font-size: 16px; color: yellow;"></i></span>rk
+                            
+                          </a>
+              <a href="#">Service <br> Agreement</a>
+              <a href="#">Privacy <br> Policy</a>
+              <a href="#">ⒸHNG Internship, 2019 </a>
+            </div>
+          </footer>
+</body>
+</html>
