@@ -20,4 +20,8 @@ class User extends Model
         return $this->belongsToMany('\App\Models\Slot', 'slot_users');
     }
 
+    public function car_parks()
+    {
+        return $this->hasMany('\App\Models\CarPark', 'owner_id');
+    }
 }

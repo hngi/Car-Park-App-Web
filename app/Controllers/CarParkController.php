@@ -11,7 +11,7 @@ class CarParkController extends Controller
 
     public function index(Request $req, Response $res, $args)
     {
-        $car_parks = CarPark::all();
+        $car_parks = CarPark::with('owner')->get();
         return $this->withJSONData($car_parks);
     }
 

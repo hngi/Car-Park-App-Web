@@ -66,6 +66,11 @@ return function (App $app) {
         return new \App\Controllers\UserController($c);
     };
 
+    // Car Park Controller dependency
+    $container['CarParkController'] = function ($c) {
+        return new \App\Controllers\CarParkController($c);
+    };
+
     // Not Found Error Handler - Error 404
     unset($container['notFoundHandler']);
     $container['notFoundHandler'] = function ($c) {

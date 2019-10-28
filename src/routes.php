@@ -44,4 +44,11 @@ return function (App $app) {
     $app->put('/slots/{id}', 'SlotController:update')->setName('update_slot');
     $app->delete('/slots/{id}', 'SlotController:delete')->setName('delete_slot');
 
+    // CarPark API routes
+    $app->get('/car-parks', 'CarParkController:index')->setName('get_car_parks');
+    $app->get('/car-parks/{id}', 'CarParkController:get')->setName('get_car_park');
+    $app->post('/car-parks', 'CarParkController:create')->setName('create_car_park');
+    $app->put('/car-parks/{id}', 'CarParkController:update')->setName('update_car_park');
+    $app->delete('/car-parks/{id}', 'CarParkController:delete')->setName('delete_car_park');
+
 };

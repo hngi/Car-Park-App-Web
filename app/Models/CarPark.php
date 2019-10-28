@@ -15,7 +15,12 @@ class CarPark extends Model
 
     public function slots()
     {
-        return $this->hasMany('\App\Slot', 'car_park_id');
+        return $this->hasMany('\App\Models\Slot', 'car_park_id');
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo('\App\Models\User', 'owner_id');
     }
 
 }
