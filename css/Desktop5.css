@@ -1,3 +1,7 @@
+.html {
+    margin-top: 0 !important;
+}
+
 #body-row {
     margin-left:0;
     margin-right:0;
@@ -104,6 +108,21 @@ body {
 
 .fa-times {
     color: white;
+}
+
+.john {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: normal;
+    color: #777777;
+    margin-bottom: 0;
+}
+
+.en {
+    font-size: 25px;
+    line-height: 29px;
+    color: #777777;
+    font-weight: normal;
 }
 
 a:hover {
