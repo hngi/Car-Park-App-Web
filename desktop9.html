@@ -107,7 +107,7 @@
                 <!--overview tabs-->
                 <div class="col shadow">
                         <nav class="nav">
-                            <a class="nav-link active text-muted border-bottom border-primary" href="#">Overview</a>
+                            <a class="nav-link active text-muted border-bottom border-primary" href="index.html">Overview</a>
                             <a class="nav-link text-muted" href="admin-analytics.html">Analytics</a>
                             <a class="nav-link text-muted" href="demographics.html">Demographics</a>
                         </nav>
@@ -214,83 +214,11 @@
                         <div id="carParks" class="mb-1 mt-3 container">
                                 <h1 class="row col-sm-12">car park locations</h1>
                                 <!--car park maps begin here-->
-                                <div class="row accordion" id="accordionExample">
+                                <div class="row">
                                     <div id="mapholder" class="col-sm-9 mb-2">
-                                        <div class="mapouter show" data-parent="#accordionExample">
+                                        <div class="mapouter">
                                             <div class="gmap_canvas" id="gmap">
                                                 <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="maryCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Maryland%2C%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="lekkiCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Lekki%2C%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="gwariCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Gwarimpa%2C%20Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="wuseCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Wuse%2C%20Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="maitCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Maitama%2C%20Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="ikejaCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Ikeja%2C%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="lereCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Surulere%2C%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                            </div>
-                                            <style>
-                                            .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                            .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                            </style>
-                                        </div>
-                                        <div class="mapouter collapse" id="ikoyiCanvas" data-parent="#accordionExample">
-                                            <div class="gmap_canvas" id="gmap">
-                                                <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Ikoyi%2C%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                                             </div>
                                             <style>
                                             .mapouter{position:relative;text-align:right;height:400px;width:100%;}
@@ -301,294 +229,35 @@
                                     <!--car park maps end here-->
                                     <!--table to select location begins here-->
                                     <div id="listView" class="col-sm-3">
-                                        <div class="park-categories" style="height: 450px;">
-
-                               <div class="btn-group" style="width: 150px;">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    LAGOS
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <h2 class="col-sm-12">list view</h2>
+                                        <div id="listTable">
+                                            <table class="table transTable">
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="first">Maryland, Lagos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lekki, Lagos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gwarimpa, Abuja</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wuse, Abuja</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maittama, Abuja</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ikeja, Lagos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Surulere, Lagos</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px;margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ABUJA
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                 <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ABA
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    PORT-HARCOURT
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    KANO
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ONITSHA
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    BENIN
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
-                                </div>
-
-                                <div class="btn-group" style="width: 150px; margin-top: 10px; ">
-                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    AKWA-IBOM
-                                  </button>
-                                  <div class="dropdown-menu">
-                                     <div id="listTable">
-                                        <table class="table transTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td id="first" data-toggle="collapse" data-target="#maryCanvas" aria-expanded="false" aria-controls="maryCanvas">Maryland, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lekkiCanvas" aria-expanded="false" aria-controls="lekkiCanvas">Lekki, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#gwariCanvas" aria-expanded="false" aria-controls="gwariCanvas">Gwarimpa, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#wuseCanvas" aria-expanded="false" aria-controls="wuseCanvas">Wuse, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#maitCanvas" aria-expanded="false" aria-controls="maitCanvas">Maittama, Abuja</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#ikejaCanvas" aria-expanded="false" aria-controls="ikejaCanvas">Ikeja, Lagos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-toggle="collapse" data-target="#lereCanvas" aria-expanded="false" aria-controls="lereCanvas">Surulere, Lagos</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <a class="dropdown-item" href="#">Add Location</a>
-                                  </div>
                                 </div>
                             <!--car park section ends here-->
                             
