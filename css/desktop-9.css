@@ -68,29 +68,17 @@ display: inline;
 text-align: right;
 padding-left: 10px;
 }
-/* section #overviewTabs .nav-border {
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px #ccc;
-    background: #fff;
+
+#cancel {
+    margin-right: 0 !important;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    border-top: none;
 }
 
-section #overviewTabs .nav-text{
-    color: #777777;
-    background-color: none;
-    font-size: 1.25em;
-    display: block;
-    padding: .5rem 2rem;
+.fa-times {
+    color: white;
 }
-
-section #overviewTabs .nav-pills .nav-text.active, .nav-pills .show>.nav-text {
-    color: #777777;
-    background-color: #fff;
-    border-bottom: 3px solid blue;
-}
-
-section #overviewTabs .nav-pills .nav-text {
-    border-radius: 0px;
-} */
 .container {
     background: #fff;
     /* margin: 15px 15px 15px 15px; */
@@ -98,31 +86,62 @@ section #overviewTabs .nav-pills .nav-text {
     overflow-y: auto;
 }
 
-#overviewTabs thead, time, .fa-calendar {
+/* #overviewTabs thead, time, .fa-calendar {
     color: #777777;
-}
+} */
 
 #overviewTabs .badge-primary {
-    border-radius: 50px;
+    border-radius: 50%;
 }
-#overviewTabs td img, .fa-calendar{
+/* #overviewTabs td img, .fa-calendar{
     width: 15px;
     height: 15px;
-}
+} */
 
 #overviewTabs td{
     color: #777777;
 }
-#overviewTabs thead td{
+#issuesHead{
+    border-bottom: 1px solid #c7c6c6;
+}
+#issuesHead td{
     color: rgba(119, 119, 119, 0.5);
     font-weight: 500;
+    font-size: 1em;
+    /* padding-left: 5em; */
 }
+#issuesHead td a{
+    color: rgba(119, 119, 119, 0.5);
+}
+#issuesHead td a:hover{
+    text-decoration: none;
+}
+#issuesHead i{
+    color: rgba(119, 119, 119, 0.5);;
+}
+#issuesHead table #issue{
+    font-size: 1.25em;
+}
+ #issuesHead table #print{
+    padding-left: 5em;
+}
+#issuesTable table tr{
+    border-bottom: 1px solid #c7c6c6;
+}
+#issuesTable{
+    overflow: scroll;
+    height: 220px;
+}
+#dark{
+    color: #000000;
+}
+
 .makeFlex{
     display: flex;
     flex-flow: row wrap;
 }
 .city{
-    margin: -1.4em 0 -1em 1em;
+    margin: -1.4em 0 -1em 1.3em;
 }
 /* 
 .aside{
@@ -161,6 +180,7 @@ section #overviewTabs .nav-pills .nav-text {
     border: 1px solid #c7c6c6;
     border-collapse: collapse;
     font-size: 0.9em;
+    color: #000000;
 }
 #listTable table td:hover{
     cursor: pointer;
@@ -174,32 +194,35 @@ section #overviewTabs .nav-pills .nav-text {
     background: #ffffff;
     margin-top: -7px;
 }
-#listTable::-webkit-scrollbar {
-    width: 8px;
+#listTable::-webkit-scrollbar, #issuesTable::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
     /* padding: 1px; */
 }
-#listTable::-webkit-scrollbar-track {
+#listTable::-webkit-scrollbar-track, #issuesTable::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
-#listTable::-webkit-scrollbar-thumb {
+#listTable::-webkit-scrollbar-thumb, #issuesTable::-webkit-scrollbar-thumb {
     background: rgb(70, 70, 241);
     border-radius: 10px;
     /* width: 5px; */
 }
-#listTable::-webkit-scrollbar-thumb:hover {
+#listTable::-webkit-scrollbar-thumb:hover, #issuesTable::-webkit-scrollbar-thumb:hover {
     background: rgb(23, 23, 253);
 }
 
-td a .fa-angle-left {
-    color: #c7c6c6;
-
-}
 /* #demo{
     height: 0.5em;
 } */
 @media screen and (max-width: 49em){
     .city{
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 40em){
+    #issuesHead table #print{
+    padding-left: 0px;
     }
 }

@@ -96,6 +96,16 @@ body {
     padding-bottom: 14px;
 }
 
+#cancel {
+    margin-right: 0 !important;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.fa-times {
+    color: white;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -323,6 +333,11 @@ a:hover {
     .relate {
         position: absolute;
         z-index: 2
+    }
+
+    .relate {
+        position: fixed;
+        top: 0;
     }
     
 }
