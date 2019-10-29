@@ -39,7 +39,12 @@
             height: 50px;
             color: white;
         }
-
+	.d-flex:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+.d-flex-active {
+	background: rgba(255, 255, 255, 0.2) !important;
+}
         /* Submenu item*/
         #sidebar-container .list-group .sidebar-submenu a {
             height: 45px;
@@ -247,6 +252,18 @@ background-color: #4285F4; }
 	            margin-left: 30px;
 	            color: gray;
 	        }
+			#cancel {
+    margin-right: 0 !important;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+.fa-times {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
 	          </style>
 </head>
 <body>
@@ -256,6 +273,8 @@ background-color: #4285F4; }
                 <ul class="list-group">
                     <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     </li>
+                    <div id="cancel" data-toggle="sidebar-container" class="fa mr-3 text-muted"
+                    style="font-size: 26px; cursor: pointer;"><i class="fas fa-times"></i></div>
                     <a href="#" data-toggle="sidebar-colapse" class=" list-group-item list-group-item-action d-flex align-items-center border-0" style="background-color: #0049B5">
                         <div class="d-flex w-100 justify-content-start align-items-center">
                             <span id="collapse-icon" class="fa fa-2x mr-3"></span>
@@ -285,7 +304,7 @@ background-color: #4285F4; }
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="#" class="d-flex-active w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                                 <span class="mr-auto">
                                         <img class="mr-auto" src="https://res.cloudinary.com/seun007/image/upload/v1572290891/image_2_mjjnfc.png" alt="Car Parks" width="30" height="25">
                                         <span class="menu-collapsed">Manage Parks</span>
