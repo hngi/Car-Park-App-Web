@@ -27,7 +27,9 @@ class CarParkController extends Controller
         $car_park = CarPark::create([
             'owner_id' => $parsedBody['owner_id'],
             'name' => $parsedBody['name'],
-            'location' => $parsedBody['location'],
+            'address' => $parsedBody['address'],
+            'phone_no' => $parsedBody['phone_no'],
+            'car_park_fee' => $parsedBody['car_park_fee'],
         ]);
         return $this->withJSONData($car_park, 201);
     }
@@ -38,7 +40,9 @@ class CarParkController extends Controller
         $update = CarPark::where('id', $parsedBody['id'])
             ->update([
                 'name' => $parsedBody['name'],
-                'location' => $parsedBody['location'],
+                'address' => $parsedBody['address'],
+                'phone_no' => $parsedBody['phone_no'],
+                'car_park_fee' => $parsedBody['car_park_fee'],
             ]);
         return $this->withJsonData(null);
     }

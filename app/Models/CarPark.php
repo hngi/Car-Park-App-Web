@@ -11,7 +11,7 @@ class CarPark extends Model
      *
      * @var array
      */
-    protected $fillable = ['owner_id', 'name', 'location'];
+    protected $fillable = ['owner_id', 'name', 'address', 'phone_no', 'car_park_fee'];
 
     public function slots()
     {

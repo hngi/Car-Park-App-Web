@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class CarPark extends AbstractMigration
+class Role extends AbstractMigration
 {
     /**
      * Change Method.
@@ -32,15 +32,9 @@ class CarPark extends AbstractMigration
     public function change()
     {
         // create the table
-        $table = $this->table('car_parks');
-        $table->addColumn('owner_id', 'integer')
-            ->addColumn('name', 'string')
-            ->addColumn('address', 'string')
-            ->addColumn('car_park_fee', 'integer')
-            ->addColumn('phone_no', 'integer')
-            ->addColumn('created_at', 'datetime', ['null' => true])
-            ->addColumn('updated_at', 'datetime', ['null' => true])
-            ->addForeignKey('owner_id', 'users', 'id')
+        $table = $this->table('roles');
+        $table->addColumn('authority', 'string')
             ->create();
     }
+
 }

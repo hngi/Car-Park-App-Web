@@ -24,4 +24,10 @@ class User extends Model
     {
         return $this->hasMany('\App\Models\CarPark', 'owner_id');
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany('\App\Models\User', 'user_roles');
+    }
+
 }
