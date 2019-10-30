@@ -1,3 +1,7 @@
+.html {
+    margin-top: 0 !important;
+}
+
 #body-row {
     margin-left:0;
     margin-right:0;
@@ -92,7 +96,7 @@ body {
     align-items: flex-end;
     height: 67px;
     border-bottom: 1px solid rgba(119, 119, 119, 0.2);
-    padding-right: 69px;
+    padding-right: 41.5px;
     padding-bottom: 14px;
 }
 
@@ -106,6 +110,21 @@ body {
     color: white;
 }
 
+.john {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: normal;
+    color: #777777;
+    margin-bottom: 0;
+}
+
+.en {
+    font-size: 25px;
+    line-height: 29px;
+    color: #777777;
+    font-weight: normal;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -114,9 +133,12 @@ a:hover {
     font-size: 20px;
     line-height: 23px;
     color: #777777;
-    margin-left: 75px;
+    margin-left: 20px;
     margin-bottom: -14px;
     padding-bottom: 14px;
+
+    padding-left: 27.5px !important;
+    padding-right: 27.5px !important;
 }
 
 .options:hover {
@@ -139,6 +161,13 @@ a:hover {
     height: 100%;
     width: 100%;
     margin-right: 8px;
+}
+
+.nav-cont {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .ad-section {
@@ -180,10 +209,17 @@ a:hover {
 }
 
 .chart {
+    position: relative;
     border: 1px solid rgba(119, 119, 119, 0.05);
     width: 152px;
     padding-top: 8px;
     margin-bottom: 10px;
+}
+
+.pie-down {
+    position: absolute;
+    bottom: 8px;
+    right: -2px;
 }
 
 .chart-section {
@@ -249,11 +285,68 @@ a:hover {
     background: #FEFEFE;
   }
 
+  .demo-border {
+      border-bottom: 3px solid #1A73E8 !important;
+      font-size: 20px;
+      line-height: 23px;
+  }
+
+  .nav-hover {
+      margin-right: 53px;
+      font-size: 20px;
+      line-height: 23px;
+  }
+
+  .nav-hover:hover {
+    border-bottom: 3px solid #1A73E8 !important;
+  }
+
   .card .card-header {
-    border-bottom: solid 1px #ccc;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.1);
     text-align: left;
     background: #FEFEFE;
+    padding-left: 13.08px;
   }
+
+  .card-header h5 {
+    color: #777777;
+    margin-bottom: 0;
+  }
+
+  #list-view {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 29px;
+      margin-bottom: 0;
+      color: #777777
+  }
+
+  .pad-left {
+      padding-left: 15px;
+      color: #000000;
+      line-height: 23px;
+      font-size: 20px;
+  }
+
+  .state-cont {
+      padding-right: 17px;
+      padding-left: 0;
+  }
+
+  .map-cont {
+      padding-right: 13px;
+  }
+
+  .list-group ::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  .list-group ::-webkit-scrollbar-thumb {
+      background-color: #1A73E8;
+      border-radius: 101px;
+  }
+
+  
 
 @media only screen and (max-width: 991px) {
     .top-padding {
@@ -279,7 +372,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 782px) {
     
     .desktop5-options {
         flex-direction: column;
@@ -287,8 +380,8 @@ a:hover {
         height: auto;
         border-bottom: 1px solid rgba(119, 119, 119, 0.2);
         padding-top: 20px;
-        padding-right: 30px;
-        margin-right: -20px; 
+        padding-right: 0px;
+        margin-right: 0px; 
     }
 
     
@@ -296,11 +389,33 @@ a:hover {
     .options {
         margin-bottom: 0px;
         padding-bottom: 0px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 
     .first-icons {
         margin-left: 20px;
         margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    .nav-column {
+        display: flex !important;
+        flex-direction: column !important;
+
+    }
+
+    .nav-cont {
+        padding-left: 16px;
+    }
+
+    .nav-hover {
+        width: 114px;
+    }
+
+    .demo-border {
+        width: 162px;
     }
 }
 
@@ -343,9 +458,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 933px) {
-    .options {
+    /* .options {
         margin-left: 30px;
-    }
+    } */
 
     .options {
         margin-top: 10px;
