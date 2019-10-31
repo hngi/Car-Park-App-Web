@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Park Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+               
+    <style>
+      .form-container, .header-container{
+            background: #FFFFFF;
+            border: 1px solid rgba(63, 63, 68, 0.005);
+            box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 1px 0px rgba(63, 63, 68, 0.05);   
+        }
+        .add-car-btn{
+           background-color: #ffffff;
+           outline-color: blue;
+           color:blue;
+           float:right;
+           margin-right:30px;
+        }
+        @media only screen and (max-width:700px){
+            .add-car-btn{
+           background-color: #ffffff;
+           outline-color: blue;
+           color:blue;
+           float:right;
+           margin-right:30px;
+           margin-top:-40px;
+        }
+        }
+        @media only screen and (max-width:420px){
+            .add-car-btn{
+           background-color: #ffffff;
+           outline-color: blue;
+           color:blue;
+           float:right;
+           margin-right:30px;
+           margin-top:-50px;
+        }
+        }
+        .p-car{
+            margin-top:5px;
+            margin-left:30px;
+        }
+        
+        .add-car-btn-2{
+            background: #1A73E8;
+            border-radius: 6px;
+            color:#ffffff;        
+            font-family: Lato;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+        color: #FFFFFF;
+        }
+        .col-sm-5{
+            margin:15px;
+        }
+        .form-control{
+           height:50px;
+        }
+        .label{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.05px;
+            color: #3A3B3F;
+        }
+        .p-note{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            color: #BDBDBD;
+        }
+    </style>
+    </head>
+    <body>
+
+
+<div class="container header-container mt-2">
+        <div class="row justify-content-center">
+                <div class="col-sm-6">
+                        <p class="p-car">Car Park Information</p>
+                      </div>
+    
+                  <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary add-car-btn">Add Another Car Park</button>
+                      </div>
+                </div>
+</div>
+          
+</div>
+
+<div class="container form-container">
+    <div class="row justify-content-center">
+            <div class="col-sm-5 mt-4">
+                <label class="label">Name of Car Park</label>
+                    <input class="form-control" type="text">
+                  </div>
+
+              <div class="col-sm-5 mt-4">
+                    <label class="label">Name of Car Park Owner</label>
+                    <input class="form-control" type="text">
+                  </div>
+            </div>
+
+            <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                        <label class="label">Address of Car Park</label>
+                            <input class="form-control" type="text">
+                          </div>
+
+                          <div class="col-sm-5">
+                                <label class="label">Phone Number of Car Park Owner</label>
+                                    <input class="form-control" type="phone">     
+                                  </div>
+            </div>
+
+            <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                        <label class="label">Car Park Fee</label>
+                            <input class="form-control" type="text">  
+                            <p class="p-note mt-4">This information here is what will be shown to users</p>
+                          </div>
+                          
+                          <div class="col-sm-5">
+                                  </div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                            <button class="btn btn-primary add-car-btn-2">Add Car Park</button>
+                          </div>
+                          <div class="col-sm-5">
+                                  </div>
+            </div>  
+                        
+                    </div>
+   
+    </div>
+
+</div>
+
+</body>
+</html>
