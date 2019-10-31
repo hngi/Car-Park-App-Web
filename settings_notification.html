@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Car Park Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 100%;
+            /* background: #E5E5E5; */
+            margin: 0;
+        }
+        #body-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        #sidebar-container {
+            min-height: 100vh;
+            background-color: #0049B5;
+            padding: 0;
+        }
+
+        /* Sidebar sizes when expanded and expanded */
+        .sidebar-expanded {
+            width: 230px;
+        }
+
+        .sidebar-collapsed {
+            width: 60px;
+        }
+
+        /* Menu item*/
+        #sidebar-container .list-group a {
+            height: 50px;
+            color: white;
+        }
+
+        /* Submenu item*/
+        #sidebar-container .list-group .sidebar-submenu a {
+            height: 45px;
+            padding-left: 30px;
+        }
+
+        .sidebar-submenu {
+            font-size: 0.9rem;
+        }
+
+        /* Separators */
+        .sidebar-separator-title {
+            background-color: #0049B5;
+            height: 35px;
+        }
+
+        .sidebar-separator {
+            background-color: #0049B5;
+            height: 25px;
+        }
+
+        .logo-separator {
+            background-color: #0049B5;
+            height: 60px;
+        }
+
+        /* Closed submenu icon */
+        #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+            content: " \f0d7";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
+        }
+
+        /* Opened submenu icon */
+        #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+            content: " \f0da";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
+        }
+        
+        .container {
+            max-width: 85%;
+            background: #FFFFFF;
+            border: 1px solid rgba(63, 63, 68, 0.005);
+            box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 1px 0px rgba(63, 63, 68, 0.05);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .setNoti h1, .setNoti h2{
+            font-size: 1.15em;
+            padding: 0.5em;
+            border-bottom: 1px solid  #E4E7EB;
+            font-weight: normal;
+            color: #3A3B3F;
+        }
+
+        .setNoti h2{
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .subNoti{
+            border-bottom: 1px solid  #E4E7EB;
+            text-align: center;
+            margin-left: 0.1em;
+        }
+
+        .subNoti p{
+            text-transform: capitalize;
+            font-size: 1em;
+            color:  #3A3B3F;
+            font-weight: 500;
+        }
+
+        .dod p{
+            text-transform: none;
+            color: #888888;
+        }
+
+        .change p{
+            color: #888888;
+        }
+
+        .demo{
+            height: 2em;
+            border-bottom: none;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 2em;
+            height: 1em;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #F3F3F3;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 0.8em;
+            width: 0.8em;
+            left: 4px;
+            bottom: 2px;
+            -webkit-transition: .4s;
+            transition: .4s;
+            background: #888888;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.16), 0px 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        input:checked + .slider {
+            background: #D8E9FF;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(0.8em);
+            -ms-transform: translateX(0.8em);
+            transform: translateX(0.8em);
+            background: #1A73E8;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.16), 0px 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .slider.round {
+            border-radius: 2em;
+        }
+
+        .slider.round:before {
+            border-radius: 2em;
+        }
+
+        .makeFlex{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .timeBtn{
+            border: 1px solid rgba(0, 0, 0, 0.53);
+            box-sizing: border-box;
+            border-radius: 5px;
+            height: 2.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0" style="background-color: #ffffff;">
+        <div class="row " id="body-row">
+            <div id="sidebar-container" class="sidebar">
+                <ul class="list-group">
+                    <li
+                        class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                    </li>
+                    <a href="#" data-toggle="sidebar-colapse"
+                        class=" list-group-item list-group-item-action d-flex align-items-center border-0"
+                        style="background-color: #0049B5">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                            <span id="collapse-text" class="menu-collapsed">Menu</span>
+                        </div>
+                    </a>
+                    <a href="index.html"
+                        class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start"
+                        style="background-color: #0049B5">
+                        <span class="mr-auto">
+                            <img class="mr-auto"
+                                src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg"
+                                alt="Dashboard" width="30" height="30">
+                            <span class="menu-collapsed">Dashboard</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </span>
+                    </a>
+                    <a href="mailSupport.html"
+                        class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
+                        style="background-color: #0049B5">
+                        <span class="mr-auto">
+                            <img class="mr-auto"
+                                src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg"
+                                alt="Mail" width="30" height="30">
+                            <span class="menu-collapsed">Mail</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </span>
+                    </a>
+                    <a href="#"
+                        class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
+                        style="background-color: #0049B5">
+                        <span class="mr-auto">
+                            <img src="https://res.cloudinary.com/seun007/image/upload/v1572290891/image_2_mjjnfc.png"
+                                alt="Users" width="30" height="30">
+                            <span class="menu-collapsed">Manage Parks</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </span>
+                    </a>
+                    <a href="#"
+                        class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
+                        style="background-color: #0049B5">
+                        <span class="mr-auto">
+                            <img src="https://res.cloudinary.com/seun007/image/upload/v1572455740/image_1_juyukf.png"
+                                alt="Users" width="30" height="30">
+                            <span class="menu-collapsed">Noifications</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </span>
+                    </a>
+                    <a href="settings_account.html"
+                        class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
+                        style="background-color: #0049B5">
+                        <span class="mr-auto">
+                            <img class="mr-auto"
+                                src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg"
+                                alt="Settings" width="25" height="25">
+                            <span class="menu-collapsed">Settings</span>
+                            <span class="submenu-icon ml-auto"></span>
+                        </span>
+                    </a>
+                </ul>
+            </div>
+            <!--For main content area -->
+            <div class="col p-0 w-25">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="d-flex">
+                        <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted"
+                            style="font-size: 22px; cursor: pointer;"></span>
+                    </div>
+                    <div class="col-7 p-2 mb-0">
+                        <form class="form-inline active-cyan-4">
+                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </form>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="col-8 pt-3 d-flex">
+                            <i class="fa fa-user pr-1 mt-1" aria-hidden="true"></i>
+                            <p class="text-muted">John Travolta</p>
+                            <i class="fas fa-bell mt-1 ml-5"></i>
+                            <i class="fa fa-angle-down fa-lg ml-3 mt-1"></i>
+                        </div>
+                        <div class="col-4  d-flex border-left justify-content-end">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg"
+                                alt="EN" width="25" height="25">
+                            <span class="text-muted pl-2">EN</span>
+                        </div>
+                    </div>
+                </nav>
+                <div class="col main p-3 text-white" style="background:#1A73E8;">
+                    <div class="col">
+                        <h1 style="font-size: 2.2rem">Welcome back Admin</h1>
+                        <h6 class="pt-2">CAR PARK APPLICATION </h6>
+                    </div>
+                </div>
+                <div class="col shadow">
+                    <nav class="nav">
+                        <a class="nav-link text-muted" href="#" id="account">Account</a>
+                        <a class="nav-link text-muted" href="#">Users</a>
+                        <a class="nav-link text-muted" href="settings_paymenthistory.html">Payment History</a>
+                        <a class="nav-link active text-muted border-bottom border-primary" href="settings_notification.html">Notification</a>
+                    </nav>
+                </div>
+                <div class="col mt-2 p-3">
+                    <div class="container">
+                        <div class="row setNoti">
+                            <h1 class="col-sm-12">How would you like to receive your notifications?</h1>
+                        </div>
+                        <div class="row setNoti">
+                            <h2 class="col-sm-12">Notify me about</h2>
+                            <div class="subNoti row col-sm-12">
+                                <p class="col-sm-6">new messages</p>
+                                <div class="col-sm-6 mt-1">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="subNoti mt-2 row col-sm-12">
+                                <p class="col-sm-6">old messages</p>
+                                <div class="col-sm-6 mt-1">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row setNoti">
+                            <h2 class="col-sm-12">do not disturb</h2>
+                            <div class="subNoti row col-sm-12 dod">
+                                <div class="col-sm-3 mt-1">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <p class="col-sm-4">Automatically disable notifications from</p>
+                                <div class="col-sm-5 makeFlex">
+                                    <input type="time" name="startTime" class="btn timeBtn mr-2">
+                                    <p class="mr-2">to</p>
+                                    <input type="time" name="startTime" class="btn timeBtn">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row setNoti">
+                            <h2 class="col-sm-12">sound</h2>
+                            <div class="subNoti row col-sm-12">
+                                <p class="col-sm-6">mute all sounds</p>
+                                <div class="col-sm-6 mt-1">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="subNoti mt-2 row col-sm-12 change">
+                                <p class="col-sm-6">play a sound when receiving notification</p>
+                                <div class="col-sm-6 mt-1">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="subNoti mt-2 row col-sm-12 demo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Hide submenus
+            $('#body-row .collapse').collapse('hide');
+            // Collapse/Expand icon
+            $('#collapse-icon').addClass('fa-angle-double-left');
+            $('#collapse-menu').addClass('fa-angle-double-right');
+            // Collapse click
+            $('[data-toggle=sidebar-colapse]').click(function () {
+                SidebarCollapse();
+            });
+            function SidebarCollapse() {
+                $('.menu-collapsed').toggleClass('d-none');
+                $('.sidebar-submenu').toggleClass('d-none');
+                $('.submenu-icon').toggleClass('d-none');
+                $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+                // Collapse/Expand icon
+                $('#collapse-icon').toggleClass('fa-angle-double-right fa-angle-double-left');
+            }
+        });
+        // Collapse click
+        $('[data-toggle=sidebar-container]').click(function () {
+            SidemenuCollapse();
+        });
+        //Collapse Side Menu
+        function SidemenuCollapse() {
+            $('#sidebar-container').toggleClass('d-none');
+            // Collapse/Expand icon
+            $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
+        }
+        //Hide Menu on Load
+        $(document).ready(function () {
+            $('#sidebar-container').toggleClass('d-none');
+        })
+        $(document).ready(function () {
+            $('.menu-collapsed').toggleClass('d-none');
+            $('.sidebar-submenu').toggleClass('d-none');
+            $('.submenu-icon').toggleClass('d-none');
+            $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+            // Collapse/Expand icon
+            $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+        })
+    </script>
+</body>
+
+</html>
