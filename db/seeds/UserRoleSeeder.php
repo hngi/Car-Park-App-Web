@@ -3,7 +3,7 @@
 
 use Phinx\Seed\AbstractSeed;
 
-class RowSeeder extends AbstractSeed
+class UserRoleSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -17,12 +17,20 @@ class RowSeeder extends AbstractSeed
     {
         $faker = Faker\Factory::create();
         $data = [];
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $data[] = [
-                'name'   => $faker->name,
+                'user_id'  => $faker->randomElement($array = range(1, 10)),
+                'role_id'  => $faker->randomElement($array = range(1, 3)),
             ];
         }
 
-        $this->table('rows')->insert($data)->save();
+        $this->table('user_roles')->insert($data)->save();
+    }
+
+    public function getDependencies()
+    {
+        return [
+            'RoleSeeder'
+        ];
     }
 }

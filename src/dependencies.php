@@ -66,6 +66,26 @@ return function (App $app) {
         return new \App\Controllers\UserController($c);
     };
 
+    // Car Park Controller dependency
+    $container['CarParkController'] = function ($c) {
+        return new \App\Controllers\CarParkController($c);
+    };
+
+    // Role Controller dependency
+    $container['RoleController'] = function ($c) {
+        return new \App\Controllers\RoleController($c);
+    };
+
+    // Slot Controller dependency
+    $container['SlotController'] = function ($c) {
+        return new \App\Controllers\SlotController($c);
+    };
+
+    // Row Controller dependency
+    $container['RowController'] = function ($c) {
+        return new \App\Controllers\RowController($c);
+    };
+
     // Not Found Error Handler - Error 404
     unset($container['notFoundHandler']);
     $container['notFoundHandler'] = function ($c) {

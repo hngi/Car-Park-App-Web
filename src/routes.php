@@ -30,6 +30,20 @@ return function (App $app) {
     $app->post('/slots/users', 'SlotController:slot_user')->setName('create_user_slot');
     $app->delete('/slots/users', 'SlotController:delete_slot_user')->setName('delete_user_slot');
 
+    // User Role routes
+    $app->get('/roles/users', 'RoleController:get_roles_users')->setName('roles_users');
+    $app->get('/roles/{id}/users', 'RoleController:roles_users')->setName('roles_users');
+    $app->get('/roles/{id}/users/{user_id}', 'RoleController:role_user')->setName('get_role_user');
+    $app->post('/roles/users', 'RoleController:role_user')->setName('create_user_role');
+    $app->delete('/roles/users', 'RoleController:delete_role_user')->setName('delete_user_role');
+
+    // Role routes
+    $app->get('/roles', 'RoleController:index')->setName('get_roles');
+    $app->get('/roles/{id}', 'RoleController:get')->setName('get_role');
+    $app->post('/roles', 'RoleController:create')->setName('create_role');
+    $app->put('/roles/{id}', 'RoleController:update')->setName('update_role');
+    $app->delete('/roles/{id}', 'RoleController:delete')->setName('delete_role');
+
     // Row API routes
     $app->get('/rows', 'RowController:index')->setName('get_rows');
     $app->get('/rows/{id}', 'RowController:get')->setName('get_row');
@@ -43,5 +57,12 @@ return function (App $app) {
     $app->post('/slots', 'SlotController:create')->setName('create_slot');
     $app->put('/slots/{id}', 'SlotController:update')->setName('update_slot');
     $app->delete('/slots/{id}', 'SlotController:delete')->setName('delete_slot');
+
+    // CarPark API routes
+    $app->get('/car-parks', 'CarParkController:index')->setName('get_car_parks');
+    $app->get('/car-parks/{id}', 'CarParkController:get')->setName('get_car_park');
+    $app->post('/car-parks', 'CarParkController:create')->setName('create_car_park');
+    $app->put('/car-parks/{id}', 'CarParkController:update')->setName('update_car_park');
+    $app->delete('/car-parks/{id}', 'CarParkController:delete')->setName('delete_car_park');
 
 };

@@ -7,6 +7,8 @@ use App\Models\SlotUser;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use App\Models\User;
+use App\Models\UserRole;
+
 
 class UserController extends Controller
 {
@@ -90,6 +92,46 @@ class UserController extends Controller
             ->where('slot_id', $args['slot_id'])
             ->whereNull('time_out')
             ->update(['time_out' => new date('Y-m-d h:i:s')]);
+        return $this->withJsonData(null, $patch ? 204 : 403);
+    }
+
+    //
+    public function user_role(Request $req, Response $res, $args)
+    {
+        $parsedBody = $req->getParsedBody();
+        $user = User::find($parsedBody['user_id']);
+        $role = Role::find($parsedBody['role_id']);
+        if ($user && $role) {
+            $user->roles()->attach([$parsedBody['role_id']]);
+        }
+        return $this->withJsonData(null);
+    }
+
+    public function get_users_roles(Request $req, Response $res, $args)
+    {
+        $users_roles = User::with('roles')->get();
+        return $this->withJsonData($users_roles);
+    }
+
+    public function get_user_roles(Request $req, Response $res, $args)
+    {
+        $user_roles = User::where('id', $args['id'])->with('roles')->first();
+        return $this->withJsonData($user_roles);
+    }
+
+    public function get_user_role(Request $req, Response $res, $args)
+    {
+        $user_role = User::where('id', $args['id'])
+            ->whereHas('roles', function ($q) use ($args) {
+                $q->where('id', $args['id']);
+            })->first();
+        return $this->withJsonData($user_role);
+    }
+
+    public function patch_user_role(Request $req, Response $res, $args)
+    {
+        $patch = UserRole::where('user_id', $args['id'])
+            ->where('role_id', $args['role_id']);
         return $this->withJsonData(null, $patch ? 204 : 403);
     }
 

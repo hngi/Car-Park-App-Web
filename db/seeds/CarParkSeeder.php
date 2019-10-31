@@ -23,7 +23,9 @@ class CarParkSeeder extends AbstractSeed
             $data[] = [
                 'owner_id'  => $current_owner,
                 'name'      => $faker->word,
-                'location'  => $faker->city,
+                'address'  => $faker->city,
+                'car_park_fee' => 500,
+                'phone_no' => '1234567890',
             ];
             if ($count > 3) {
                 $current_owner++;
