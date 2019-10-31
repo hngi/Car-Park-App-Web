@@ -37,7 +37,7 @@ class CarPark extends AbstractMigration
             ->addColumn('name', 'string')
             ->addColumn('address', 'string')
             ->addColumn('car_park_fee', 'integer')
-            ->addColumn('phone_no', 'integer')
+            ->addColumn('phone_no', 'string')
             ->addColumn('created_at', 'datetime', ['null' => true])
             ->addColumn('updated_at', 'datetime', ['null' => true])
             ->addForeignKey('owner_id', 'users', 'id')

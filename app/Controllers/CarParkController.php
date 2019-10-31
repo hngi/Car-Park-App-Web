@@ -37,7 +37,7 @@ class CarParkController extends Controller
     public function update(Request $req, Response $res, $args)
     {
         $parsedBody = $req->getParsedBody();
-        $update = CarPark::where('id', $parsedBody['id'])
+        $update = CarPark::where('id', $args['id'])
             ->update([
                 'name' => $parsedBody['name'],
                 'address' => $parsedBody['address'],
