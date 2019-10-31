@@ -8,7 +8,6 @@
     <title>Car Park Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <style>
@@ -97,94 +96,72 @@
             position: relative;
         }
 
-        .payHead h1{
-            font-size: 1.25em;
-            padding: 1em;
+        .payHead{
             border-bottom: 1px solid  #E4E7EB;
+            padding: 0.5em;
         }
 
-        .payHead h1 span{
-            font-size: 0.6em;
-            color: #66788A;
-            font-weight: 100;
+        .payHead h1{
+            font-size: 1.25em;
+            color:  #3A3B3F;
         }
-        form .searchBtn{
-            background: #F3F2F0;
-            border: 1px solid rgba(130, 130, 130, 0.2);
-            border-radius: 4px;
-            width: 10em;
-            margin-left: -0.3em;
-            z-index: 99;
-            color: #4F4F4F;
-            font-weight: 500;
-        }
-        form .eBtn{
+
+        .payHead .newBtn{
             background: #488AC5;
             box-shadow: 0px 0.949807px 3.79923px rgba(0, 0, 0, 0.25);
             color: #ffffff;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
             font-weight: 500;
-            height: 2.2em;
-            padding: inherit;
+            height: 2.5em;
+            padding-left: 2em;
+            padding-right: 2em;
         }
-        form .addBtn{
-            box-shadow: 0px 1.3px 4.3px rgba(0, 0, 0, 0.25);
-            margin-left: -0.1em;
-            background: #ffffff;
-            border-top-left-radius: 0px;
-            border-bottom-left-radius: 0px;
-            color: #4F4F4F;
-            font-weight: 500;
-            height: 2.2em;
-            padding: inherit;
+
+        .payHead p{
+            font-size: 1em;
+            color:  #888888;
+            font-weight: 400;
         }
+
         .payTable{
             overflow-x: scroll;
             overflow-y: hidden;
         }
-        form label{
-            color: #4F4F4F;
-        }
+        
         table td, table th{
             color: #3A3B3F;
         }
+
         table tr{
             border-bottom: 1px solid #E4E7EB;
         }
+
         table td{
             font-weight: 400;
         }
-        @media screen and (max-width: 64em){
-            form .searchBtn{
-                margin-left: 0px;
-                margin-top: 0.5em;
-            }
-            form .eBtn, form .addBtn{
-                border-radius: 3.79923px;
-            }
-            form .addBtn{
-                margin-left: 9.7em;
-                margin-top: 0.5em;
-            }
+
+        table .demo td{
+            height: 0.7em;
         }
+
+        table .demo{
+            border-bottom: none;
+        }
+
         @media screen and (max-width: 48em){
-            form .eBtn, form .addBtn{
+            .payHead .newBtn{
+                padding-left: 0em;
+                padding-right: 0em;
                 height: unset;
             }
         }
-        @media screen and (max-width: 41em){
-            form .addBtn{
-                margin-left: 0em;
+
+        @media screen and (max-width: 34em){
+            .payHead .newBtn{
+                padding: 0 1em 0 1em;
+                height: 2.5em;
             }
         }
-        @media screen and (max-width: 35em){
-            .payHead h1 span{
-                position: absolute;
-                top: 4em;
-                left: 0.4em;
-            }
-        }
+
     </style>
 </head>
 
@@ -264,7 +241,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="d-flex">
                         <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted"
-                            style="font-size: 25px; font-weight: 900; cursor: pointer;"></span>
+                            style="font-size: 22px; cursor: pointer;"></span>
                     </div>
                     <div class="col-7 p-2 mb-0">
                         <form class="form-inline active-cyan-4">
@@ -302,83 +279,49 @@
                 <div class="col shadow">
                     <nav class="nav">
                         <a class="nav-link text-muted" href="settings_account.html">Account</a>
-                        <a class="nav-link text-muted" href="settings_users.html">Users</a>
-                        <a class="nav-link text-muted border-bottom border-primary" href="settings_paymenthistory.html">Payment History</a>
+                        <a class="nav-link text-muted border-bottom border-primary" href="settings_users.html">Users</a>
+                        <a class="nav-link text-muted" href="settings_paymenthistory.html">Payment History</a>
                         <a class="nav-link active text-muted" href="settings_notification.html">Notification</a>
                     </nav>
                 </div>
                 <div class="col mt-2 p-3">
                     <div class="container">
                         <div class="row payHead">
-                            <h1 class="col-sm-12">Payment History <span> &emsp; Every payment details are made available here</span></h1>
-                        </div>
-                        <div class="row col-sm-12">
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6">
-                                <form action="">
-                                    <div class="row">
-                                        <input type="email" name="search" id="" class="form-control col-sm-8" placeholder="&#xF002; Find by email address..." style="font-family: FontAwesome, Arial; font-style: normal">
-                                        <button type="submit" class="btn searchBtn">Search</button>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <label for="" class="control-label sm-4 mt-1">Search for people by &nbsp;</label>
-                                        <button class="btn eBtn col-sm-4">Email Address</button>
-                                        <button class="btn addBtn col-sm-4">Adding Filters</button>
-                                    </div>
-                                </form>
+                            <h1 class="col-sm-3">Users</h1>
+                            <p class="col-sm-3">Your users are made available here</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3">
+                                <button class="btn newBtn">Add New Member</button>
                             </div>
                         </div>
-                        <div class="payTable row mt-4">
+                        <div class="payTable row">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>Date</th>
-                                        <th>Reference Number</th>
-                                        <th>Description</th>
-                                        <th>Amount</th>
-                                        <th colspan="2">Payment Method</th>
+                                        <th>Name</th>
+                                        <th>Email Address</th>
+                                        <th>Role</th>
+                                        <th>Last Login</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>Anthony Joshua</td>
+                                        <td>anthonyjo@gmail.com</td>
+                                        <td>User</td>
                                         <td>2/2/2020</td>
-                                        <td>ID2712JJJG</td>
-                                        <td>Park Fee</td>
-                                        <td>&#8358;20.00</td>
-                                        <td>Visa</td>
-                                        <td><i class="fas fa-ellipsis-v"></i> &emsp; <i class="fas fa-pencil-alt"></i></td>
                                     </tr>
                                     <tr>
+                                        <td>Anthony Joshua</td>
+                                        <td>anthonyjo@gmail.com</td>
+                                        <td>User</td>
                                         <td>2/2/2020</td>
-                                        <td>ID2712JJJG</td>
-                                        <td>Park Fee</td>
-                                        <td>&#8358;20.00</td>
-                                        <td>Visa</td>
-                                        <td><i class="fas fa-ellipsis-v"></i> &emsp; <i class="fas fa-pencil-alt"></i></td>
                                     </tr>
-                                    <tr>
-                                        <td>2/2/2020</td>
-                                        <td>ID2712JJJG</td>
-                                        <td>Park Fee</td>
-                                        <td>&#8358;20.00</td>
-                                        <td>Visa</td>
-                                        <td><i class="fas fa-ellipsis-v"></i> &emsp; <i class="fas fa-pencil-alt"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2/2/2020</td>
-                                        <td>ID2712JJJG</td>
-                                        <td>Park Fee</td>
-                                        <td>&#8358;20.00</td>
-                                        <td>Visa</td>
-                                        <td><i class="fas fa-ellipsis-v"></i> &emsp; <i class="fas fa-pencil-alt"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2/2/2020</td>
-                                        <td>ID2712JJJG</td>
-                                        <td>Park Fee</td>
-                                        <td>&#8358;20.00</td>
-                                        <td>Visa</td>
-                                        <td><i class="fas fa-ellipsis-v"></i> &emsp; <i class="fas fa-pencil-alt"></i></td>
+                                    <tr class="demo">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
