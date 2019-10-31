@@ -116,6 +116,7 @@ body {
     font-weight: normal;
     color: #777777;
     margin-bottom: 0;
+    margin-left: 10px;
 }
 
 .en {
@@ -400,22 +401,42 @@ a:hover {
 }
 
 @media only screen and (max-width: 582px) {
+    .nav-cont {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+@media only screen and (max-width: 526px) {
     .nav-column {
         display: flex !important;
-        flex-direction: column !important;
-
+        justify-content: space-around;
     }
 
     .nav-cont {
-        padding-left: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .nav-hover {
-        width: 114px;
+        /* width: 114px; */
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .demo-border {
-        width: 162px;
+        /* width: 162px; */
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .nav-column {
+        justify-content: space-between;
     }
 }
 
