@@ -15,17 +15,17 @@ class Slot extends Model
 
     public function car_park()
     {
-        return $this->belongsTo('\App\CarPark', 'car_park_id');
+        return $this->belongsTo('\App\Models\CarPark', 'car_park_id');
     }
 
     public function row()
     {
-        return $this->belongsTo('\App\Row', 'row_id');
+        return $this->belongsTo('\App\Models\Row', 'row_id');
     }
 
     public function users()
     {
-        return $this->belongsToMany('\App\User', 'slot_users')
+        return $this->belongsToMany('\App\Models\User', 'slot_users')
             ->withPivot(['id', 'time_in', 'time_out']);
     }
 

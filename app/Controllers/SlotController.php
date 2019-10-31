@@ -25,21 +25,24 @@ class SlotController extends Controller
 
     public function create(Request $req, Response $res, $args)
     {
+        $parsedBody = $req->getParsedBody();
+
         $slot = Slot::create([
-            'car_park_id' => $args['car_park_id'],
-            'row_id' => $args['row_id'],
-            'number' => $args['number'],
+            'car_park_id' => $parsedBody['car_park_id'],
+            'row_id' => $parsedBody['row_id'],
+            'number' => $parsedBody['number'],
         ]);
         return $this->withJSONData($slot, 201);
     }
 
     public function update(Request $req, Response $res, $args)
     {
-        $update = Slot::where('id', $args['id'])
+        $parsedBody = $req->getParsedBody();
+        $update = Slot::where('id', $parsedBody['id'])
             ->update([
-                'car_park_id' => $args['car_park_id'],
-                'row_id' => $args['row_id'],
-                'number' => $args['number'],
+                'car_park_id' => $parsedBody['car_park_id'],
+                'row_id' => $parsedBody['row_id'],
+                'number' => $parsedBody['number'],
             ]);
         return $this->withJsonData(null, 204);
     }
