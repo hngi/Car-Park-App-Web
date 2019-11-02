@@ -15,6 +15,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,22 +25,26 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        body{
+        body {
             overflow-x: hidden;
         }
+
         #body-row {
-            margin-left:0;
-            margin-right:0;
+            margin-left: 0;
+            margin-right: 0;
         }
+
         #sidebar-container {
-            min-height: 100vh;   
+            min-height: 100vh;
             background-color: #0049B5;
             padding: 0;
         }
-        .more-details{
+
+        .more-details {
             color: #333;
         }
-        .more-details:hover{
+
+        .more-details:hover {
             text-decoration: none;
             color: #000;
         }
@@ -48,6 +53,7 @@ session_start();
         .sidebar-expanded {
             width: 230px;
         }
+
         .sidebar-collapsed {
             width: 60px;
         }
@@ -63,6 +69,7 @@ session_start();
             height: 45px;
             padding-left: 30px;
         }
+
         .sidebar-submenu {
             font-size: 0.9rem;
         }
@@ -72,182 +79,272 @@ session_start();
             background-color: #0049B5;
             height: 35px;
         }
+
         .sidebar-separator {
             background-color: #0049B5;
             height: 25px;
         }
+
         .logo-separator {
-            background-color: #0049B5;    
+            background-color: #0049B5;
             height: 60px;
         }
 
         /* Closed submenu icon */
         #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
-        content: " \f0d7";
-        font-family: FontAwesome;
-        display: inline;
-        text-align: right;
-        padding-left: 10px;
-        }
-        /* Opened submenu icon */
-        #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
-        content: " \f0da";
-        font-family: FontAwesome;
-        display: inline;
-        text-align: right;
-        padding-left: 10px;
+            content: " \f0d7";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
         }
 
-        .pt-4{
+        /* Opened submenu icon */
+        #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+            content: " \f0da";
+            font-family: FontAwesome;
+            display: inline;
+            text-align: right;
+            padding-left: 10px;
+        }
+
+        .pt-4 {
             padding: 1rem !important;
         }
 
-        
-        h4{
+
+        h4 {
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
             font-size: 20px;
             text-align: center;
         }
- 
- .details{
-     margin: 1.5rem 0 auto;
- }
 
- a .card {
-    margin: 0 auto;
-}
+        .details {
+            margin: 1.5rem 0 auto;
+        }
 
-.scrollbar {
-margin-left: 30px;
-float: left;
-height: 300px;
-background: #fff;
-overflow-y: scroll;
-margin-bottom: 25px;
-}
-.pb-5{
-    padding-bottom: 1rem !important;
-}
+        a .card {
+            margin: 0 auto;
+        }
 
-.scrollbar-primary::-webkit-scrollbar {
-width: 5px;
-background-color: #F5F5F5; }
+        .scrollbar {
+            margin-left: 30px;
+            float: left;
+            height: 300px;
+            background: #fff;
+            overflow-y: scroll;
+            margin-bottom: 25px;
+        }
 
-.scrollbar-primary::-webkit-scrollbar-thumb {
-border-radius: 10px;
---webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-background-color: #4285F4; }
+        .pb-5 {
+            padding-bottom: 1rem !important;
+        }
 
-.card{
-    margin-bottom: 1rem !important;
-}
+        .scrollbar-primary::-webkit-scrollbar {
+            width: 5px;
+            background-color: #F5F5F5;
+        }
 
-#cancel {
-    margin-right: 0 !important;
-    padding-left: 22px;
-    margin-bottom: 10px;
-    color:#fff !important;
-}
+        .scrollbar-primary::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: #4285F4;
+        }
 
-@media (max-width: 378px){
-    .scrollbar{
-    margin: 0 auto;
-    flex: 0 0 100%;
-} 
-}
+        .card {
+            margin-bottom: 1rem !important;
+        }
 
-@media (max-width: 568px) {
-    .card-body:nth-child(4){
-        flex: 0 0 0;
-    margin-left: -10rem !important;
-}
+        #cancel {
+            margin-right: 0 !important;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            color: #fff !important;
+        }
 
-.map{
-    padding-bottom: 1rem;
-}
+        .john {
+            font-size: 1.5rem;
+            line-height: 29px;
+            font-weight: normal;
+            color: #777777;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
 
-.col-10{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+        h2 {
+            font-size: 1.5rem;
+        }
 
-.scrollbar{
-    margin: 0 auto;
-    flex: 0 0 100%;
-}
+        @media (max-width: 1240px) {
+            .map {
+                padding-bottom: 1rem;
+            }
 
-.col-8{
-    flex: 0 0 50%;
-}
+            .col-10 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
-.col-4{
-    position: absolute;
-    top: 57%;
-    left: 20%;
-}
-.text-muted p{
-    line-height: .5rem;
-}
-}
+            .scrollbar {
+                margin: 0 auto;
+                flex: 0 0 50%;
+            }
+        }
 
-@media (max-width: 768px){
-    .map{
-    padding-bottom: 1rem;
-}
+        @media (max-width: 988px) {
+            .map {
+                padding-bottom: 1rem;
+            }
 
-.col-10{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+            .col-10 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
-.scrollbar{
-    margin: 0 auto;
-    flex: 0 0 60%;
-}
-}
+            .scrollbar {
+                margin: 0 auto;
+                flex: 0 0 50%;
+            }
 
-@media (max-width: 1240px){
-    .map{
-    padding-bottom: 1rem;
-}
+            .right {
+                justify-content: none !important;
+                position: absolute;
+                left: 65%;
+                top: 62%;
+            }
+        }
 
-.col-10{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+        @media (max-width: 768px) {
+            .map {
+                padding-bottom: 1rem;
+            }
 
-.scrollbar{
-    margin: 0 auto;
-    flex: 0 0 50%;
-} 
-}
+            .col-10 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .scrollbar {
+                margin: 0 auto;
+                flex: 0 0 60%;
+            }
+
+            .right {
+                justify-content: none !important;
+                position: absolute;
+                left: 65%;
+                top: 62%;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .card-body:nth-child(4) {
+                flex: 0 0 0;
+                margin-left: -10rem !important;
+            }
+
+            .map {
+                padding-bottom: 1rem;
+            }
+
+            .col-10 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .scrollbar {
+                margin: 0 auto;
+                flex: 0 0 100%;
+            }
+
+            .col-8 {
+                flex: 0 0 50%;
+            }
+
+            .col-4 {
+                position: absolute;
+                top: 57%;
+                left: 20%;
+            }
+
+            .text-muted p {
+                line-height: .5rem;
+            }
+
+            .right {
+                justify-content: none !important;
+                position: absolute;
+                left: 65%;
+                top: 62%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .right {
+                justify-content: none !important;
+                position: absolute;
+                left: 65%;
+                top: 62%;
+            }
+
+
+        }
+
+        @media (max-width: 380px) {
+            .scrollbar {
+                margin: 0 auto;
+                flex: 0 0 100%;
+            }
+
+            .right {
+                justify-content: none !important;
+                position: absolute;
+                left: 60%;
+                top: 62%;
+            }
+
+            .border-left {
+                border-left: none !important;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container-fluid p-0" style="background-color: #F6F6F6;">
         <div class="row " id="body-row">
             <div id="sidebar-container" class="sidebar relate">
                 <ul class="list-group">
-                    <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                    <li
+                        class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     </li>
-                    
-                    <a href="#" data-toggle="sidebar-colapse" class=" list-group-item list-group-item-action d-flex align-items-center border-0 menu-hover" style="background-color: #0049B5">
+
+                    <a href="#" data-toggle="sidebar-colapse"
+                        class=" list-group-item list-group-item-action d-flex align-items-center border-0 menu-hover"
+                        style="background-color: #0049B5">
                         <div class="d-flex w-100 justify-content-start align-items-center">
                             <span id="collapse-icon" class="fa fa-2x mr-3 fa-angle-double-left"></span>
                         </div>
                     </a>
-                    <a href="desktop8.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover dashboard-background" style="background-color: #0049B5">
+                    <a href="desktop8.html"
+                        class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover dashboard-background"
+                        style="background-color: #0049B5">
                         <span class="mr-auto">
-                            <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
+                            <img class="mr-auto"
+                                src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg"
+                                alt="Dashboard" width="30" height="">
                             <span class="menu-collapsed">Dashboard</span>
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="mail_support.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover" style="background-color: #0049B5">
+                    <a href="mail_support.html"
+                        class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover"
+                        style="background-color: #0049B5">
                         <span class="mr-auto">
-                            <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
+                            <img src="https://res.cloudinary.com/dfjzditzc/image/upload/v1572534298/Vector_1_n2czaq.png"
+                                alt="Users" width="35" height="">
                             <span class="menu-collapsed">Manage Parks</span>
                             <span class="submenu-icon ml-auto"></span>
                         </span>
@@ -258,27 +355,33 @@ background-color: #4285F4; }
             <div class="col p-0 w-25">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="d-flex">
-                        <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted" style="font-size: 22px; cursor: pointer;"></span>
+                        <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted"
+                            style="font-size: 22px; cursor: pointer;"></span>
                     </div>
-                    <div class="col-7 p-2 mb-0">   
+                    <div class="col-7 p-2 mb-0">
                         <form class="form-inline active-cyan-4">
                             <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
                                 aria-label="Search">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </form>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                        
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="col-8 pt-3 d-flex">
-                                <i class="fa fa-user pr-1" aria-hidden="true"></i>
-                                <p class="text-muted">John Travolta</p>
+                        <div class="col-8 pt-3 d-flex"
+                            style="padding-top: 0 !important; display: flex !important; align-items: center !important; position: relative">
+                            <img
+                                src="https://res.cloudinary.com/dfjzditzc/image/upload/v1572447652/Ellipse_1_sjzgqf.png">
+                            <p class="text-muted john">John Travolta</p>
                         </div>
-                        <div class="col-4  d-flex border-left justify-content-end">
-                                <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
-                                <span class="text-muted pl-2">EN</span>
+                        <div class="col-4  d-flex border-left justify-content-end right">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg"
+                                alt="EN" width="25" height="25">
+                            <span class="text-muted pl-2">EN</span>
                         </div>
                     </div>
                 </nav>
@@ -289,194 +392,228 @@ background-color: #4285F4; }
                     </div>
                 </div>
                 <div class="col shadow">
-                        <nav class="nav">
-                            <a class="nav-link active text-muted border-bottom border-primary" href="index.html">Overview</a>
-                            <a class="nav-link text-muted" href="admin-analytics.html">Analytics</a>
-                            <a class="nav-link text-muted" href="demographics.html">Demographics</a>
-                        </nav>
+                    <nav class="nav">
+                        <a class="nav-link active text-muted border-bottom border-primary"
+                            href="index.html">Overview</a>
+                        <a class="nav-link text-muted" href="admin-analytics.html">Analytics</a>
+                        <a class="nav-link text-muted" href="demographics.html">Demographics</a>
+                    </nav>
                 </div>
                 <div class="row details">
 
-                        <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="shadow card">
-                                    <div class="card-body p-0">
-                                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="display: inline-block; padding: 10px 20px;">
-                                                <h5 class="card-title text-muted pt-2">New Users</h5>
-                                        </div>
-                                        <div class="btn-actions-pane-right text-capitalize actions-icon-btn" style=" display: inline-block; ">
-                                            <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
-                                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
-                                                    <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
-                                                </button>
-                                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu" x-placement="top-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
-                                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><a href = "newUsers.html" class = "more-details">More details</a></button>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="card-text pb-2 border-top pt-2 text-center" style="color: black; font-size:40px; font-weight: 500;">20</p>
-                                    </div>
-                                    <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="shadow card">
+                            <div class="card-body p-0">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal"
+                                    style="display: inline-block; padding: 10px 20px;">
+                                    <h5 class="card-title text-muted pt-2">New Users</h5>
                                 </div>
+                                <div class="btn-actions-pane-right text-capitalize actions-icon-btn"
+                                    style=" display: inline-block; ">
+                                    <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                            <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
+                                        </button>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu"
+                                            x-placement="top-end"
+                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
+                                            <button type="button" tabindex="0" class="dropdown-item"><i
+                                                    class="dropdown-icon lnr-inbox"> </i><a href="newUsers.html"
+                                                    class="more-details">More details</a></button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-text pb-2 border-top pt-2 text-center"
+                                    style="color: black; font-size:40px; font-weight: 500;">20</p>
                             </div>
-            
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                    <div class="shadow card">
-                                        <div class="card-body p-0">
-                                            <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="display: inline-block; padding: 10px 20px;">
-                                                    <h5 class="card-title text-muted pt-2">Exisiting Users</h5>
-                                            </div>
-                                            <div class="btn-actions-pane-right text-capitalize actions-icon-btn" style=" display: inline-block; ">
-                                                <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
-                                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
-                                                        <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
-                                                    </button>
-                                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu" x-placement="top-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
-                                                        <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><a href = "desktop10.html" class = "more-details">More details</a></button>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="card-text pb-2 border-top pt-2 text-center" style="color: orange; font-size:40px; font-weight: 500;">8</p>
+                            <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="shadow card">
+                            <div class="card-body p-0">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal"
+                                    style="display: inline-block; padding: 10px 20px;">
+                                    <h5 class="card-title text-muted pt-2">Exisiting Users</h5>
+                                </div>
+                                <div class="btn-actions-pane-right text-capitalize actions-icon-btn"
+                                    style=" display: inline-block; ">
+                                    <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                            <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
+                                        </button>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu"
+                                            x-placement="top-end"
+                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
+                                            <button type="button" tabindex="0" class="dropdown-item"><i
+                                                    class="dropdown-icon lnr-inbox"> </i><a href="desktop10.html"
+                                                    class="more-details">More details</a></button>
+
                                         </div>
-                                        <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                     </div>
                                 </div>
-            
-                                <div class="col-xl-3 col-md-6 mb-4">
-                                        <div class="shadow card">
-                                            <div class="card-body p-0">
-                                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="display: inline-block; padding: 10px 20px;">
-                                                        <h5 class="card-title text-muted pt-2">Issues</h5>
-                                                </div>
-                                                <div class="btn-actions-pane-right text-capitalize actions-icon-btn" style=" display: inline-block; ">
-                                                    <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
-                                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
-                                                            <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
-                                                        </button>
-                                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu" x-placement="top-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
-                                                            <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><a href = "desktop9.html" class = "more-details">More details</a></button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p class="card-text pb-2 border-top pt-2 text-center" style="color: red; font-size:40px; font-weight: 500;">15</p>
-                                            </div>
-                                            <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                                <p class="card-text pb-2 border-top pt-2 text-center"
+                                    style="color: orange; font-size:40px; font-weight: 500;">8</p>
+                            </div>
+                            <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="shadow card">
+                            <div class="card-body p-0">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal"
+                                    style="display: inline-block; padding: 10px 20px;">
+                                    <h5 class="card-title text-muted pt-2">Issues</h5>
+                                </div>
+                                <div class="btn-actions-pane-right text-capitalize actions-icon-btn"
+                                    style=" display: inline-block; ">
+                                    <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                            <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
+                                        </button>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu"
+                                            x-placement="top-end"
+                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
+                                            <button type="button" tabindex="0" class="dropdown-item"><i
+                                                    class="dropdown-icon lnr-inbox"> </i><a href="desktop9.html"
+                                                    class="more-details">More details</a></button>
+
                                         </div>
                                     </div>
-            
-                                    <div class="col-xl-3 col-md-6 mb-4">
-                                            <div class="shadow card">
-                                                <div class="card-body p-0">
-                                                    <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="display: inline-block; padding: 10px 20px;">
-                                                            <h5 class="card-title text-muted pt-2">Car Park</h5>
-                                                    </div>
-                                                    <div class="btn-actions-pane-right text-capitalize actions-icon-btn" style=" display: inline-block; ">
-                                                        <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
-                                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
-                                                                <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
-                                                            </button>
-                                                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu" x-placement="top-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
-                                                                <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><a href = "desktop11,.html" class = "more-details">More details</a></button>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <p class="card-text pb-2 border-top pt-2 text-center" style="color: purple; font-size:40px; font-weight: 500;">20</p>
-                                                </div>
-                                                <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
-                                            </div>
+                                </div>
+                                <p class="card-text pb-2 border-top pt-2 text-center"
+                                    style="color: red; font-size:40px; font-weight: 500;">15</p>
+                            </div>
+                            <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="shadow card">
+                            <div class="card-body p-0">
+                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal"
+                                    style="display: inline-block; padding: 10px 20px;">
+                                    <h5 class="card-title text-muted pt-2">Car Park</h5>
+                                </div>
+                                <div class="btn-actions-pane-right text-capitalize actions-icon-btn"
+                                    style=" display: inline-block; ">
+                                    <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                            <i class="fas fa-ellipsis-v btn-icon-wrapper"></i>
+                                        </button>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu"
+                                            x-placement="top-end"
+                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-212px, -239px, 0px);">
+                                            <button type="button" tabindex="0" class="dropdown-item"><i
+                                                    class="dropdown-icon lnr-inbox"> </i><a href="desktop11,.html"
+                                                    class="more-details">More details</a></button>
+
                                         </div>
+                                    </div>
+                                </div>
+                                <p class="card-text pb-2 border-top pt-2 text-center"
+                                    style="color: purple; font-size:40px; font-weight: 500;">20</p>
+                            </div>
+                            <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
+                        </div>
+                    </div>
                     <div class="col card">
                         <h2 class="section-heading pt-4 text-muted">Car Park Locations</h2>
                         <div class="d-flex flex-wrap justify-content-evenly">
                             <div class="col-10 map">
-                                    <iframe class="w-100" src="https://maps.google.com/maps?q=Lekki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                                    style="border:0; height: 400px;" allowfullscreen></iframe>
+                                <iframe class="w-100"
+                                    src="https://maps.google.com/maps?q=Lekki&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" style="border:0; height: 400px;" allowfullscreen></iframe>
                             </div>
-                            <div class="scrollbar scrollbar-primary">
-                                <h4>List View</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    
-                                </ul>
+                            <div class="scrollbar scrollbar-primary" style="height: 395px;">
+                                <div class="list-group">
+                                    <h4 class="list-group-item list-group-item-action" style="background:#F6F6F6; ">
+                                        List View
+                                    </h4>
+                                    <a href="#" class="list-group-item list-group-item-action">Maryland,
+                                        Lagos</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Lekki, Lagos</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Gwarimpa,
+                                        Abuja</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Wuse, Abuja</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Maitama,
+                                        Abuja</a>
+                                    <a href="#" class="list-group-item list-group-item-action">wuse 2, Abuja</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Oshodi, Lagos</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Apapa, Lagos</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Ikeja, Lagos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-            </div>                      
+
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function(){
-// Hide submenus
-$('#body-row .collapse').collapse('hide'); 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Hide submenus
+                $('#body-row .collapse').collapse('hide');
 
-// Collapse/Expand icon
-$('#collapse-icon').addClass('fa-angle-double-left');
-$('#collapse-menu').addClass('fa-angle-double-right'); 
+                // Collapse/Expand icon
+                $('#collapse-icon').addClass('fa-angle-double-left');
+                $('#collapse-menu').addClass('fa-angle-double-right');
 
-// Collapse click
-$('[data-toggle=sidebar-colapse]').click(function() {
-    SidebarCollapse();
-});
-function SidebarCollapse () {
-    $('.menu-collapsed').toggleClass('d-none');
-    $('.sidebar-submenu').toggleClass('d-none');
-    $('.submenu-icon').toggleClass('d-none');
-    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
-    // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-right fa-angle-double-left');
-}
-});
-// Collapse click
-$('[data-toggle=sidebar-container]').click(function() {
-    SidemenuCollapse();
-});
-//Collapse Side Menu
-function SidemenuCollapse () {
-    $('#sidebar-container').toggleClass('d-none');
-    // Collapse/Expand icon
-    $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
-}
+                // Collapse click
+                $('[data-toggle=sidebar-colapse]').click(function () {
+                    SidebarCollapse();
+                });
+                function SidebarCollapse() {
+                    $('.menu-collapsed').toggleClass('d-none');
+                    $('.sidebar-submenu').toggleClass('d-none');
+                    $('.submenu-icon').toggleClass('d-none');
+                    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
 
-//Hide Menu on Load
-$(document).ready(function(){
-    $('#sidebar-container').toggleClass('d-none');
-})
-$(document).ready(function(){
-    $('.menu-collapsed').toggleClass('d-none');
-    $('.sidebar-submenu').toggleClass('d-none');
-    $('.submenu-icon').toggleClass('d-none');
-    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
-    // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-})
-    </script>
+                    // Collapse/Expand icon
+                    $('#collapse-icon').toggleClass('fa-angle-double-right fa-angle-double-left');
+                }
+            });
+            // Collapse click
+            $('[data-toggle=sidebar-container]').click(function () {
+                SidemenuCollapse();
+            });
+            //Collapse Side Menu
+            function SidemenuCollapse() {
+                $('#sidebar-container').toggleClass('d-none');
+                // Collapse/Expand icon
+                $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
+            }
+
+            //Hide Menu on Load
+            $(document).ready(function () {
+                $('#sidebar-container').toggleClass('d-none');
+            })
+            $(document).ready(function () {
+                $('.menu-collapsed').toggleClass('d-none');
+                $('.sidebar-submenu').toggleClass('d-none');
+                $('.submenu-icon').toggleClass('d-none');
+                $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+                // Collapse/Expand icon
+                $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+            })
+        </script>
 </body>
+
 </html>
