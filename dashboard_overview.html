@@ -144,6 +144,24 @@ background-color: #4285F4; }
     margin-bottom: 1rem !important;
 }
 
+#map {
+        height: 400px;
+        width: 100%;
+    }
+    #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
+
 @media (max-width: 378px){
     .scrollbar{
     margin: 0 auto;
@@ -408,33 +426,23 @@ background-color: #4285F4; }
                                         </div>
                     <div class="col card">
                         <h2 class="section-heading pt-4 text-muted">Car Park Locations</h2>
-                        <div class="d-flex flex-wrap justify-content-evenly">
-                            <div class="col-9 map">
-                                    <iframe class="w-100" src="https://maps.google.com/maps?q=Lekki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                                    style="border:0; height: 400px;" allowfullscreen></iframe>
+                        <div class="row">
+                            <div class="col-sm-8 mb-4">
+                                <div id="map"></div>
+                                <div id="legend"><h3>Legend</h3></div>
                             </div>
-                            <div class="scrollbar scrollbar-primary">
+                            <div class="col-sm-3 scrollbar scrollbar-primary">
                                 <h4>List View</h4>
                                 <ul class="list-group">
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Surulere, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Yaba, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>VI, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Ikeja, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Ikoyi, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Berger, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -444,8 +452,91 @@ background-color: #4285F4; }
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-    </script>
+    <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(6.6080, 3.6218),
+            mapTypeId: 'roadmap'
+          });
+  
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+          var icons = {
+            parking: {
+              name: 'Parking',
+              icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+              name: 'Library',
+              icon: iconBase + 'library_maps.png'
+            },
+            info: {
+              name: 'Info',
+              icon: iconBase + 'info-i_maps.png'
+            }
+          };
+  
+          var features = [
+            {
+              position: new google.maps.LatLng(6.6018, 3.3515),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4698, 3.5852),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4281, 3.4219),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5355, 3.3087),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.6252, 3.3441),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5410, 3.3674),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.4926, 3.3490),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5584, 3.3915),
+              type: 'library'
+            },
+            {
+                position: new google.maps.LatLng(6.6194, 3.5105),
+                type: 'parking'
+            },
+            {
+                position: new google.maps.LatLng(6.6378, 3.3699),
+                type: 'parking'
+            }
+          ];
+  
+          // Create markers.
+          features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              map: map
+            });
+          });
+  
+          var legend = document.getElementById('legend');
+          for (var key in icons) {
+            var type = icons[key];
+            var name = type.name;
+            var icon = type.icon;
+            var div = document.createElement('div');
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
+            legend.appendChild(div);
+          }
+  
+          map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi0SAUh6Ws4fbh3QHB1Y3PE_4UXkAaZsw&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
