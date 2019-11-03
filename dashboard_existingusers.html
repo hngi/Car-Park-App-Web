@@ -197,6 +197,23 @@
     #listTable::-webkit-scrollbar-thumb:hover, #issuesTable::-webkit-scrollbar-thumb:hover {
         background: rgb(23, 23, 253);
     }
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+    #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
 
     @media screen and (max-width: 49em){
         .city{
@@ -225,14 +242,14 @@
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                    <a href="#" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                    <a href="./dashboard_overview.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                         <span class="mr-auto">
                             <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
                             <span class="menu-collapsed">Dashboard</span>
                             <span class="submenu-icon ml-auto"></span>
                         </span>  
                     </a>
-                    <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                    <a href="./mail_supportinbox.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                         <span class="mr-auto">
                             <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
                             <span class="menu-collapsed">Mail</span>
@@ -249,7 +266,7 @@
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="#"
+                    <a href="./notification.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -259,7 +276,7 @@
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="settings_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                    <a href="./settings_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                         <span class="mr-auto">
                             <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg" alt="Settings" width="25" height="25">
                             <span class="menu-collapsed">Settings</span>
@@ -308,9 +325,9 @@
                 <!--overview tabs-->
                 <div class="col shadow">
                     <nav class="nav">
-                        <a class="nav-link active text-muted border-bottom border-primary" href="#">Overview</a>
-                        <a class="nav-link text-muted" href="#">Analytics</a>
-                        <a class="nav-link text-muted" href="#">Demographics</a>
+                        <a class="nav-link active text-muted border-bottom border-primary" href="./dashboard_overview.html">Overview</a>
+                        <a class="nav-link text-muted" href="dashboard_analytics.html">Analytics</a>
+                        <a class="nav-link text-muted" href="dashboard_demographics.html">Demographics</a>
                     </nav>
                 </div>
                 <div class="col mt-2 p-3">
@@ -460,16 +477,9 @@
                         <h1 class="row col-sm-12">car park locations</h1>
                         <!--car park maps begin here-->
                         <div class="row">
-                            <div id="mapholder" class="col-sm-9 mb-2">
-                                <div class="mapouter">
-                                    <div class="gmap_canvas" id="gmap">
-                                        <iframe width="100%" height="400px" id="gmapCanvas" src="https://maps.google.com/maps?q=Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                    </div>
-                                    <style>
-                                        .mapouter{position:relative;text-align:right;height:400px;width:100%;}
-                                        .gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}
-                                    </style>
-                                </div>
+                            <div id="mapholder" class="col-sm-9 mb-4">
+                                <div id="map"></div>
+                                <div id="legend"><h3>Legend</h3></div>    
                             </div>
                             <!--car park maps end here-->
                             <!--table to select location begins here-->
@@ -519,7 +529,90 @@
             </div>
         </div>
     </div>
-
+    <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(6.6080, 3.6218),
+            mapTypeId: 'roadmap'
+          });
+  
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+          var icons = {
+            parking: {
+              name: 'Parking',
+              icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+              name: 'Library',
+              icon: iconBase + 'library_maps.png'
+            },
+            info: {
+              name: 'Info',
+              icon: iconBase + 'info-i_maps.png'
+            }
+          };
+  
+          var features = [
+            {
+              position: new google.maps.LatLng(6.6018, 3.3515),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4698, 3.5852),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4281, 3.4219),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5355, 3.3087),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.6252, 3.3441),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5410, 3.3674),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.4926, 3.3490),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5584, 3.3915),
+              type: 'library'
+            },
+            {
+                position: new google.maps.LatLng(6.6194, 3.5105),
+                type: 'parking'
+            },
+            {
+                position: new google.maps.LatLng(6.6378, 3.3699),
+                type: 'parking'
+            }
+          ];
+  
+          // Create markers.
+          features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              map: map
+            });
+          });
+  
+          var legend = document.getElementById('legend');
+          for (var key in icons) {
+            var type = icons[key];
+            var name = type.name;
+            var icon = type.icon;
+            var div = document.createElement('div');
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
+            legend.appendChild(div);
+          }
+  
+          map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi0SAUh6Ws4fbh3QHB1Y3PE_4UXkAaZsw&callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
