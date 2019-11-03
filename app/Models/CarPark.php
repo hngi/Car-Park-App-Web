@@ -11,11 +11,16 @@ class CarPark extends Model
      *
      * @var array
      */
-    protected $fillable = ['owner_id', 'name', 'location'];
+    protected $fillable = ['owner_id', 'name', 'address', 'phone_no', 'car_park_fee'];
 
     public function slots()
     {
-        return $this->hasMany('\App\Slot', 'car_park_id');
+        return $this->hasMany('\App\Models\Slot', 'car_park_id');
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo('\App\Models\User', 'owner_id');
     }
 
 }

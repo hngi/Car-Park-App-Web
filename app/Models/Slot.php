@@ -13,7 +13,7 @@ class Slot extends Model
      */
     protected $fillable = ['car_park_id', 'row_id', 'number'];
 
-    public function car_parks()
+    public function car_park()
     {
         return $this->belongsTo('\App\CarPark', 'car_park_id');
     }
