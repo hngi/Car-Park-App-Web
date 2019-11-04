@@ -19,7 +19,7 @@
 
   <body>
     <div class="container">
-      <form class="form" action="#">
+      <form class="form" action="login.php" method="post"> 
         <h1>Admin Login</h1>
         <br />
         <label for="email">Email Address</label>
@@ -37,6 +37,7 @@
         <input
           type="password"
           id="password"
+          name="password"
           class="placeicon"
           placeholder="&#xf2bb;  "
           onblur="validatePasword()"
