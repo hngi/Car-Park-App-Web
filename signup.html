@@ -13,7 +13,7 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link
       rel="icon"
       href="https://res.cloudinary.com/seun007/image/upload/v1572520438/image_3_zznsc1.png"
@@ -199,7 +199,9 @@ center>a{
   <body>
     <div class="container">
       <form class="form" action="#">
-        <h1>Partner Login</h1>
+        <h1 style="color:#f9cd40;">GET STARTED.
+        <br>BECOME A PARTNER.</H1>
+        <div style="margin-top:-2rem; color:white; font-size:14px;">Register your car park with us and become a partner with us</div>
         <br />
         <label for="email">Email Address</label>
         <input
@@ -208,10 +210,14 @@ center>a{
           id="email"
           class="placeicon"
           placeholder="&#xf007;  "
+          placeholder="johnbrown@gmail.com"
           onblur="validateMail()"
         />
         <b id="emError" style="color:lightcoral; font-size:14px"></b>
-        <br />
+       
+        <label for="name">Full Name</label>
+        <input type="text" id="name" class="placeicon" placeholder="John Brown"/>
+        
         <label for="password">Password</label>
         <input
           type="password"
@@ -226,18 +232,18 @@ center>a{
             <a href="" id="forgot-password">Forgot Password?</a>
           </div>
         </div>
-        <br />
+        
         <div id="btns" class="btns">
           <button
             class="btn login"
             type="button"
-            value="Login"
-            onclick="login()"
+            value="Sign Up"
+            
           >
-            Login
+            Sign Up
           </button>
         </div>
-        <center>Don't Have an Account? <a href="signup.html">Sign Up</a></center>
+        <center>Already Have an Account? <a href="index.html">Login</a></center>
       </form>
       
       <div class="side2">
@@ -276,12 +282,7 @@ center>a{
         }
       }
 
-      function login() {
-        if (evalidated && pvalidated) {
-          window.location = "index.html";
-        } else {
-        }
-      }
+      
     </script>
   </body>
 </html>

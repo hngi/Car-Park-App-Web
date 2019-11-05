@@ -144,6 +144,24 @@ background-color: #4285F4; }
     margin-bottom: 1rem !important;
 }
 
+#map {
+        height: 400px;
+        width: 100%;
+    }
+    #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
+
 @media (max-width: 378px){
     .scrollbar{
     margin: 0 auto;
@@ -216,6 +234,157 @@ background-color: #4285F4; }
     flex: 0 0 50%;
 } 
 }
+
+.popup {
+  /*position: relative;*/
+  
+  /*display: inline-block;*/
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  color: #555;
+  border-radius: 6px;
+  /*padding: 8px 0;*/
+  position: absolute;
+  z-index: 1;
+  top: 15vh;
+  right: 10px;
+  height: 420px;
+   background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  box-shadow: 
+    -2rem 2rem 2rem rgba(black, 0.2);
+  filter: blur(0);
+  transform: scale(1);  
+  opacity: 1;
+  /*visibility: visible;
+  &.off {
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(8px);
+    transform: scale(0.33);
+    box-shadow: 1rem 0 0 rgba(black, 0.2);*/
+  
+}
+.popup .notification-box {
+    border: 1px solid grey; 
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.popup .notification-box b {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+/*p {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 0px;
+}*/
+
+
+/* Popup arrow */
+.popup .popuptext::after {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid white;
+ content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 25%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  /*border-color: #ff  transparent transparent;*/
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .display {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+  .popup .notification-box {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+ .popup .notification-box {
+    margin-left: 80px;
+    float: none;
+    margin: 5px;
+    letter-spacing: normal;
+    line-height: normal;
+}
+}
+	    
+	    @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .popuptext {
+    width: 100%;
+      height: 430px;
+    right: -10px;
+      background: white;
+      z-index: 1;
+  }
+}
+    
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .notification-box {
+    width: 100%;
+      margin: 0;
+      background-color: white;
+  }
+}
+        
+    @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box b, .popup .notification-box p, .popup .notification-box a  {
+      font-size: 11px;
+       float: none;
+       margin: 0;
+       letter-spacing: normal;
+  }
+}
+        
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box i  {
+      font-size: 12px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -225,13 +394,6 @@ background-color: #4285F4; }
                 <ul class="list-group">
                     <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     </li>
-                        <a href="index.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #1A73E8">
-                            <span class="mr-auto">
-                                    <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
-                                    <span class="menu-collapsed">Dashboard</span>
-                                    <span class="submenu-icon ml-auto"></span>
-                            </span>  
-                        </a>
 
                         <a href="#" data-toggle="sidebar-colapse" class=" list-group-item list-group-item-action d-flex align-items-center border-0" style="background-color: #0049B5">
                             <div class="d-flex w-100 justify-content-start align-items-center">
@@ -239,15 +401,21 @@ background-color: #4285F4; }
                                 <span id="collapse-text" class="menu-collapsed">Menu</span>
                             </div>
                         </a>
-
-                        <a href="mail_support.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="index.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #1A73E8">
+                            <span class="mr-auto">
+                                    <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
+                                    <span class="menu-collapsed">Dashboard</span>
+                                    <span class="submenu-icon ml-auto"></span>
+                            </span>  
+                        </a>
+                        <a href="./mail_supportinbox.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                 <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
                                 <span class="menu-collapsed">Mail</span>
                                 <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="manage_park.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="carpark_manage_addcar.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/seun007/image/upload/v1572290891/image_2_mjjnfc.png" alt="Mail" width="30" height="30">
                                     <span class="menu-collapsed">Manage Park</span>
@@ -255,14 +423,14 @@ background-color: #4285F4; }
                             </span>  
                         </a>
 
-                        <a href="notification.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./notification.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img src="https://res.cloudinary.com/seun007/image/upload/v1572455740/image_1_juyukf.png" alt="Users" width="30" height="30">
                                     <span class="menu-collapsed">Notification </span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="settings.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./settings_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg" alt="Settings" width="25" height="25">
                                     <span class="menu-collapsed">Settings</span>
@@ -293,7 +461,61 @@ background-color: #4285F4; }
                         <div class="col-8 pt-3 d-flex">
                                 <i class="fa fa-user pr-1" aria-hidden="true"></i>
                                 <p class="text-muted">John Travolta</p>
+                                <div class="popup" onclick="popupMessage()"><i class="far fa-bell mt-1 ml-5" style="font-size: 18px; margin-bottom: 15px;"aria-hidden="true"><i class="fa fa-angle-down fa-lg"></i></i>
+ <br>
+  <span class="popuptext" style="text-align: center; margin: auto;" id="myPopup"><b>Notifications</b>
+            <b style="color: royalblue; margin-left: 65px;">Mark all as read</b>
+            <b style="float: right; color: blue; padding-right: 10px;"><a href="./settings_account.html">Settings</a></b><br>
+<br>
+<div style="background-color: lightblue;"><b style="color: blue; padding-right: 350px;"> Now</b></div><br>
+
+       <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style=" font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">10</b> new requests for carpark Registration.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View Requests</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+<div style="background-color: lightblue;"><b style="color: blue; padding-right: 340px;">Earlier</b></div><br>
+
+        <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                  <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style="font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">15</b> new <b style="color: royalblue;">issues</b> from carpark customers.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View issue</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                  <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style="font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">15</b> new <b style="color: royalblue;">issues</b> from carpark customers.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View issue</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: royalblue; width: 100%">
+            <b><a href="notification.html"  style="color: white; padding-right: 10px; text-decoration: none;"> See All</a></b>
+        </div>
+</span>
+</div>
                         </div>
+                        <br>
                         <div class="col-4  d-flex border-left justify-content-end">
                                 <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
                                 <span class="text-muted pl-2">EN</span>
@@ -308,13 +530,14 @@ background-color: #4285F4; }
                 </div>
                 <div class="col shadow">
                         <nav class="nav">
-                            <a class="nav-link active text-muted border-bottom border-primary" href="index.html">Overview</a>
-                            <a class="nav-link text-muted" href="admin-analytics.html">Analytics</a>
-                            <a class="nav-link text-muted" href="demographics.html">Demographics</a>
+                            <a class="nav-link active text-muted border-bottom border-primary" href="dashboard_overview.html">Overview</a>
+                            <a class="nav-link text-muted" href="dashboard_analytics.html">Analytics</a>
+                            <a class="nav-link text-muted" href="dashboard_demographics.html">Demographics</a>
                         </nav>
                 </div>
                 <div class="row details">
 
+                    <a href="./dashboard_newusers.html">
                         <div class="col-xl-3 col-md-6 mb-4">
                                 <div class="shadow card">
                                     <div class="card-body p-0">
@@ -336,13 +559,15 @@ background-color: #4285F4; }
                                     </div>
                                     <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                 </div>
+                                </a>
                             </div>
             
+                            <a href="./dashboard_existingusers.html">
                             <div class="col-xl-3 col-md-6 mb-4">
                                     <div class="shadow card">
                                         <div class="card-body p-0">
                                             <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="display: inline-block; padding: 10px 20px;">
-                                                    <h5 class="card-title text-muted pt-2">Exisiting Users</h5>
+                                                    <h5 class="card-title text-muted pt-2">Existing Users</h5>
                                             </div>
                                             <div class="btn-actions-pane-right text-capitalize actions-icon-btn" style=" display: inline-block; ">
                                                 <div class="btn-group dropdown" style="position: absolute; right: 5px; top:10px;">
@@ -360,7 +585,9 @@ background-color: #4285F4; }
                                         <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                     </div>
                                 </div>
+                                </a>
             
+                                <a href="./dashboard_issues.html">
                                 <div class="col-xl-3 col-md-6 mb-4">
                                         <div class="shadow card">
                                             <div class="card-body p-0">
@@ -383,7 +610,9 @@ background-color: #4285F4; }
                                             <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                         </div>
                                     </div>
-            
+                                    </a>
+
+                                    <a href="./dashboard_carpark.html">
                                     <div class="col-xl-3 col-md-6 mb-4">
                                             <div class="shadow card">
                                                 <div class="card-body p-0">
@@ -406,35 +635,27 @@ background-color: #4285F4; }
                                                 <div class="card-footer pb-5 " style="background-color: #EAEAEA;"></div>
                                             </div>
                                         </div>
+                                    </a>
+
                     <div class="col card">
                         <h2 class="section-heading pt-4 text-muted">Car Park Locations</h2>
-                        <div class="d-flex flex-wrap justify-content-evenly">
-                            <div class="col-9 map">
-                                    <iframe class="w-100" src="https://maps.google.com/maps?q=Lekki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                                    style="border:0; height: 400px;" allowfullscreen></iframe>
+                        <div class="row">
+                            <div class="col-sm-8 mb-4">
+                                <div id="map"></div>
+                                <div id="legend"><h3>Legend</h3></div>
                             </div>
-                            <div class="scrollbar scrollbar-primary">
+                            <div class="col-sm-3 scrollbar scrollbar-primary">
                                 <h4>List View</h4>
                                 <ul class="list-group">
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    <li class="list-group-item"><strong>Maryland, Lagos</strong>
-                                    </li>
-                                    
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Surulere, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Yaba, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>VI, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Ikeja, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Ikoyi, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Berger, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
+                                    <li class="list-group-item"><strong>Maryland, Lagos</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -444,10 +665,100 @@ background-color: #4285F4; }
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-    </script>
+    <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(6.6080, 3.6218),
+            mapTypeId: 'roadmap'
+          });
+  
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+          var icons = {
+            parking: {
+              name: 'Parking',
+              icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+              name: 'Library',
+              icon: iconBase + 'library_maps.png'
+            },
+            info: {
+              name: 'Info',
+              icon: iconBase + 'info-i_maps.png'
+            }
+          };
+  
+          var features = [
+            {
+              position: new google.maps.LatLng(6.6018, 3.3515),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4698, 3.5852),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4281, 3.4219),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5355, 3.3087),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.6252, 3.3441),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5410, 3.3674),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.4926, 3.3490),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5584, 3.3915),
+              type: 'library'
+            },
+            {
+                position: new google.maps.LatLng(6.6194, 3.5105),
+                type: 'parking'
+            },
+            {
+                position: new google.maps.LatLng(6.6378, 3.3699),
+                type: 'parking'
+            }
+          ];
+  
+          // Create markers.
+          features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              map: map
+            });
+          });
+  
+          var legend = document.getElementById('legend');
+          for (var key in icons) {
+            var type = icons[key];
+            var name = type.name;
+            var icon = type.icon;
+            var div = document.createElement('div');
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
+            legend.appendChild(div);
+          }
+  
+          map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi0SAUh6Ws4fbh3QHB1Y3PE_4UXkAaZsw&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+// When the user clicks on div, open the popup
+function popupMessage() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("display");
+}
+</script>
     <script>
     $(document).ready(function(){
 // Hide submenus

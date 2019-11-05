@@ -135,7 +135,7 @@ border-radius: 10px;
 }
 .notification-box {
     border: 1px solid #C4C4C4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 20px;
     border-radius: 10px;
@@ -165,13 +165,16 @@ p {
 
 
 @media screen and (min-width: 710px) and (max-width: 850px) {
-h1, b, .notification-box, {
+h1, b, .notification-box, .popup .notification-box {
     margin-left: 80px;
+    float: none;
+    margin: 5px;
+    letter-spacing: normal;
 }
 }
 
 @media screen and (min-width: 850px) and (max-width: 1090px) {
-h1, b, .notification-box, .popuptext, {
+h1, b, .notification-box, .popup .notification-box {
     margin-left: 70px;
 }
 }
@@ -240,7 +243,7 @@ width: 98%;
   position: absolute;
   z-index: 1;
   top: 15vh;
-  left: -250px;
+  right: 10px;
   height: 420px;
    background: white;
   border: 1px solid #ccc;
@@ -274,13 +277,13 @@ width: 98%;
     font-size: 14px;
     
 }
-p {
+/*p {
     font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     margin-bottom: 0px;
-}
+}*/
 
 
 /* Popup arrow */
@@ -319,22 +322,39 @@ p {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
-@media screen and (min-width: 710px) and (max-width: 850px) {
-    .col-8 pt-3 d-flex {
-        float: right;
-        /*display: inline-block;
-        text-align: center;
-        width: auto;
-        left: 30px*/
 
-
-    }
+@media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .popuptext {
+    width: 100%;
+      height: 420px;
+    right: -10px;
+      background: white;
+      z-index: 1;
+  }
 }
-@media screen and (min-width: 850px) and (max-width: 1090px) {
-    .popup .popuptext {
-        margin-left: 90px;
-    }
-    }
+    
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .notification-box {
+    width: 100%;
+      margin: 0;
+      background-color: white;
+  }
+}
+        
+    @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box b, .popup .notification-box p, .popup .notification-box a  {
+      font-size: 11px;
+       float: none;
+       margin: 0;
+       letter-spacing: normal;
+  }
+}
+        
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box i  {
+      font-size: 12px;
+  }
+}
 
     </style>
 </head>
@@ -354,14 +374,14 @@ p {
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./dashboard_overview.html" class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813970/Vector_excuh3.svg" alt="Dashboard" width="30" height="30">
                                     <span class="menu-collapsed">Dashboard</span>
                                     <span class="submenu-icon ml-auto"></span>
                             </span>  
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./mail_supportinbox.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
                                     <span class="menu-collapsed">Mail</span>
@@ -376,7 +396,7 @@ p {
                                 <span class="submenu-icon ml-auto"></span>
                             </span>
                         </a>
-                        <a href="#"
+                        <a href="./notification.html"
                             class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
                             style="background-color: #0049B5">
                              
@@ -386,7 +406,7 @@ p {
                                 <span class="submenu-icon ml-auto"></span>
                             </span>
                         </a>
-                        <a href="#" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
+                        <a href="./settings_account.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #0049B5">
                             <span class="mr-auto">
                                     <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813962/Vector_2_zvoqmz.svg" alt="Settings" width="25" height="25">
                                     <span class="menu-collapsed">Settings</span>
@@ -412,16 +432,13 @@ p {
                     </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div class="col-8 pt-3 d-flex">
-                                    <i class="fa fa-user pr-1" style="font-size: 16px; margin-bottom: 10px;" aria-hidden="true"></i>
+                                    <i class="fa fa-user pr-1" style="font-size: 16px; margin-bottom: 15px;" aria-hidden="true"></i>
                                     <p class="text-muted">John Travolta</p>
-                                </div>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <div class="col-8 pt-3 d-flex">
-                                    <div class="popup" onclick="popupMessage()"><i class="far fa-bell" style="font-size: 25px;"aria-hidden="true"><i class="fas fa-sort-down"></i></i>
+                                    <div class="popup" onclick="popupMessage()"><i class="far fa-bell mt-1 ml-5" style="font-size: 20px; margin-bottom: 15px;"aria-hidden="true"><i class="fa fa-angle-down fa-lg"></i></i>
  <br>
   <span class="popuptext" style="text-align: center; margin: auto;" id="myPopup"><b>Notifications</b>
             <b style="color: royalblue; margin-left: 65px;">Mark all as read</b>
-            <b style="float: right; color: blue; padding-right: 10px;"><a href="setting.html">Settings</a></b><br>
+            <b style="float: right; color: blue; padding-right: 10px;"><a href="./settings_account.html">Settings</a></b><br>
 <br>
 <div style="background-color: lightblue;"><b style="color: blue; padding-right: 350px;"> Now</b></div><br>
 
@@ -496,15 +513,15 @@ p {
                     <div class="row" style="background-color:#F6F6F6; width: 98%; margin-left: 0;margin-right: 0;">
                         <!--OVERIEW -->
                         <div class="col-12 px-0 head-container-parent">
-                            <div class="head-container ml-5  d-flex justify-content-between" style="width: 98%;">
-                                <a href="notification.html" class="py-2 px-2 active-tab" style="color: darkgrey;">Notifications</a>
+                            <div>
+                                <a href="notification.html" class="py-2 px-2 active-tab" style="color: darkgrey; margin-left: 10px;">Notifications</a>
                                 
-                                <a href="#" class="py-2 px-2" style="color: darkgray; left: 30px;"></a>
+                                <a href="#" style="color: darkgray; float: right;">Notification Settings</a>
                             </div>
 
 <!--Notification box-->
  
-            <b style="text-align: center; display: block;">October 2019<i class="fas fa-sort-down"></i></b>
+            <b style="text-align: center; display: block;"><a href="#" style="color: #555; text-decoration: none;"> October 2019<i class="fas fa-sort-down"></i></a></b>
 <br>
 
        <div class="notification-box">
@@ -666,7 +683,90 @@ p {
 
 
 
-
+<script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(6.6080, 3.6218),
+            mapTypeId: 'roadmap'
+          });
+  
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+          var icons = {
+            parking: {
+              name: 'Parking',
+              icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+              name: 'Library',
+              icon: iconBase + 'library_maps.png'
+            },
+            info: {
+              name: 'Info',
+              icon: iconBase + 'info-i_maps.png'
+            }
+          };
+  
+          var features = [
+            {
+              position: new google.maps.LatLng(6.6018, 3.3515),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4698, 3.5852),
+              type: 'info'
+            }, {
+              position: new google.maps.LatLng(6.4281, 3.4219),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5355, 3.3087),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.6252, 3.3441),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5410, 3.3674),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.4926, 3.3490),
+              type: 'parking'
+            }, {
+              position: new google.maps.LatLng(6.5584, 3.3915),
+              type: 'library'
+            },
+            {
+                position: new google.maps.LatLng(6.6194, 3.5105),
+                type: 'parking'
+            },
+            {
+                position: new google.maps.LatLng(6.6378, 3.3699),
+                type: 'parking'
+            }
+          ];
+  
+          // Create markers.
+          features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+              position: feature.position,
+              icon: icons[feature.type].icon,
+              map: map
+            });
+          });
+  
+          var legend = document.getElementById('legend');
+          for (var key in icons) {
+            var type = icons[key];
+            var name = type.name;
+            var icon = type.icon;
+            var div = document.createElement('div');
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
+            legend.appendChild(div);
+          }
+  
+          map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi0SAUh6Ws4fbh3QHB1Y3PE_4UXkAaZsw&callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
