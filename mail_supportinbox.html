@@ -239,6 +239,24 @@
         margin-top: 3em;
     }
 
+    form #hide {
+        color: #777777;
+        width: 100%;
+        padding-left: 0.3em;
+        margin-left: -0.5em;
+        display: none;
+    }
+
+    form #hide p {
+        font-size: 0.8em;
+        margin: 0.3em;
+    }
+
+    form .forward {
+        border-bottom: 1px solid rgba(119, 119, 119, 0.5);
+        font-weight: bold;
+    }
+
     form .sendBtn {
         background: #1A73E8;
         border-radius: 4px;
@@ -544,7 +562,7 @@
                                     <a href="mail_supportinbox.html" class="mb-2"><i class="fas fa-inbox fa-lg mr-2"></i>Inbox</a> 
                                 </li>
                                 <li>
-                                    <a href="#" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
+                                    <a href="mail_supportdrafts.html" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
                                 </li>
                                 <li>
                                     <a href="#" class="mb-2"><i class="fas fa-star fa-lg mr-2"></i>Starred</a>
@@ -582,7 +600,7 @@
                                                 <label for="" class="badge ml-3">J</label>
                                             </div>
                                             <div class="col-sm-9 move">
-                                                <h1>My account debited but payme...<span>October 21, 2019 21:00</span></h1>
+                                                <h1>My account debited but payme...<span class="col-sm-6">October 21, 2019 21:00</span></h1>
                                                 <h2>John Utaka</h2>
                                                 <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
                                             </div>
@@ -605,7 +623,7 @@
                                                 <label for="" class="badge ml-3" style="background: #9F34A2;">M</label>
                                             </div>
                                             <div class="col-sm-9 move">
-                                                <h1>My account debited but payme...<span>October 21, 2019 21:00</span></h1>
+                                                <h1>My account debited but payme...<span class="col-sm-6">October 21, 2019 21:00</span></h1>
                                                 <h2>John Utaka</h2>
                                                 <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
                                             </div>
@@ -628,7 +646,7 @@
                                         <div class="dropdown">
                                             <i class="fa fa-ellipsis-v messageDot" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                                             <div class="dropdown-menu mr-4 mt-n4" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">forward</a>
+                                                <a class="dropdown-item" href="#hide" onclick="forwardMessage()">forward</a>
                                                 <a class="dropdown-item" href="#">print</a>
                                                 <a class="dropdown-item" href="#">download</a>
                                                 <a class="dropdown-item" href="#">mark as read</a>
@@ -662,6 +680,12 @@
                                     <div class="col-sm-1"></div>
                                     <div class="col-sm-10">
                                         <form action="" class="col-sm-12" role="form">
+                                            <div class="row" id="hide">
+                                                <p class="forward col-sm-12">Forward</p>
+                                                <p class="col-sm-12">Date:</p>
+                                                <p class="col-sm-12">Subject:</p>
+                                                <p class="col-sm-12">To:</p>
+                                            </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="reply" id="" cols="30" rows="10" class="w-100">Reply</textarea>
@@ -736,6 +760,15 @@
             // Collapse/Expand icon
             $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
         })
+
+        //forward message
+
+        function forwardMessage() {
+            document.getElementById('hide').style.display = "block";
+        }
+
     </script>
+
+
 </body>
 </html>
