@@ -1,0 +1,360 @@
+.html {
+    margin-top: 0 !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+#sidebar-container {
+    min-height: 100vh;   
+    background-color: #0049B5;
+    padding: 0;
+}
+
+.menu-hover:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dashboard-background {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+    width: 230px;
+}
+.sidebar-collapsed {
+    width: 60px;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+    height: 50px;
+    color: white;
+}
+
+/* Submenu item*/
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+}
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+/* Separators */
+.sidebar-separator-title {
+    background-color: #0049B5;
+    height: 35px;
+}
+.sidebar-separator {
+    background-color: #0049B5;
+    height: 25px;
+}
+.logo-separator {
+    background-color: #0049B5;    
+    height: 60px;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+content: " \f0d7";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+content: " \f0da";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#cancel {
+    margin-right: 0 !important;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.fa-times {
+    color: white;
+}
+
+.john {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: normal;
+    color: #777777;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.en {
+    font-size: 25px;
+    line-height: 29px;
+    color: #777777;
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.nav-cont {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.container-fluid {
+    margin: 10px 0 0 0;
+    margin-right: 0;
+}
+
+.fa-angle-down {
+    color: rgba(119, 119, 119, 0.5);
+    margin-right: 10px;
+}
+
+  .demo-border {
+      border-bottom: 3px solid #1A73E8 !important;
+      font-size: 20px;
+      line-height: 23px;
+  }
+
+  .nav-hover {
+      margin-right: 53px;
+      font-size: 20px;
+      line-height: 23px;
+  }
+
+  .nav-hover:hover {
+    border-bottom: 3px solid #1A73E8 !important;
+  }
+
+  .pointer {
+      cursor: pointer;
+  }
+
+
+/*** Status Container*/
+
+.status_container {
+    padding-top: 20px;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-bottom: 70px;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.status_data {
+    border: 1px solid rgba(229, 229, 229);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.status_data_header {
+    padding-left: 10px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+.texts {
+    color: #3A3B3F;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.05px;
+    padding-top: 41px;
+    padding-bottom: 25px;
+}
+  
+.all-cars {
+    padding-left: 76.2px;
+    color: #66788A;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.width {
+    width: 20%;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-heads {
+    font-weight: bold;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.second {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-display {
+    display: flex;
+    
+}
+
+.mobile-width {
+    width: 33.33%;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 680px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    .nav-cont {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 711px) {
+    .nav-column {
+        display: flex !important;
+        justify-content: space-around;
+    }
+
+    .nav-cont {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .nav-hover {
+        /* width: 114px; */
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .demo-border {
+        /* width: 162px; */
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+
+@media only screen and (max-width: 526px) {
+    .nav-column {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    .nav-cont {
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+    .nav-hover {
+        /* width: 114px; */
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .demo-border {
+        /* width: 162px; */
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .all-cars {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .nav-column {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .move {
+        position: relative;
+        left: 45px;
+    }
+
+    .relative {
+        position: absolute !important;
+        left: 0 !important;
+        z-index: 1 !important;
+        width: 100% !important;
+    }
+    
+    .relate {
+        position: absolute;
+        z-index: 2
+    }
+
+    .relate {
+        position: fixed;
+        top: 0;
+    }
+    
+}
+
+
+
+
+
+
