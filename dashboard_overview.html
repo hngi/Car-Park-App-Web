@@ -234,6 +234,157 @@ background-color: #4285F4; }
     flex: 0 0 50%;
 } 
 }
+
+.popup {
+  /*position: relative;*/
+  
+  /*display: inline-block;*/
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  color: #555;
+  border-radius: 6px;
+  /*padding: 8px 0;*/
+  position: absolute;
+  z-index: 1;
+  top: 15vh;
+  right: 10px;
+  height: 420px;
+   background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  box-shadow: 
+    -2rem 2rem 2rem rgba(black, 0.2);
+  filter: blur(0);
+  transform: scale(1);  
+  opacity: 1;
+  /*visibility: visible;
+  &.off {
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(8px);
+    transform: scale(0.33);
+    box-shadow: 1rem 0 0 rgba(black, 0.2);*/
+  
+}
+.popup .notification-box {
+    border: 1px solid grey; 
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.popup .notification-box b {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+/*p {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 0px;
+}*/
+
+
+/* Popup arrow */
+.popup .popuptext::after {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid white;
+ content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 25%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  /*border-color: #ff  transparent transparent;*/
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .display {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+  .popup .notification-box {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+ .popup .notification-box {
+    margin-left: 80px;
+    float: none;
+    margin: 5px;
+    letter-spacing: normal;
+    line-height: normal;
+}
+}
+	    
+	    @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .popuptext {
+    width: 100%;
+      height: 430px;
+    right: -10px;
+      background: white;
+      z-index: 1;
+  }
+}
+    
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .notification-box {
+    width: 100%;
+      margin: 0;
+      background-color: white;
+  }
+}
+        
+    @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box b, .popup .notification-box p, .popup .notification-box a  {
+      font-size: 11px;
+       float: none;
+       margin: 0;
+       letter-spacing: normal;
+  }
+}
+        
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box i  {
+      font-size: 12px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -310,7 +461,61 @@ background-color: #4285F4; }
                         <div class="col-8 pt-3 d-flex">
                                 <i class="fa fa-user pr-1" aria-hidden="true"></i>
                                 <p class="text-muted">John Travolta</p>
+                                <div class="popup" onclick="popupMessage()"><i class="far fa-bell mt-1 ml-5" style="font-size: 18px; margin-bottom: 15px;"aria-hidden="true"><i class="fa fa-angle-down fa-lg"></i></i>
+ <br>
+  <span class="popuptext" style="text-align: center; margin: auto;" id="myPopup"><b>Notifications</b>
+            <b style="color: royalblue; margin-left: 65px;">Mark all as read</b>
+            <b style="float: right; color: blue; padding-right: 10px;"><a href="./settings_account.html">Settings</a></b><br>
+<br>
+<div style="background-color: lightblue;"><b style="color: blue; padding-right: 350px;"> Now</b></div><br>
+
+       <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style=" font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">10</b> new requests for carpark Registration.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View Requests</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+<div style="background-color: lightblue;"><b style="color: blue; padding-right: 340px;">Earlier</b></div><br>
+
+        <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                  <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style="font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">15</b> new <b style="color: royalblue;">issues</b> from carpark customers.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View issue</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-box">
+            <div class="d-flex bd-highlight">
+                  <div>
+                    <i class="fas fa-exclamation-triangle" style="font-size: 25px; float: left; margin-left: 10px; margin-top: 10px"></i>
+                </div>
+                <div class="p-1 w-100 bd-highlight" style="font-size: 14px;">
+                    <p>You have <b style="color: royalblue;">15</b> new <b style="color: royalblue;">issues</b> from carpark customers.<p style="float: left; margin-left: 35px;">Today 10:21AM</p><br><a href="#">
+                     <b style="float: right; color: royalblue; margin-right: 10px;">View issue</b></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: royalblue; width: 100%">
+            <b><a href="notification.html"  style="color: white; padding-right: 10px; text-decoration: none;"> See All</a></b>
+        </div>
+</span>
+</div>
                         </div>
+                        <br>
                         <div class="col-4  d-flex border-left justify-content-end">
                                 <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
                                 <span class="text-muted pl-2">EN</span>
@@ -547,6 +752,13 @@ background-color: #4285F4; }
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+// When the user clicks on div, open the popup
+function popupMessage() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("display");
+}
+</script>
     <script>
     $(document).ready(function(){
 // Hide submenus
