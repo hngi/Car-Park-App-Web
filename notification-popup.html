@@ -19,202 +19,12 @@
 
         }
 
-        .welcome-row {
-            background-color: #1A73E8;
-        }
-
-        hgroup {
-            color: #fff;
-        }
-
-        hgroup>h1 {
-            font-size: 2em;
-            font-weight: 100;
-        }
-
-        hgroup>h2 {
-            font-size: 1em;
-            font-weight: 100;
-            letter-spacing: 0.05em;
-        }
-
-       .span-nav .active {
-        padding-right: 20px;
-        border-bottom: 1px solid #0049B5;
-      }
-      #body-row {
-            margin-left: 0;
-            margin-right: 0;
-        }
-        #sidebar-container {
-            min-height: 100vh;  
-            background-color: #0049B5;
-            padding: 0;
-        }
-
-        /* Sidebar sizes when expanded and expanded */
-        .sidebar-expanded {
-            width: 230px;
-        }
-        .sidebar-collapsed {
-            width: 60px;
-        }
-
-        /* Menu item*/
-        #sidebar-container .list-group a {
-            height: 50px;
-            color: white;
-        }
-
-        /* Submenu item*/
-        #sidebar-container .list-group .sidebar-submenu a {
-            height: 45px;
-            padding-left: 30px;
-        }
-        .sidebar-submenu {
-            font-size: 0.9rem;
-        }
-
-        /* Separators */
-        .sidebar-separator-title {
-            background-color: #0049B5;
-            height: 35px;
-        }
-        .sidebar-separator {
-            background-color: #0049B5;
-            height: 25px;
-        }
-        .logo-separator {
-            background-color: #0049B5;    
-            height: 60px;
-        }
-        
-
-        /* Closed submenu icon */
-        #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
-        content: " \f0d7";
-        font-family: FontAwesome;
-        display: inline;
-        text-align: right;
-        padding-left: 10px;
-        }
-       
-        /*.max-width {
-          max-width: 98.5%;
-        }*/
-
-         /* Opened submenu icon */
-        #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
-            content: " \f0da";
-            font-family: FontAwesome;
-            display: inline;
-            text-align: right;
-            padding-left: 10px;
-        }
-
-        
-        /* {
-    box-sizing: border-box;
-}
-body {
-    min-height: 100vh;
-    min-width: 100vw;
-    width: 100;
-}*/
-
-.p-1:hover {
-background-color: white;
-border-radius: 10px;
-}
-
-.notification-box img {
-    margin: 10px;
-    margin-left: 20px;
-    margin-right: -10px;
-    padding: 14px;
-}
-.notification-box {
-    border: 1px solid #C4C4C4;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    margin-left: 20px;
-    border-radius: 10px;
-    background-color: lightblue;
-}
-.notification-box b {
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    
-}
-.notification-box span {
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 2
-}
-p {
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    margin-bottom: 0px;
-}
-
-
-@media screen and (min-width: 710px) and (max-width: 850px) {
-h1, b, .notification-box {
-    margin-left: 80px;
-}
-}
-
 @media screen and (min-width: 850px) and (max-width: 1090px) {
 h1, b, .notification-box, .popuptext {
     margin-left: 70px;
 }
 }
 
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: white;
-  border: 1px solid lightblue;
-    border: 10px;
-cursor: pointer;
-width: 98%;
-  font-size: 25px;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: white;
-  border-radius: 10px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  /*position: relative;*/
-  display: inline-block;
-  width: 100%;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
- display: none;
-  /*position: absolute;*/
-  background-color: #f1f1f1;
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  /*z-index: 1;*/
-  overflow: auto;
-}
-
-
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -274,13 +84,6 @@ width: 98%;
     font-size: 14px;
     
 }
-p {
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    margin-bottom: 0px;
-}
 
 
 /* Popup arrow */
@@ -335,6 +138,39 @@ p {
         margin-left: 90px;
     }
     }
+
+    @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .popuptext {
+    width: 100%;
+      height: 420px;
+    right: -10px;
+      background: white;
+      z-index: 1;
+  }
+}
+    
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+  .popup .notification-box {
+    width: 100%;
+      margin: 0;
+      background-color: white;
+  }
+}
+        
+    @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box b, .popup .notification-box p, .popup .notification-box a  {
+      font-size: 11px;
+       float: none;
+       margin: 0;
+       letter-spacing: normal;
+  }
+}
+        
+        @media screen and (min-width: 250px) and (max-width: 610px) {
+   .popup .notification-box i  {
+      font-size: 12px;
+  }
+}
 
     </style>
 </head>
@@ -398,97 +234,15 @@ p {
 </div>
                                    <br>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-   
-    <script>
-       $(document).ready(function(){
-// Hide submenus
-$('#body-row .collapse').collapse('hide'); 
-
-// Collapse/Expand icon
-$('#collapse-icon').addClass('fa-angle-double-left');
-$('#collapse-menu').addClass('fa-angle-double-right'); 
-
-// Collapse click
-$('[data-toggle=sidebar-colapse]').click(function() {
-    SidebarCollapse();
-});
-function SidebarCollapse () {
-    $('.menu-collapsed').toggleClass('d-none');
-    $('.sidebar-submenu').toggleClass('d-none');
-    $('.submenu-icon').toggleClass('d-none');
-    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
-    // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-right fa-angle-double-left');
-}
-});
-// Collapse click
-$('[data-toggle=sidebar-container]').click(function() {
-    SidemenuCollapse();
-});
-//Collapse Side Menu
-function SidemenuCollapse () {
-    $('#sidebar-container').toggleClass('d-none');
-    // Collapse/Expand icon
-    $('#collapse-menu').toggleClass('fa-angle-double-right fa-angle-double-left');
-}
-
-//Hide Menu on Load
-$(document).ready(function(){
-    $('#sidebar-container').toggleClass('d-none');
-})
-$(document).ready(function(){
-    $('.menu-collapsed').toggleClass('d-none');
-    $('.sidebar-submenu').toggleClass('d-none');
-    $('.submenu-icon').toggleClass('d-none');
-    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
-    // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-})
-</script>
+  
 <script>
 // When the user clicks on div, open the popup
 function popupMessage() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("display");
-}
-</script>
-   <script>
-    /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
 }
 </script>
  
