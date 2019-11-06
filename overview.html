@@ -1,15 +1,4 @@
-<?php	
-session_start();
-	if (!(isset($_SESSION['username']) && $_SESSION['username'] != ''))
-	{ // we don't have session at all
-		header("Location:index.html");
-	}
-	
-	$user_id = $_SESSION['user_id'];
-	$firstname = $_SESSION['firstname'];
-	$lastname = $_SESSION['lastname'];
-	$username = $_SESSION['username'];
-?>
+
 
 
 
@@ -328,7 +317,7 @@ session_start();
                             <span id="collapse-icon" class="fa fa-2x mr-3 fa-angle-double-left"></span>
                         </div>
                     </a>
-                    <a href="desktop8.html"
+                    <a href="overview.html"
                         class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover dashboard-background"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -339,7 +328,7 @@ session_start();
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="mail_support.html"
+                    <a href="carpark_manage_addcar.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
