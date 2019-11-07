@@ -164,8 +164,6 @@
     .move h1 span{
         color: #0049B5;
         font-size: 0.7em;
-        /* float: right; */
-        /* margin-right: 0.3em; */
     }
 
     .move h2{
@@ -176,7 +174,7 @@
     .move p{
         font-size: 0.7em;
         color: #777777;
-        width: 60%;
+        width: 90%;
     }
 
     .bigMessage {
@@ -326,6 +324,16 @@
         cursor: pointer;
     }
 
+    #spam-intro p a {
+        color: #1A73E8;
+        font-size: 0.9em;
+    }
+
+    #spam-intro p a:hover {
+        cursor: pointer;
+        color: red;
+    }
+
     @media screen and (max-width: 64em){
         .composeBtn{
             width: 95%;
@@ -398,16 +406,12 @@
 
         form .sendBtn {
             margin-left: 0em;
-        }
+        } 
 
         .move {
-            margin-top: -4em;
+            margin-top: -6em;
             margin-left: 7.5em;
         }    
-
-        .move-more {
-            margin-top: -5em;
-        }
 
         .move-two {
             margin-top: -5em;
@@ -420,7 +424,7 @@
         
         .move-two p span a {
             margin-left: 1em;
-        }        
+        }       
     }
 
     @media screen and (max-width: 27em) {   
@@ -558,7 +562,7 @@
 
 </style>
 <body>
-    <!--go to line 608 to see pop up notification codes-->
+    <!--go to line 606 to see pop up notification codes-->
     <div class="container-fluid p-0" style="background-color: #ffffff">
         <div class="row " id="body-row">
             <!--sidebar nav-->
@@ -757,19 +761,19 @@
                             </div>
       
                             <ul class="list-group">
-                                <li>
+                                <li >
                                     <a href="mail_supportinbox.html" class="mb-2"><i class="fas fa-inbox fa-lg mr-2"></i>Inbox</a> 
                                 </li>
                                 <li>
                                     <a href="mail_supportdrafts.html" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
                                 </li>
-                                <li style="background-color: rgb(69, 143, 240);">
+                                <li>
                                     <a href="mail_supportstarred.html" class="mb-2"><i class="fas fa-star fa-lg mr-2"></i>Starred</a>
                                 </li>
                                 <li>
                                     <a href="mail_supportsent.html" class="mb-2"><i class="fas fa-paper-plane fa-lg mr-2"></i>Sent</a>
                                 </li>
-                                <li>
+                                <li style="background-color: rgb(69, 143, 240);">
                                     <a href="mail_supportspam.html" class="mb-2"><i class="fas fa-exclamation-triangle fa-lg mr-2"></i>Spam</a>
                                 </li>
                                 <li>
@@ -789,7 +793,12 @@
                                         <i class="fa fa-angle-right fa-lg mt-1"></i>
                                     </div>
                                 </div>
-                                <div class="row">
+
+                                <div id="spam-intro"> 
+                                    <p style="text-align: center;margin: 1em 0; color: #777777; font-size: 0.9em;">Spam Messages will be automatically deleted after 30 days.</p>
+                                    <p style="text-align: center;"><a>Delete all spam messages now</a></p>
+                                </div>
+                               <div class="row">
                                     <div class="message mt-1 ml-2">
                                         <div class="row col-sm-12">
                                             <input type="checkbox" name="" id="" class="ml-1 mt-1">
@@ -798,43 +807,21 @@
                                             <div class="col-sm-3">
                                                 <label for="" class="badge ml-3">J</label>
                                             </div>
-                                            <div class="col-sm-9 move move-more">
-                                                <h1><b>My account debited but payme...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>John Utaka</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
+                                            <div class="col-sm-9 move">
+                                                <h1><b>We apologize for any issues y...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
+                                                <h2 style="color: black;">Sent To: <span class="col-sm-6" style="color: #0049B5">John Utaka</span></h2>
+                                                <p style="font-size: 15px;" style="width: 90px;">On behalf of Car Park management we apologize for any debit issues as a result of direct trans...</p>
                                             </div>
                                         </div>
                                         <div class="row col-sm-12">
                                             <div class="col-sm-11"></div>
                                             <div class="col-sm-1">
-                                                <i class="fa fa-star fa-lg mb-2 mr-1 demo" style="color: #FFA800;"></i>
+                                                <i class="far fa-star fa-lg mb-2 mr-1 demo" style="color: #777777;"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="message mt-1 ml-2">
-                                        <div class="row col-sm-12">
-                                            <input type="checkbox" name="" id="" class="ml-1 mt-1">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1>
-                                            </div>
-                                            <div class="col-sm-9 move">
-                                                <h1><b>My account debited but payme...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>John Utaka</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
-                                            </div>
-                                        </div>
-                                        <div class="row col-sm-12">
-                                            <div class="col-sm-11"></div>
-                                            <div class="col-sm-1">
-                                                <i class="fa fa-star fa-lg mb-2 mr-1 demo" style="color: #FFA800;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                          
+                                                         
                             </div>
                             <div class="col-sm-6 bigMessage mt-2">
                                 <div class="row pr-1">
@@ -852,7 +839,7 @@
                                                 <a class="dropdown-item" href="#">delete</a>
                                             </div>
                                         </div>
-                                        <h2>John Utaka</h2>
+                                         <h2>John Utaka</h2>
                                         <p>
                                             john_u@gmail.com
                                             <span><a href=""><i class="fa fa-print"></i> Print</a></span>
@@ -899,7 +886,6 @@
                                                         <input type="email" name="email" id="" class="forwardInputs">
                                                     </div>
                                                 </div>
-                                            </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-12">
                                                     <textarea name="reply" id="" cols="30" rows="10" class="w-100">Reply</textarea>
@@ -975,7 +961,7 @@
             $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
         })
 
-        //forward message
+        //forward message scrpts
 
         function forwardMessage() {
             document.getElementById('hide').style.display = "block";

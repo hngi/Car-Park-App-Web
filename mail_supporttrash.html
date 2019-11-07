@@ -153,6 +153,22 @@
         width: 100%;
         border-radius: 100%;
     }
+    .delete{
+        text-align: center;
+        font-size: 0.9em;
+        color: #777777;
+        margin: 1em 0;
+    }
+
+    .clear{
+        text-align: center;
+        color:#1A73E8;
+    }
+
+    .clear>a:hover{
+        text-decoration:none;
+        color:red;
+    }
 
     .move h1{
         font-size: 0.9em;
@@ -171,6 +187,10 @@
     .move h2{
         font-size: 0.9em;
         color: #0049B5;
+    }
+
+    .move h2 span {
+        color: #777777;
     }
 
     .move p{
@@ -401,13 +421,9 @@
         }
 
         .move {
-            margin-top: -4em;
+            margin-top: -6em;
             margin-left: 7.5em;
         }    
-
-        .move-more {
-            margin-top: -5em;
-        }
 
         .move-two {
             margin-top: -5em;
@@ -558,7 +574,6 @@
 
 </style>
 <body>
-    <!--go to line 608 to see pop up notification codes-->
     <div class="container-fluid p-0" style="background-color: #ffffff">
         <div class="row " id="body-row">
             <!--sidebar nav-->
@@ -582,7 +597,7 @@
                     <a href="./mail_supportinbox.html" class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start" style="background-color: #1A73E8">
                         <span class="mr-auto">
                             <img class="mr-auto" src="https://res.cloudinary.com/benjee/image/upload/v1571813955/Group_45_vky2t5.svg" alt="Mail" width="30" height="30">
-                            <span class="menu-collapsed">Mail</span>
+                            <span class="menu-collapsed" >Mail</span>
                             <span class="submenu-icon ml-auto"></span>
                         </span>  
                     </a>
@@ -624,7 +639,7 @@
                         </div>
                         <div class="col-7 p-2 mb-0">   
                             <form class="form-inline active-cyan-4">
-                                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="in:sent"
                                     aria-label="Search">
                                 <i class="fas fa-search" aria-hidden="true"></i>
                             </form>
@@ -763,16 +778,16 @@
                                 <li>
                                     <a href="mail_supportdrafts.html" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
                                 </li>
-                                <li style="background-color: rgb(69, 143, 240);">
+                                <li>
                                     <a href="mail_supportstarred.html" class="mb-2"><i class="fas fa-star fa-lg mr-2"></i>Starred</a>
                                 </li>
-                                <li>
+                                <li >
                                     <a href="mail_supportsent.html" class="mb-2"><i class="fas fa-paper-plane fa-lg mr-2"></i>Sent</a>
                                 </li>
                                 <li>
                                     <a href="mail_supportspam.html" class="mb-2"><i class="fas fa-exclamation-triangle fa-lg mr-2"></i>Spam</a>
                                 </li>
-                                <li>
+                                <li style="background-color: rgb(69, 143, 240);">
                                     <a href="mail_supporttrash.html" class="mb-2"><i class="fas fa-trash fa-lg mr-2"></i>Trash</a>
                                 </li>
                             </ul>
@@ -789,6 +804,12 @@
                                         <i class="fa fa-angle-right fa-lg mt-1"></i>
                                     </div>
                                 </div>
+
+                                    <div class="delete">
+                                        <p>Trash messages will automatically be deleted after 30 days</p>
+                                        <span class="clear"><a href=""> Delete this message now</a></span>
+                                    </div>
+                               
                                 <div class="row">
                                     <div class="message mt-1 ml-2">
                                         <div class="row col-sm-12">
@@ -798,39 +819,16 @@
                                             <div class="col-sm-3">
                                                 <label for="" class="badge ml-3">J</label>
                                             </div>
-                                            <div class="col-sm-9 move move-more">
-                                                <h1><b>My account debited but payme...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>John Utaka</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
-                                            </div>
-                                        </div>
-                                        <div class="row col-sm-12">
-                                            <div class="col-sm-11"></div>
-                                            <div class="col-sm-1">
-                                                <i class="fa fa-star fa-lg mb-2 mr-1 demo" style="color: #FFA800;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="message mt-1 ml-2">
-                                        <div class="row col-sm-12">
-                                            <input type="checkbox" name="" id="" class="ml-1 mt-1">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1>
-                                            </div>
                                             <div class="col-sm-9 move">
-                                                <h1><b>My account debited but payme...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>John Utaka</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
+                                                <h1><b>We apologize for any issues y...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
+                                                <h2><span>Sent To: </span>John Utaka</h2>
+                                                <p>on behalf of CarPark management we apologize for any debit issues as a result of direct tran...</p>
                                             </div>
                                         </div>
                                         <div class="row col-sm-12">
                                             <div class="col-sm-11"></div>
                                             <div class="col-sm-1">
-                                                <i class="fa fa-star fa-lg mb-2 mr-1 demo" style="color: #FFA800;"></i>
+                                                <i class="far fa-star fa-lg mb-2 mr-1 demo" style="color: #777777;"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -984,8 +982,8 @@
 
         //pop up notofication scripts
         function popupMessage() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("display");
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("display");
         }
 
     </script>
