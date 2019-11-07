@@ -750,8 +750,10 @@
         height: 500px;
         margin-bottom: -120px;
         margin-left: -200px;
-        background:white;
+        background-color: white;
+
         display:none;
+        z-index: 1;
         } 
         #popup2{
         position: fixed;
@@ -761,7 +763,7 @@
         height: 450px;
         margin-bottom: -120px;
         margin-left: -200px;
-        background:white;
+        background-color :white;
         display:none;
         } 
 
@@ -773,7 +775,7 @@
         height: 450px;
         margin-bottom: -120px;
         margin-left: -200px;
-        background:white;
+        background-color:white;
         display:none;
         } 
         #opacity{
@@ -935,7 +937,7 @@ position: relative;
               </nav>
               <div class="col main p-3 text-white" style="background:#1A73E8;">
                   <div class="col">
-                      <h1 style="font-size: 35px">Welcome back Admin</h1>
+                      <h1 style="font-size: 35px"></h1>
                       <h6 class="pt-2">CAR PARK APPLICATION </h6>
                   </div>
               </div>
@@ -955,29 +957,17 @@ position: relative;
         </a>
     <ul>
       <li>
-          <a href="./mail_mailcampaign.html">
-        <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/All_lpndxk.svg" alt="All">
-          </a>
-        All
-      </li>
+          <a href="./mail_mailcampaign.html" style="text-decoration: none; color: white;">
+        <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/All_lpndxk.svg" alt="All">All</li> </a>
       <li>
-          <a href="./mail_mailcampaignongoing.html">
-              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831583/cars/Arrow_vmii5g.svg" alt="->" a href="./mail_mailcampaignongoing.html">
-          </a>
-        Ongoing
-      </li>
+          <a href="./mail_mailcampaignongoing.html" style="text-decoration: none; color: white;">
+              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831583/cars/Arrow_vmii5g.svg" alt="->" a href="./mail_mailcampaignongoing.html">Ongoing</li></a>
       <li>
-          <a href="./mail_mailcampaigndraft.html">
-              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/draft_k9nyhc.svg" alt="Draft">
-          </a>
-        Draft
-      </li>
+          <a href="./mail_mailcampaigndraft.html" style="text-decoration: none; color: white;">
+              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/draft_k9nyhc.svg" alt="Draft">Draft</li></a>
       <li>
-          <a href="./mail_mailcampaigncompleted.html">
-              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/completed_csrvtb.svg" alt="Completed">
-          </a>
-        Completed
-      </li>
+          <a href="./mail_mailcampaigncompleted.html" style="text-decoration: none; color: white;">
+              <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/completed_csrvtb.svg" alt="Completed">Completed</li> </a>
       <a href="#" id="Automation" onclick="automate()" style="text-decoration: none; color: white;"><li>
               <img src="https://res.cloudinary.com/kayode/image/upload/v1571831584/cars/Automation_g0qdiq.svg" alt="Automation"> Automation
           </li></a>
@@ -1156,7 +1146,7 @@ position: relative;
                      
                     </select>
                     <br>
-                      <a href="/Users/inVENT/Desktop/Car-Park-App-Web-FE-SuperAdmin/mail_mailcampaign-proceed.html"><button class="btn btn-primary" style="float: right; margin-top: 5px;margin-right: 18%;text-decoration: none;">Proceed</button></a>
+                      <a href="mail_mailcampaign-proceed.html"><button class="btn btn-primary" style="float: right; margin-top: 5px;margin-right: 18%;text-decoration: none;">Proceed</button></a>
 
               </form>
 
@@ -1187,7 +1177,7 @@ position: relative;
                      
                     </select>
                     <br>
-                      <a href="/Users/inVENT/Desktop/Car-Park-App-Web-FE-SuperAdmin/mail_mailcampaign-proceed.html"><button class="btn btn-primary" style="float: right; margin-top: 5px;margin-right: 18%;text-decoration: none;">Proceed</button></a>
+                      <a href="mail_mailcampaign-proceed-bday.html"><button class="btn btn-primary" style="float: right; margin-top: 5px;margin-right: 18%;text-decoration: none;">Proceed</button></a>
 
               </form>
 
@@ -1206,6 +1196,7 @@ position: relative;
            
 
   </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
