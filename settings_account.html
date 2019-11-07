@@ -10,6 +10,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="js/settings_account.js"></script>
         <style>
             #body-row {
                 margin-left: 0;
@@ -221,14 +222,13 @@
                             <div class="card" style="width: 100%;">
                                 <div class="card-body">
 
-                                    <form>
+                                    <form name="settings_account">
                                         <fieldset>
                                             <div style="padding-left: 1.25rem; padding-right: 1.25rem">Personal
                                                 information
                                                 <span class="card-text" style="color: darkgray; padding-left: 50px">The
                                                     information can be edited from your profile page.</span>
-                                                <a href="#" class="btn btn-primary"
-                                                    style="float: right; width: 120px;">Save</a>
+                                                <a href="#" class="btn btn-primary" onclick="updateAccount()" style="float: right; width: 120px;">Save</a>
                                             </div>
                                             <br>
                                             <hr>
@@ -237,19 +237,19 @@
                                                 <div class="form-group row">
                                                     <div class="col-sm-6">
                                                         First Name
-                                                        <input type="email" class="form-control"
+                                                        <input class="form-control" id="fname" name="fname"
                                                             placeholder="First name">
                                                     </div>
                                                     <div class="col-sm-6">
                                                         Last Name
-                                                        <input type="email" class="form-control"
+                                                        <input class="form-control" id="lname" name="lname"
                                                             placeholder="Last name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-6">
                                                         Email
-                                                        <input type="email" class="form-control" placeholder="Email">
+                                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                                     </div>
                                                     <div class="col-sm-6"></div>
                                                 </div>
@@ -330,6 +330,14 @@
                     // Collapse/Expand icon
                     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
                 });
+
+
+                //pop up notofication scripts
+                function popupMessage() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("display");
+                }
+
             </script>
     </body>
 
