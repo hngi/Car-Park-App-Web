@@ -7,52 +7,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <title>Ongoing mails_Mail-Campaign </title>
-
+  <title>Mail-Campaign</title>
+  <link
+      rel="icon"
+      href="https://res.cloudinary.com/seun007/image/upload/v1572520438/image_3_zznsc1.png"
+      type="image/gif"
+      sizes="5x16"
+    />
   <style>
-    #automate{
-      position: fixed;
-        bottom: 35%;
-        left: 62%;
-        width:700px;
-        height: 500px;
-        margin-bottom: -120px;
-        margin-left: -200px;
-        background:white;
-        display:none;
-    }
-     #opacity{
-         background: rgb(6,0,1);
-background: linear-gradient(90deg, rgba(6,0,1,0.9724264705882353) 0%, rgba(9,5,6,0.9724264705882353) 45%, rgba(3,0,0,0.9668242296918768) 100%);
-position: relative;
-
-        display:block;
-
-        }
-           #popup2{
-        position: fixed;
-        bottom: 40%;
-        left: 75%;
-        width:500px;
-        height: 450px;
-        margin-bottom: -120px;
-        margin-left: -200px;
-        background:white;
-        display:none;
-        } 
-
-        #popup3{
-        position: fixed;
-        bottom: 40%;
-        left: 75%;
-        width:500px;
-        height: 450px;
-        margin-bottom: -120px;
-        margin-left: -200px;
-        background:white;
-        display:none;
-        } 
-
     .mail-container {
       padding: 0;
       margin:0;
@@ -71,7 +33,12 @@ position: relative;
     .mail-side-bar ul li {
       list-style-type: none;
       padding-bottom: 30px;
+
     }
+    .mail-side-bar ul li a:hover{
+      background-color: grey;
+    }
+    
     .mail-side-bar ul li img {
       padding-right: 10px;
     }
@@ -145,10 +112,7 @@ position: relative;
     color: royalblue;
     size: 11px;
     }
-    .last-bar {
-      padding-top: 70px;
-      background-color: #fff;
-    }
+    
     .last-bar button{
       float: right;
     margin-top: 20px;
@@ -159,22 +123,14 @@ position: relative;
 
     }
     .session-first {
-      font-size: 12px;
+      font-size: 15px;
       padding: 10px;
-      width: 90%;
       margin: auto;
-      background-color: #b1b1b1;
     }
     .session-second {
+      font-size: 15px;
       padding: 10px;
-      font-size: 12px;
-      width: 90%;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 11px;
-      background-color: #171717;
-      color: whitesmoke;
+      margin: auto;
     }
     #newletter-head {
       text-align: center;
@@ -259,8 +215,278 @@ position: relative;
         .campaign {
           margin-bottom: 3px;
         }
+        #popup{
+        position: fixed;
+        bottom: 35%;
+        left: 62%;
+        width:700px;
+        height: 500px;
+        margin-bottom: -120px;
+        margin-left: -200px;
+        background:white;
+        display:none;
+        } 
+        #popup2{
+        position: fixed;
+        bottom: 40%;
+        left: 75%;
+        width:500px;
+        height: 450px;
+        margin-bottom: -120px;
+        margin-left: -200px;
+        background:white;
+        display:none;
+        } 
 
-        /*style for the elipsis message dots*/
+        #popup3{
+        position: fixed;
+        bottom: 40%;
+        left: 75%;
+        width:500px;
+        height: 450px;
+        margin-bottom: -120px;
+        margin-left: -200px;
+        background:white;
+        display:none;
+        } 
+        #opacity{
+         background: rgb(6,0,1);
+background: linear-gradient(90deg, rgba(6,0,1,0.9724264705882353) 0%, rgba(9,5,6,0.9724264705882353) 45%, rgba(3,0,0,0.9668242296918768) 100%);
+position: relative;
+        display:block;
+
+        }
+        
+.p-1:hover {
+background-color: white;
+border-radius: 10px;
+}
+
+.notification-box img {
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: -10px;
+    padding: 14px;
+}
+.notification-box {
+    border: 1px solid #C4C4C4;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.notification-box b {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+.notification-box span {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2
+}
+
+
+
+@media screen and (min-width: 710px) and (max-width: 850px) {
+h1, b, .notification-box {
+    margin-left: 80px;
+}
+}
+
+@media screen and (min-width: 850px) and (max-width: 1090px) {
+h1, b, .notification-box, .popuptext {
+    margin-left: 70px;
+}
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  border: 1px solid lightblue;
+    border: 10px;
+cursor: pointer;
+width: 98%;
+  font-size: 25px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  /*position: relative;*/
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ display: none;
+  /*position: absolute;*/
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*z-index: 1;*/
+  overflow: auto;
+}
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.popup {
+  /*position: relative;*/
+  
+  /*display: inline-block;*/
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  color: #555;
+  border-radius: 6px;
+  /*padding: 8px 0;*/
+  position: absolute;
+  z-index: 1;
+  top: 15vh;
+  left: -250px;
+  height: 420px;
+   background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  box-shadow: 
+    -2rem 2rem 2rem rgba(black, 0.2);
+  filter: blur(0);
+  transform: scale(1);  
+  opacity: 1;
+  /*visibility: visible;
+  &.off {
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(8px);
+    transform: scale(0.33);
+    box-shadow: 1rem 0 0 rgba(black, 0.2);*/
+  
+}
+.popup .notification-box {
+    border: 1px solid grey; 
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.popup .notification-box b {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+
+/* Popup arrow */
+.popup .popuptext::after {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid white;
+ content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 25%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  /*border-color: #ff  transparent transparent;*/
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .display {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+@media screen and (min-width: 710px) and (max-width: 850px) {
+    .col-8 pt-3 d-flex {
+        float: right;
+        /*display: inline-block;
+        text-align: center;
+        width: auto;
+        left: 30px*/
+
+
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 1090px) {
+    .popup .popuptext {
+        margin-left: 90px;
+    }
+    }
+
+        textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+#list>li{
+    display:inline;
+    padding:0.5rem; 
+}
+   @media screen and (max-width: 700px) {
+  .container {
+    width: 375px;
+    margin: 30px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px;
+    justify-content: center;
+    align-content: center;
+  }
+  #list>li{
+    display:none;   
+}
+   }
+
+     /*style for the elipsis message dots*/
          .move-two {
         border-bottom: 1px solid rgba(119, 119, 119, 0.2);
         margin-bottom: 3em;
@@ -301,123 +527,6 @@ position: relative;
         font-size: 0.9em;
         font-weight: 500;
     }
-
-     /*pop up notofication styles start here*/
-    .popup {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    }
-
-    /* The actual popup */
-    .popup .popuptext {
-    visibility: hidden;
-    width: 25em;
-    color: #555;
-    position: absolute;
-    z-index: 1;
-    top: 10vh;
-    right: 0.8em;
-    height: max-content;
-    background: white;
-    border: 1px solid #ccc;
-    transition: 1.1s ease-out;
-    box-shadow: 
-        -2rem 2rem 2rem rgba(black, 0.2);
-    filter: blur(0);
-    transform: scale(1);  
-    opacity: 1;
-    }
-    .popup .notification-box {
-        border: 1px solid grey; 
-        margin-bottom: 0.3em;
-        margin-right: 0.3em;
-        margin-left: 0.3em;
-        border-radius: 5px;
-        background-color: white;
-    }
-    .popup .notification-box b {
-        font-family: sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        
-    }
-
-    .popup .notHeadAll {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-    }
-
-    /* Toggle this class - hide and show the popup */
-    .popup .display {
-        visibility: visible;
-        -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-    }
-
-    /* Add animation (fade in the popup) */
-    @-webkit-keyframes fadeIn {
-        from {opacity: 0;} 
-        to {opacity: 1;}
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity:1 ;}
-    }
-
-            
-    @media screen and (min-width: 250px) and (max-width: 610px) {
-        .popup .notification-box b, .popup .notification-box p, .popup .notification-box a  {
-            font-size: 0.7em;
-            float: none;
-            margin: 0;
-            letter-spacing: normal;
-        }
-
-        .popup .notHead {
-            font-size: 0.7em;
-        }
-
-        .popup .notHeadTwo {
-            margin-left: 0px;
-        }
-
-        .popup .notBottom {
-            margin-top: 1em;
-        }
-        
-        .popup .notification-box i  {
-            font-size: 0.75em;
-        }
-
-        .popup .notification-box {
-            width: 100%;
-            margin: 0;
-            background-color: white;
-        }
-        .popup .popuptext {
-            width: 100%;
-            height: 26.25em;
-            right: -10px;
-            background: white;
-            z-index: 1;
-        }
-
-
-
-
-    /*pop up notification styles end here*/
-
-     /*automation pop up styling starts here*/
-        
-  
-      
- /*automation pop up styling ends here*/
 
       </style>
 </head>
@@ -677,42 +786,42 @@ position: relative;
                   </div>
                 </div>
 
-              
-                  <p id="newletter-head">CarPark NewsLetter Subscription</p>
-                  <section class="session-first">
-                    <p>Hi User,</p>
-                    <p>
-                      My account was debited but payment for park space was not processed
-                      accordingly.
-                    </p>
-                    <p>
-                      I have proof of invoice sent to me after payment was made, but when I
-                      checked the car space I wanted to book, it's saying that the payment has
-                      not been processed, therefore park space cannot be booked.
-                    </p>
-                    <p>I don't know what to do.</p>
-                    <p>Kindly look into the situation and get back to me ASAP.</p>
-                    <p>Eagerly awaiting your response.</p>
-                    <p>Thank you.</p>
-                  </section>
-                  <section class="session-second">
-                    <p>Our mailing address is:</p>
-                    <p>CAR PARK APP</p>
-                    <p>Sanjuma Kai Close Festac Town</p>
-                    <p>Lagos 100211</p>
-                    <p>Nigeria</p>
-                    <p>Add us to your address book</p>
-                    <p>Want to change how you receive these emails?</p>
-                    <p>You can update your preferences or unsubscribe from this list</p>
-                  </section>
-                  <button class="btn btn-primary">Send</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- My Work Finishes -->
+        
+       <p id="newletter-head">Compose Campaign</p>
+        <p style="text-align: center;margin-top: 0;">Lets Get Started</p><br>
+      <section class="session-first">
+        <p style="color:#0049B5; margin:0;">Campaign Title</p>
+          <input type="text" name="title" style="height: 40px; width: 353px; "><br><br>
+       
+        <p style="color: #0049B5; margin-top: 10px; margin-bottom:5px;">
+        Recipients
+        </p>
+        <p style="border: solid 1px; border-radius:10px; padding: 10px; height: 55px;text-align: center;width: 55px; margin-bottom:2rem;">22
+        <select id="sel" onchange="toggle()" style="width:15rem; margin-left:4rem; padding-bottom:0;">
+                    <option value="1" selected>View Recipients Details</option>
+                    <option value="2">View Recipients Details</option>
+                    <option value="3">Recipient 3</option>
+                </select>
+                <ul id="list" style="list-style-type:none; margin-left:20rem; margin-top:-3rem; padding-bottom:2rem;"><li><a href="#">Add</a></li><li><a href="#">Edit</a></li><li><a href="#">Delete</a></li></ul></p>
+        <p style="color:#0049B5; margin:5px 0;">Email Marketing Software</p>
+        <p><select style="width: 100%; height: 50px;">
+                    <option value="1" selected>Mail Chimp</option>
+                    <option value="2">Mail Monkey</option>
+                    <option value="3">Mail Burst</option>
+                </select></p>
+    </section>
+    <section class="session-second">
+        <p style="color:#0049B5; margin-left:0; ">Content</p>
+        <textarea minlength="30" placeholder="Message"></textarea>
+    <button class="btn btn-primary">Send</button>
+    </section>
+    </div>
         </div>
-      </div>
+    </div>
+  </div>
+    <!-- My Work Finishes -->
+            </div>                      
+        </div>
     </div>
 
      <!--automation pop up code starts here-->
@@ -822,5 +931,4 @@ $(document).ready(function(){
     </script>
 
 </body>
-
 </html>
