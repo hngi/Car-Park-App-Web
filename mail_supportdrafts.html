@@ -106,12 +106,6 @@
       font-weight: bolder;
     }
 
-    ul li {
-        list-style-type: none;
-        display: block;
-        margin: 0;
-        padding: 1em;
-    }
 
     ul li a {
         color: white;
@@ -123,301 +117,302 @@
         color: white
     }
 
-    .smallMessage{
-        background-color: #f6f6f6;
-    }
-
-    .checkRow{
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        width: 97%;
-        padding: 0.3em;
-        height: 2.1em;
-        background: rgba(255, 255, 255, 0.48);
-        color: #777777;
-    }
-
-    .message{
-        background-color: #ffffff;
-        width: 97%;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 3px;
-    }
-
-    .badge{
-        background: #FFA800;
-        padding: 0.3em;
-        color: #ffffff;
-        font-size: 4em;
-        width: 100%;
-        border-radius: 100%;
-    }
-
-    .move h1{
-        font-size: 0.9em;
-        color: #000000;
-        border-bottom: 1px solid rgba(119, 119, 119, 0.2);
-        padding-bottom: 0.3em;
-    }
-
-    .move h1 span{
-        color: #0049B5;
-        font-size: 0.7em;
-        /* float: right; */
-        /* margin-right: 0.3em; */
-    }
-
-    .move h2{
-        font-size: 0.9em;
-        color: #0049B5;
-    }
-
-    .move p{
-        font-size: 0.7em;
-        color: #777777;
-        width: 60%;
-    }
-
-    .bigMessage {
-        background: #ffffff;
-        margin: 0;
-        padding: 3em 0.5em;
-    }
-
-    .bigMessage .badge {
-        padding: 0.3em;
-        font-size: 5em;
-    }
-
-    .move-two {
-        border-bottom: 1px solid rgba(119, 119, 119, 0.2);
-        margin-bottom: 3em;
-        margin-top: 2em;
-    }
-
-    .move-two h2 {
-        font-size: 0.9em;
-        color: #0049B5;
-    }
-
-    .move-two p {
-        font-size: 0.7em;
-        color: #0049B5;
-    }
-
-    .move-two p span a {
-        margin-left: 2em;
-        color: rgba(119, 119, 119, 0.5);
-    }
-
-    .move-two .messageDot {
-        color: #777777;
-        float: right;
-        margin-top: 0;
-    }
-
-    .move-two .messageDot:hover{
-        cursor: pointer;
-    }
-
-    .move-two p span a:hover {
-        text-decoration: none;
-    }
-
-    .dropdown-item {
-        color: #000000;
-        font-size: 0.9em;
-        font-weight: 500;
-    }
-
-    .theMessage p {
-        color: #000000;
-        font-size: 0.8em;
-        line-height: 2em;
-    }
-
-    .messageTop {
-        margin-top: 3em;
-    }
-
-    form #hide {
-        color: #777777;
-        width: 100%;
-        padding-left: 0.3em;
-        margin-left: -0.5em;
-        display: none;
-    }
-
-    form #hide p {
-        font-size: 0.8em;
-        margin: 0.3em;
-    }
-
-    form .forward {
-        border-bottom: 1px solid rgba(119, 119, 119, 0.5);
-        font-weight: bold;
-    }
-
-    form .forwardInputs {
-        border: none;
-        color: #777777;
-        font-size: 0.8em;
-    }
-
-    form .sendBtn {
-        background: #1A73E8;
-        border-radius: 4px;
-        color: #ffffff;
-        margin-left: -2.7em;
-        width: 8em;
-    }
-
-    form textarea{
-        width: 90%;
-        background-color: #F6F6F6;
-        color: #777777;
-        font-size: 0.8em;
-        padding-left: 0.3em;
-        resize: none;
-        border: none;
-    }
-
-    #newMessage {
-        color: #000000;
-    }
-
-    #newMessage h3 {
-        font-size: 1em;
-        text-align: center;
-    }
-
-    #newMessage form .form-group label{
-        color:  #1A73E8;
-        font-size: 0.9em;
-        font-weight: bold;
-    }
-
-    #newMessage textarea {
-        resize: none;
-        width: 100%;
-        background: #ffffff;
-        border: 1px solid rgb(204, 204, 204);
-        box-sizing: border-box;
-        border-radius: 0.5em;
-    }
-
-    #newMessage form i {
-        color: #777777;
-    }
-
-    #newMessage form .btn {
-        background: #1A73E8;
-        border-radius: 2px;
-        color: #ffffff;
-        width: 5em
-    }
-
-    #newMessage form .fa-paperclip {
-        margin-left: 60%;
-    }
-
-    .closeModal:hover {
-        cursor: pointer;
-    }
-
-    @media screen and (max-width: 64em){
-        .composeBtn{
-            width: 95%;
+        /* First column styling*/
+        #col-1{
+            background: #1A73E8;
         }
+        .compose-btn{
+            background: #5CB5FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 0px 25px 25px 0px;
+            margin-top:30px;
+            width: 187px;
+            height: 50px;
+position:relative;  
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+display:flex;
+margin-left:-15px;
+outline: none;
+        }
+        .plus-icon{   
+position:absolute;  
+color: #FFFFFF;
+font-size: 25px;
+margin-top:-40px;
+margin-left:120px;
+        }
+        @media only screen and (max-width:1250px){
+            .compose-btn{
+                width: 135px;
+            }
+            .plus-icon{ 
+                margin-left:90px;
+                margin-top:-35px;
+            }
+        }
+        .list-group{
+            margin-top:20px;
+        }
+        .list-group-item{
+            margin-top:20px;
+            font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+list-style-type: none;
+        }
+   
+       
+        /* second column styling*/
+.row-1, .row-2{
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.initial-con{
+    background: #FFB800;
+    height:80px;
+    width:80px;
+    margin-top:20px;
+    border-radius: 50%;
+    display: flex;
+}
 
-        .composeBtn span{
-            padding-left: 0;
+.initial-1{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 59px;
+margin:auto;
+color: #FFFFFF;
+}
+.span-h{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+margin-left:130px;
+margin-top:-65px;
+color: #000000;
+}
+.date, .time{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+color: #0049B5;
+}
+.span-n{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+margin-left:130px;
+margin-top:-4px;
+color: #0049B5;
+}
+.span-p{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+margin-top:40px;
+margin-left:130px;
+color: #777777;
+}
+.hr-row{
+    margin-left:120px;
+    margin-top:1px;
+}
+@media only screen and (max-width:700px){
+    .span-n{
+        margin-top:-5px;
         }
+        .span-p{
+            margin-top:45px;
+        }
+        .hr-row{
+    margin-top:-10px;
+}
+}
+.hr-row{
+    margin-left:110px;
+    margin-top:10px;
+}
+        /* third column styling*/
+        #col-3{
+            background: #FFFFFF;
+        }
+        .initial-con-3{
+    background: #FFB800;
+    height:80px;
+    width:80px;
+    margin-top:20px;
+    border-radius: 50%;
+    margin:20px;
+    display: flex;
+}
+.span-n-3{
+    margin-top:40px;
+    margin-left:-10px;
+}
+@media only screen and (max-width:700px){
+    .span-n-3{
+    margin-top:40px;
+    margin-left:10px;
+}
+.message{
+    margin-top:10px;
+}
+}
+@media only screen and (max-width:420px){
+    .span-n-3{
+    margin-top:-65px;
+    margin-left:105px;
+   
+}
+.message{
+    margin-top:-45px;
+}
+}
+.name-3{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
 
-        .badge, .bigMessage .badge {
-            padding: 0.2em;
-            font-size: 4em;
-        }
-        
-        .messageTop {
-            margin-top: 2em;
-        }
-
-        form .sendBtn {
-            margin-left: -4.5em;
-        }
+color: #1A73E8;
+}
+        textarea{
+            background-color: #F6F6F6;
+    margin-top:50px;
+}
+#btn-send{
+    background: #0049B5;
+    color:#F6F6F6;
+    float:right;
+    height:40px;
+    width:100px;
+    margin-top:15px;
+    font-size:20px;
+}
+#span-name{
+    margin-top:25px;
+    margin-left:5px;
+}
+#span-icon{
+margin-left:15px;
+color: rgba(119, 119, 119, 0.3);
+}
+#span-icon-link{
+margin-left:5px;
+color: rgba(119, 119, 119, 0.3);
+}
+.drop-icon{
+float:right;
+  position: relative;
+  color:#777777;
+}
+.message{
+    margin-top:40px;
+}
+.p-message{
+    margin-top:40px;
+}
+.dropdown-menu-right{
+    background: #F6F6F6;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+}
+@media only screen and (max-width:1250px){
+    #span-name{
+        margin-top:-5;
+        margin-left:10px;
     }
+    #span-icon{
+margin-left:5px;
+color: rgba(119, 119, 119, 0.3);
+}
+#span-icon-link{
+margin-left:px;
+color: rgba(119, 119, 119, 0.3);
+}
+}
 
-    @media screen and (max-width: 48em){
-        .badge {
-            font-size: 3em;
-            padding: 0.1em;
-        }
+.p-complaint-h{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+margin-top: 5px;
+color: #000000;
+}
+#span-name-1{
+    margin-top: -10px;
+    position: absolute;
+}
 
-        .bigMessage .badge {
-            font-size: 3em;
-            padding: 0.2em;
-        }
-        
-        .messageTop {
-            margin-top: 0em;
-        }
-
-        form .sendBtn {
-            margin-left: -6em;
-        }
-    }
-
-    @media screen and (max-width: 35em){
-        .smallMessage{
-            padding-left: 8%;
-        }
-
-        .checkRow{
-            width: 95%;
-        }
-
-        .message{
-            width: 95%;
-            padding: 3%;
-        }
-
-        .badge, .bigMessage .badge{
-            width: 2em;
-            padding: 0.4em;
-        }
-
-        .demo {
-            float: right;
-        }
-
-        .bigMessage {
-            padding-left: 3em;
-        }
-
-        form .sendBtn {
-            margin-left: 0em;
-        }        
-    }
-
-    @media screen and (max-width: 27em) {   
-        #newMessage form .fa-paperclip {
-            margin-left: 55%;
-        }
-    }
-    
-    @media screen and (max-width: 375px) {   
-        #newMessage form .fa-paperclip {
-            margin-left: 47%;
-        }
-    }
-    
-    @media screen and (max-width: 320px) {   
-        #newMessage form .fa-paperclip {
-            margin-left: 30%;
-        }
-    }
+@media only screen and (max-height:600px){
+.container-fluid{
+    height:100%;
+}
+}
+@media only screen and (min-height:700px){
+.container-fluid{
+    height:100%;
+}
+}
+.notification-bell{
+margin-left:15px;
+    outline: none;
+    border:none;
+}
+.row-modal{
+    background: #E3F2FF;
+}
+.modal-row-1{
+    border: 1px solid rgba(119, 119, 119, 0.2);
+box-sizing: border-box;
+border-radius: 7px;
+margin:10px;
+font-family: Nunito;
+font-size: 14px;
+line-height: 18px;
+color: #000000;
+}
+.view-req{
+    float:right;
+}
+.see-all{
+background: #1A73E8;
+}
+.seeall{
+    color:#fff;
+    text-align: center;
+}
+.span-icons{
+    margin-left:40px;
+}
+.fa-angle-left, .fa-angle-right{
+    float:right;
+}
+#star{
+    color:#FFB800;
+    float:right;
+}
 
     /*pop up notofication styles start here*/
     .popup {
@@ -527,12 +522,121 @@
         }
     }
 
+    .mail-bar {
+      background-color:#1A73E8;
+      color: #fff;
+      padding-top: 2em;
+      padding-right: 0;
+      height: inherit;
+      /* padding-bottom: 59px; */
+    }
 
+    .composeBtn {
+      color: white;
+      width: 10em;
+      border: 0;
+      height: 3.2em;
+      background-color: #5cb5ff;
+      border-radius: 0px 25px 25px 0px;
+    }
+
+    .composeBtn span {
+      padding-left: 2.8em;
+      font-size: 1.2em;
+      font-weight: bolder;
+    }
+
+    ul li {
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 1em;
+    }
+
+    ul li a {
+        color: white;
+        font-weight: 500;
+    }
+
+    ul li a:hover{
+        text-decoration: none;
+        color: white
+    }
+    @media screen and (max-width: 64em){
+        .composeBtn{
+            width: 95%;
+        }
+
+        .composeBtn span{
+            padding-left: 0;
+        }
+    }
+    form #hide {
+        color: #777777;
+        width: 100%;
+        padding-left: 0.3em;
+        margin-left: -0.5em;
+        display: none;
+    }
+
+    form #hide p {
+        font-size: 0.8em;
+        margin: 0.3em;
+    }
+
+    form .forward {
+        border-bottom: 1px solid rgba(119, 119, 119, 0.5);
+        font-weight: bold;
+    }
+    
+    form .forwardInputs {
+        border: none;
+        color: #777777;
+        font-size: 0.8em;
+    }
+
+    form .sendBtn {
+        background: #1A73E8;
+        border-radius: 4px;
+        color: #ffffff;
+        margin-left: -2.7em;
+        width: 8em;
+    }
+    @media screen and (max-width: 64em){
+        .composeBtn{
+            width: 95%;
+        }
+
+        .composeBtn span{
+            padding-left: 0;
+        }
+
+       
+        .messageTop {
+            margin-top: 2em;
+        }
+
+        form .sendBtn {
+            float:right;
+        }
+    }
+
+   
+
+    form textarea{
+        width: 90%;
+        background-color: #F6F6F6;
+        color: #777777;
+        font-size: 0.8em;
+        padding-left: 0.3em;
+        resize: none;
+        border: none;
+    }
     /*pop up notification styles end here*/
 
 </style>
 <body>
-    <!--go to line 608 to see pop up notification codes-->
+    <!--go to line 606 to see pop up notification codes-->
     <div class="container-fluid p-0" style="background-color: #ffffff">
         <div class="row " id="body-row">
             <!--sidebar nav-->
@@ -560,7 +664,7 @@
                             <span class="submenu-icon ml-auto"></span>
                         </span>  
                     </a>
-                    <a href="#"
+                    <a href="carpark_manage_addcar.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -679,221 +783,219 @@
                         <a class="nav-link text-muted" href="./mail_mailcampaign.html">Campaign</a>
                     </nav>
                 </div>
-                <div class="container-fluid m-0 mt-1 pr-4 p-0">
+             <!--mail support page starts from here-->
+             <div class="col mt-1">
+                        
                     <div class="row">
-                        <div class="col-sm-2 mail-bar">
-                            <button type="button" class="composeBtn mb-5" data-toggle="modal" data-target="#newMessage">Compose <span>+</span></button>
-                            <!-- Modal appears when compose is clicked -->
-                            <div class="modal" id="newMessage" role="dialog" tabindex="-1" aria-labelledby="newMessageBody" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered mr-5 modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-body" id="newMessageBody">
-                                            <div class="row">
-                                                <div class="col-sm-1"></div>
-                                                <h3 class="col-sm-10">New Message</h3>
-                                                <span aria-hidden="true" class="close closeModal col-sm-1" data-dismiss="modal" aria-label="Close">&times;</span>
-                                            </div>
-                                            <div class="row mt-1">
-                                                <div class="col-sm-1"></div>
-                                                <form action="" class="form-horizontal col-sm-10" role="form">
-                                                    <div class="form-group">
-                                                        <label class="control-label sm-1 ml-3" for="">To</label>
-                                                        <div class="col-sm-11">
-                                                            <input type="text" name=""class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label sm-1 ml-3" for="">Subject</label>
-                                                        <div class="col-sm-11">
-                                                            <input type="text" name=""class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label sm-1 ml-3" for="">Subject</label>
-                                                        <div class="col-sm-11">
-                                                            <textarea name="subject" id="" cols="30" rows="10"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
+
+                        <!--first column-->
+                        <div class="col-md-2 mt-2 m-0 mt-1 pr-4 p-0" id="col-1">
+                                <button type="button" class="composeBtn mb-5 mt-5" data-toggle="modal" data-target="#newMessage">Compose <span>+</span></button>
+                         
+                                <div class="modal" id="newMessage" role="dialog" tabindex="-1" aria-labelledby="newMessageBody" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered mr-5 modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-body" id="newMessageBody">
+                                                    <div class="row">
                                                         <div class="col-sm-1"></div>
-                                                        <div class="col-sm-11">
-                                                            <i class="fas fa-trash"></i>
-                                                            <i class="fa fa-paperclip"></i>
-                                                            <button type="submit" class="btn ml-2">Send</button>
+                                                        <h3 class="col-sm-10">New Message</h3>
+                                                        <span aria-hidden="true" class="close closeModal col-sm-1" data-dismiss="modal" aria-label="Close">&times;</span>
+                                                    </div>
+                                                    <div class="row mt-1">
+                                                        <div class="col-sm-1"></div>
+                                                        <form action="" class="form-horizontal col-sm-10" role="form">
+                                                            <div class="form-group">
+                                                                <label class="control-label sm-1 ml-3" for="">To</label>
+                                                                <div class="col-sm-11">
+                                                                    <input type="text" name=""class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label sm-1 ml-3" for="">Subject</label>
+                                                                <div class="col-sm-11">
+                                                                    <input type="text" name=""class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label sm-1 ml-3" for="">Subject</label>
+                                                                <div class="col-sm-11">
+                                                                    <textarea name="subject" id="" cols="30" rows="10"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="col-sm-1"></div>
+                                                                <div class="col-sm-11">
+                                                                    <i class="fas fa-trash"></i>
+                                                                    <i class="fa fa-paperclip"></i>
+                                                                    <button type="submit" class="btn ml-2">Send</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+              
+
+                                    <ul class="list-group">
+                                            <li>
+                                                <a href="mail_supportinbox.html" class="mb-2"><i class="fas fa-inbox fa-lg mr-2"></i>Inbox</a> 
+                                            </li>
+                                            <li style="background-color: rgb(69, 143, 240);">
+                                                <a href="mail_supportdrafts.html" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
+                                            </li>
+                                            <li>
+                                                <a href="mail_supportstarred.html" class="mb-2"><i class="fas fa-star fa-lg mr-2"></i>Starred</a>
+                                            </li>
+                                            <li>
+                                                <a href="mail_supportsent.html" class="mb-2"><i class="fas fa-paper-plane fa-lg mr-2"></i>Sent</a>
+                                            </li>
+                                            <li>
+                                                <a href="mail_supportspam.html" class="mb-2"><i class="fas fa-exclamation-triangle fa-lg mr-2"></i>Spam</a>
+                                            </li>
+                                            <li>
+                                                <a href="mail_supporttrash.html" class="mb-2"><i class="fas fa-trash fa-lg mr-2"></i>Trash</a>
+                                            </li>
+                                        </ul>
+                        </div>
+
+                        <!--second column-->
+                        <div class="col-md-5" id="col-2">
+                          <div class="row justify-content-center">
+                            <div class="col-md-11 mt-2 row-1" style="background-color: #FFFFFF; box-shadow: none;">
+                                    <input type="checkbox" name="check" id="" class="mt-1">
+                                <i class="fa fa-redo-alt mt-1 span-icons"></i>
+                                <span class="span-icons"><i class="fa fa-ellipsis-v dropdown" selected="selected" data-toggle="dropdown" id="dropmenu" ></i></button>
+                                <label class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item">reply</a>
+                                    <a href="#" class="dropdown-item">forward</a>
+                                    <a href="#" class="dropdown-item">print</a>
+                                    <a href="#" class="dropdown-item">download</a>
+                                    <a href="#" class="dropdown-item">mark as unread</a>
+                                    <a href="#" class="dropdown-item">delete</a>
+                                </label></span>
+                                <span class="span-icons">1-2 of 1</span>
+                                <i class="fa fa-angle-right fa-lg mt-1 span-icons"></i>
+                                <i class="fa fa-angle-left fa-lg mt-1 span-icons"></i>
+                                
+                           
+                                
+                            </div>
+                             <div class="col-md-11 mt-2 row-2">
+                                    <input type="checkbox" name="check" id="" class="mt-1">
+                                    <section class="draft-sec"><h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1></section>
+                                    <p class="span-h"> <strong>My account debited but payme...</strong><span class="date">October 21, 2019</span>
+                                    <span class="time">21:00</span></p><hr class="hr hr-row"/>
+                                    <p class="span-n">John Utaka</p>
+                                    <p class="span-p"><strong>Hi, my account was debited but payment for park space was 
+                                            not processed...</strong></p>
+                                            <i class="far fa-star fa-lg mb-2 mr-1 demo" id="star"></i>
+                                    
+                            </div>
+                            <div class="col-md-11 mt-2 row-2">
+                                    <input type="checkbox" name="check" id="" class="mt-1">
+                                    <section class="draft-sec"><h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1></section>
+                                    <p class="span-h"> <strong>(no Subject)</strong><span class="date">October 21, 2019</span>
+                                    <span class="time">21:00</span></p><hr class="hr hr-row"/>
+                                    <p class="span-n"><strong>(no name)</strong></p>
+                                    <p class="span-p">Hi, my account was debited but payment for park space was 
+                                            not processed...</p>
+                                            <i class="far fa-star fa-lg mb-2 mr-1 demo" id="star" style="color: #777777;"></i>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!--third column-->
+                        <div class="col-md-5 mt-2" id="col-3">
+                            
+                                       
+                                <div class="row">
+                                        <div class="row initial-con-3"><h3 class="initial-1">J</h3></div>
+                                        <span class="span-n-3 name-3">John Utaka<span>
+                                                <i class="fa fa-ellipsis-v dropdown drop-icon" selected="selected" data-toggle="dropdown" id="dropmenu" ></i></button>
+                                                <label class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">reply</a>
+                                                    <a href="#" class="dropdown-item">forward</a>
+                                                    <a href="#" class="dropdown-item">print</a>
+                                                    <a href="#" class="dropdown-item">download</a>
+                                                    <a href="#" class="dropdown-item">mark as unread</a>
+                                                    <a href="#" class="dropdown-item">delete</a>
+                                                </label>
+                                        </span>
+                                            <br/>john_u@gmail.com
+                                            <span> <i class="fa fa-print" id="span-icon"><span id="span-icon-link">Print</span></i></span>
+                                            <span> <i class="fa fa-download" id="span-icon"><span id="span-icon-link">Download</span></i></span>
+                            
+                                            <hr class="hr"/>
+                                       
+                                    </div>
+                                    <div class="container message">
+                                    <h6><strong>My Account debited but payment not processed</strong></h6>
+                                    <p class="p-responsive p-message">Hi Admin,</p>
+
+                                    <p class="p-responsive">my account was debited but payment for park space was not processed
+                                         accordingly. </p>
+                                            
+                                    <p class="p-responsive">I have proof of invoice sent to me after payment was made, but when i
+                                         checked the car space i wanted to book, it’s saying that payment has not been process therefore
+                                          park space cannot be booked.</p>
+                                            
+                                    <p class="p-responsive">I dont know what to do.</p>
+                                            
+                                    <p class="p-responsive"> Kindly look into the situation and get back to me ASAP.</p>
+                                            
+                                    <p class="p-responsive">Eagerly awaiting your response.</p>
+                                            
+                                    <p class="p-responsive">Thank you.</p>
+                                </div>
+                                <div class="row pr-1 messageTop">
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-10">
+                                            <form action="" class="col-sm-12" role="form">
+                                                <div class="row" id="hide">
+                                                    <p class="forward col-sm-12">Forward</p>
+                                                    <div class="form-group row">
+                                                        <p class="col-sm-1">Date:</p>
+                                                        <div class="col-sm-8 ml-n1">
+                                                            <input type="date" name="date" id="datePicker" class="forwardInputs">
                                                         </div>
                                                     </div>
-                                                </form>
-                                                <div class="col-sm-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-      
-                            <ul class="list-group">
-                                <li>
-                                    <a href="mail_supportinbox.html" class="mb-2"><i class="fas fa-inbox fa-lg mr-2"></i>Inbox</a> 
-                                </li>
-                                <li style="background-color: rgb(69, 143, 240);">
-                                    <a href="mail_supportdrafts.html" class="mb-2"><i class="fas fa-file-alt fa-lg mr-2"></i>Drafts</a>
-                                </li>
-                                <li>
-                                    <a href="mail_supportstarred.html" class="mb-2"><i class="fas fa-star fa-lg mr-2"></i>Starred</a>
-                                </li>
-                                <li>
-                                    <a href="mail_supportsent.html" class="mb-2"><i class="fas fa-paper-plane fa-lg mr-2"></i>Sent</a>
-                                </li>
-                                <li>
-                                    <a href="mail_supportspam.html" class="mb-2"><i class="fas fa-exclamation-triangle fa-lg mr-2"></i>Spam</a>
-                                </li>
-                                <li>
-                                    <a href="mail_supporttrash.html" class="mb-2"><i class="fas fa-trash fa-lg mr-2"></i>Trash</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="main col-sm-10 row m-0 p-0">
-                            <div class="col-sm-6 smallMessage">
-                                <div class="row">
-                                    <div class="checkRow mt-2 ml-2">
-                                        <input type="checkbox" name="check" id="" class="mt-1">
-                                        <i class="fa fa-redo-alt mt-1"></i>
-                                        <i class="fa fa-ellipsis-v mt-1"></i>
-                                        <p>1-2 of 1</p>
-                                        <i class="fa fa-angle-left fa-lg mt-1"></i>
-                                        <i class="fa fa-angle-right fa-lg mt-1"></i>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="message mt-1 ml-2">
-                                        <div class="row col-sm-12">
-                                            <input type="checkbox" name="" id="" class="ml-1 mt-1">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1>
-                                            </div>
-                                            <div class="col-sm-9 move">
-                                                <h1><b>My account debited but payme...</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>John Utaka</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
-                                            </div>
-                                        </div>
-                                        <div class="row col-sm-12">
-                                            <div class="col-sm-11"></div>
-                                            <div class="col-sm-1">
-                                                <i class="fa fa-star fa-lg mb-2 mr-1 demo" style="color: #FFA800;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="message mt-1 ml-2">
-                                        <div class="row col-sm-12">
-                                            <input type="checkbox" name="" id="" class="ml-1 mt-1">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <h1 for="" class="draft ml-3" style="color: #F44D4D;">Draft</h1>
-                                            </div>
-                                            <div class="col-sm-9 move">
-                                                <h1><b>(no subject)</b><span class="col-sm-6">October 21, 2019 21:00</span></h1>
-                                                <h2>(no name)</h2>
-                                                <p>my account was dubiously debited for reasons i do not know and i demand justice for this...</p>
-                                            </div>
-                                        </div>
-                                        <div class="row col-sm-12">
-                                            <div class="col-sm-11"></div>
-                                            <div class="col-sm-1">
-                                                <i class="far fa-star fa-lg mb-2 mr-1 demo" style="color: #777777;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                          
-                            </div>
-                            <div class="col-sm-6 bigMessage mt-2">
-                                <div class="row pr-1">
-                                    <div class="col-sm-3">
-                                        <label for="" class="badge ml-3">J</label>
-                                    </div>
-                                    <div class="col-sm-9 move-two">
-                                        <div class="dropdown">
-                                            <i class="fa fa-ellipsis-v messageDot" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                                            <div class="dropdown-menu mr-4 mt-n4" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#hide" onclick="forwardMessage()">forward</a>
-                                                <a class="dropdown-item" href="#">print</a>
-                                                <a class="dropdown-item" href="#">download</a>
-                                                <a class="dropdown-item" href="#">mark as read</a>
-                                                <a class="dropdown-item" href="#">delete</a>
-                                            </div>
-                                        </div>
-                                        <h2>John Utaka</h2>
-                                        <p>
-                                            john_u@gmail.com
-                                            <span><a href=""><i class="fa fa-print"></i> Print</a></span>
-                                            <span><a href=""><i class="fa fa-download"></i> Download</a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row pr-1 messageTop">
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-sm-10 theMessage">
-                                        <b solid>My Account debited but payment not processed</b> <br> <br>
-                                        <p>Hi User, <br> <br>
-                                            my account was debited but payment for park space was not processed accordingly. <br> <br>
-                                            I have proof of invoice sent to me after payment was made, but when i checked the car space i wanted to book, it’s saying that payment has not been process therefore park space cannot be booked. <br> <br>
-                                            I dont know what to do. <br> <br>
-                                            Kindly look into the situation and get back to me ASAP. <br> <br>
-                                            Eagerly awaiting your response. <br> <br>
-                                            Thank you.
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row pr-1 messageTop">
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-sm-10">
-                                        <form action="" class="col-sm-12" role="form">
-                                            <div class="row" id="hide">
-                                                <p class="forward col-sm-12">Forward</p>
-                                                <div class="form-group row">
-                                                    <p class="col-sm-1">Date:</p>
-                                                    <div class="col-sm-8 ml-n1">
-                                                        <input type="date" name="date" id="datePicker" class="forwardInputs">
+                                                    <div class="form-group row">
+                                                        <p class="col-sm-1">Subject:</p>
+                                                        <div class="col-sm-8 ml-2">
+                                                            <input type="text" name="subject" id="" class="forwardInputs">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <p class="col-sm-1">To:</p>
+                                                        <div class="col-sm-8 ml-n1">
+                                                            <input type="email" name="email" id="" class="forwardInputs">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <p class="col-sm-1">Subject:</p>
-                                                    <div class="col-sm-8 ml-2">
-                                                        <input type="text" name="subject" id="" class="forwardInputs">
+                                                <div class="row">
+                                                    <div class="form-group col-sm-12">
+                                                        <textarea name="reply" id="" cols="30" rows="10" class="w-100">Reply</textarea>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <p class="col-sm-1">To:</p>
-                                                    <div class="col-sm-8 ml-n1">
-                                                        <input type="email" name="email" id="" class="forwardInputs">
+                                                <div class="row">
+                                                    <div class="col-sm-9"></div>
+                                                    <div class="form-group col-sm-3">
+                                                        <button type="submit" class="btn form-control sendBtn">Send</button>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group col-sm-12">
-                                                    <textarea name="reply" id="" cols="30" rows="10" class="w-100">Reply</textarea>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-9"></div>
-                                                <div class="form-group col-sm-3">
-                                                    <button type="submit" class="btn form-control sendBtn">Send</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-1"></div>
-                                </div>
-                            </div>                            
+                                            </form>
+                                        </div>
                         </div>
                     </div>
-                </div>
-            </div>
+              
+    </div>    
+    
+    
+
+    <!--mail support ends here-->
         </div>
     </div>
 
@@ -949,7 +1051,7 @@
             $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
         })
 
-        //forward message
+        //forward message scrpts
 
         function forwardMessage() {
             document.getElementById('hide').style.display = "block";
@@ -967,3 +1069,4 @@
 
 </body>
 </html>
+
