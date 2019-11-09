@@ -24,21 +24,46 @@ const makePutRequest = (url, data) => {
         body: JSON.stringify(data)
     }).then(response => {
         if (response.ok){
-            alert("Account Updated");
+            swal.fire('Account Updated");
             return response.json()
         } else {
-            alert('Account Update Failed');
+            swal.fire('Account Update failed")
         }
     }).catch(error => {
-        alert("Error occurred");
+        swal.fire("Error occurred");
     })
 };
 
 
 const authHeaders = () => {
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9obmctY2FyLXBhcmstYXBpLmhlcm9rdWFwcC5jb21cL2FwaVwvdjFcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTczMDUwODA2LCJleHAiOjE1NzMxNTg4MDYsIm5iZiI6MTU3MzA1MDgwNiwianRpIjoiZWtSSk9IWnhvOThXYkZ2eCIsInN1YiI6NCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.eCrAQDNY9OHtY7nEScv1vq5iqhoAeNuALCAwed5nh_w";
+    let token = localStorage.getItem('token');
+
     return {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
     }
 };
+
+const changePassword = () => {
+    passwordPutRequest();
+};
+
+
+const passwordPutRequest = () => {
+    const url = "https://hng-car-park-api.herokuapp.com/api/v1/user";
+    Swal.fire({
+        title: 'Submit your password',
+        input: 'text',
+        inputAttributes: {
+            autocapitalize: 'off'
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Submit',
+        showLoaderOnConfirm: true,
+        preConfirm: (password) => {
+            const data = {password: password};
+            makePutRequest(url, data)
+        },
+        allowOutsideClick: () => !Swal.isLoading()
+    })
+}
