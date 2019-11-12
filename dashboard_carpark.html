@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://res.cloudinary.com/seun007/image/upload/v1572520438/image_3_zznsc1.png"type="image/gif"sizes="5x16"/>
 </head>
 <style>
     /* NAV TAB */
@@ -475,7 +476,7 @@
                                 </div>
                                 <!--notofication bell and popup codes starts-->
                         </div>
-                        <div class="col-4  d-flex border-left justify-content-end">
+                        <div class="col-4  d-flex border-left justify-content-center">
                                 <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
                                 <span class="text-muted pl-2">EN</span>
                         </div>
@@ -491,8 +492,8 @@
                 <div class="col shadow">
                     <nav class="nav">
                         <a class="nav-link active text-muted border-bottom border-primary" href="./dashboard_overview.html">Overview</a>
-                        <a class="nav-link text-muted" href="#">Analytics</a>
-                        <a class="nav-link text-muted" href="#">Demographics</a>
+                        <a class="nav-link text-muted" href="dashboard_analytics.html">Analytics</a>
+                        <a class="nav-link text-muted" href="dashboard_demographics.html">Demographics</a>
                     </nav>
                 </div>
                 <div class="col mt-2 p-3">
@@ -502,8 +503,8 @@
                                 <table class=" table table-borderless col-sm-12 mb-n3">
                                     <tr>
                                         <td id="issue">Car Park &nbsp; <label class="badge badge-primary">7</label></td>
-                                        <td id="print"><i class="fa fa-print fa-lg"></i> &nbsp; Print</td>
-                                        <td><i class="fa fa-download fa-lg"></i> &nbsp; Download</td>
+                                        <td id="print"> <a href="#" onclick="window.print();return false;"><i class="fa fa-print fa-lg"></i> &nbsp; Print</a></td>
+                                        <td> <a href="#" onclick="saveAs()"><i class="fa fa-download fa-lg"></i> &nbsp; Download</a></td>
                                         <td> <a href="dashboard_overview.html"><i class="fa fa-angle-left"></i> &nbsp; Go Back</a></td>
                                     </tr>
                                 </table>
@@ -623,7 +624,7 @@
                             <div id="listView" class="col-sm-3">
                                 <h2 class="col-sm-12">list view</h2>
                                 <div id="listTable">
-                                    <table class="table">
+                                    <a href="#" style="text-decoration: none;"><table class="table" style="text-decoration: none;">
                                         <tbody>
                                             <tr>
                                                 <td id="first">Maryland, Lagos</td>
@@ -656,7 +657,7 @@
                                                 <td>Yaba, Lagos</td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> </a>
                                 </div>
                             </div>
                         </div>
@@ -750,10 +751,14 @@
         }
       </script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi0SAUh6Ws4fbh3QHB1Y3PE_4UXkAaZsw&callback=initMap"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <script src="js/jsPDF.js"></script>
+    <script src="js/pdfFromHTML.js"></script>
+
     <script>
     $(document).ready(function(){
 // Hide submenus
@@ -808,5 +813,25 @@ $(document).ready(function(){
           popup.classList.toggle("display");
         }
     </script>
+
+    <script>
+
+    var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {   
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('carpark.pdf');
+});
+
+
+</script> 
 </body>
 </html>
