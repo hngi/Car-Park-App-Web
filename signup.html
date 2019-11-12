@@ -37,11 +37,12 @@ body {
 .container {
   display: grid;
   width: 1000px;
-  margin: 80px auto;
+  margin: 5px auto;
   grid-template-columns: 450px 450px;
   grid-template-rows: 600px;
   justify-content: center;
   align-content: center;
+
 }
 
 .form {
@@ -52,6 +53,7 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   box-shadow: -12px 2px 26px -17px rgba(0, 0, 0, 0.75);
+  height: 115%;
 }
 
 input {
@@ -90,20 +92,29 @@ input[type="password"]::-ms-input-placeholder {
   text-align: right;
   color: #fff;
 }
+input[type="text"]::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #C1C1C1;
+}
+input[type="text"]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  
+  color: #C1C1C1;
+}
 button {
   color: darkgreen;
   font-weight: bolder;
 }
 
-div.div-2 a#forgot-password {
+#forgot-password {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
+  text-align: right;
+  float: right;
 }
 
 #checkitems {
-  display: flex;
-  flex-direction: row;
   align-items: baseline;
   margin-bottom: 40px;
   padding: 0;
@@ -151,7 +162,7 @@ form.form div#btns button.btn.login {
   position: relative;
   top: 0;
   left: 0;
-  height: 600px;
+  height: 125%;
   width: 450px;
 }
 div.overlay {
@@ -181,7 +192,7 @@ center>a{
 @media screen and (max-width: 700px) {
   .container {
     width: 350px;
-    margin: 30px auto;
+    margin: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 600px;
     justify-content: center;
@@ -197,6 +208,7 @@ center>a{
   </head>
 
   <body>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div class="container">
       <form class="form" action="#">
         <h1 style="color:#f9cd40;">GET STARTED.
@@ -216,7 +228,7 @@ center>a{
         <b id="emError" style="color:lightcoral; font-size:14px"></b>
        
         <label for="name">Full Name</label>
-        <input type="text" id="name" class="placeicon" placeholder="John Brown"/>
+        <input type="text" id="name" class="placeicon" placeholder="John Brown" maxlength="32" pattern="[a-zA-Z]{1,32}" />
         
         <label for="password">Password</label>
         <input
@@ -226,20 +238,30 @@ center>a{
           placeholder="&#xf2bb;  "
           onblur="validatePasword()"
         />
+        <label for="password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm_password"
+          class="placeicon"
+          placeholder="&#xf2bb;  " 
+          onblur="validatePasword()"
+        />
+        <a href="" id="forgot-password">Forgot Password?</a>
         <div id="checkitems">
           <div class="div-2">
-            <b id="passError" style="color:lightcoral; font-size:14px "></b>
-            <a href="" id="forgot-password">Forgot Password?</a>
-          </div>
+          	<span id='message'></span><br>
+            <b id="passError" style="color:lightcoral; font-size:12.5px "></b>
+        </div>
+        
+            
+          
         </div>
         
         <div id="btns" class="btns">
           <button
             class="btn login"
             type="button"
-            value="Sign Up"
-            
-          >
+            value="Sign Up">
             Sign Up
           </button>
         </div>
@@ -277,12 +299,18 @@ center>a{
           pvalidated = true;
         } else {
           passError.innerHTML =
-            "Password must incude numbers or characters only (min 5, max 15)";
+            "Password must incude numbers or characters only";
           pvalidated = false;
         }
       }
 
       
-    </script>
+	$('#password, #confirm_password').on('keyup', function () {
+  if ($('#password').val() == $('#confirm_password').val()) {
+    $('#message').html('Passwords Match &#10004').css('color', 'green');
+  } else 
+    $('#message').html('Passwords Do Not Match &#10006').css('color', 'red');
+});
+</script>
   </body>
 </html>
