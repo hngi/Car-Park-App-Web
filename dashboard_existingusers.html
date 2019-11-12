@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+     <link rel="icon" href="https://res.cloudinary.com/seun007/image/upload/v1572520438/image_3_zznsc1.png"type="image/gif"sizes="5x16"/>
 </head>
 <style>
     /* NAV TAB */
@@ -473,7 +474,7 @@
                                 </div>
                                 <!--notofication bell and popup codes starts-->
                         </div>
-                        <div class="col-4  d-flex border-left justify-content-end">
+                        <div class="col-4  d-flex border-left justify-content-center">
                                 <img src="https://res.cloudinary.com/benjee/image/upload/v1571821721/Rectangle_15_cj6nwd.svg" alt="EN" width="25" height="25">
                                 <span class="text-muted pl-2">EN</span>
                         </div>
@@ -500,7 +501,7 @@
                                 <table class=" table table-borderless col-sm-12 mb-n3">
                                     <tr>
                                         <td id="issue">Existing Users &nbsp; <label class="badge badge-primary">7</label></td>
-                                        <td id="print"><i class="fa fa-print fa-lg"></i> &nbsp; Print</td>
+                                       <td id="print"> <a href="#" onclick="window.print();return false;"><i class="fa fa-print fa-lg"></i> &nbsp; Print</a></td>
                                         <td><i class="fa fa-download fa-lg"></i> &nbsp; Download</td>
                                         <td> <a href="dashboard_overview.html"><i class="fa fa-angle-left"></i> &nbsp; Go Back</a></td>
                                     </tr>
@@ -648,8 +649,8 @@
                             <!--table to select location begins here-->
                             <div id="listView" class="col-sm-3">
                                 <h2 class="col-sm-12">list view</h2>
-                                <div id="listTable">
-                                    <table class="table">
+                                <div id="listTable" style="text-decoration: none;">
+                                   <a href="#" style="text-decoration: none;"> <table class="table" style="text-decoration: none;">
                                         <tbody>
                                             <tr>
                                                 <td id="first">Maryland, Lagos</td>
@@ -682,7 +683,7 @@
                                                 <td>Yaba, Lagos</td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> </a>
                                 </div>
                             </div>
                         </div>
